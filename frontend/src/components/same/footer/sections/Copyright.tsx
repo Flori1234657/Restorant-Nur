@@ -1,7 +1,12 @@
+import { Stack, Typography } from "@mui/joy";
 import React from "react";
 
 const Copyright = () => {
-  return <div>Copyright</div>;
+  return (
+    <Stack>
+      <Typography>©Copyright Florian Dollani</Typography>
+    </Stack>
+  );
 };
 
 export default Copyright;
