@@ -7,15 +7,17 @@ import { GiNotebook as Icon } from "react-icons/gi";
 const Hero = () => {
   return (
     <Stack>
-      <Typography level="h1">Welcome to our fish restaurant!</Typography>
-      <Typography level="body-lg">
-        Lorem ipsum dolor sit amet consectetur. Ornare arcu facilisis
-        scelerisque laoreet magna a odio. Nullam vitae egestas eget at in.
-      </Typography>
-      <Button startDecorator={<Icon />}>Book A Table</Button>
       <Stack>
-        <HoursClosedModal />
-        <ReactSVG src={HomeWave} />
+        <Typography level="h1">Welcome to our fish restaurant!</Typography>
+        <Typography level="body-lg">
+          Lorem ipsum dolor sit amet consectetur. Ornare arcu facilisis
+          scelerisque laoreet magna a odio. Nullam vitae egestas eget at in.
+        </Typography>
+        <Button startDecorator={<Icon />}>Book A Table</Button>
+        <Stack>
+          <HoursClosedModal />
+          <ReactSVG src={HomeWave} />
+        </Stack>
       </Stack>
     </Stack>
   );

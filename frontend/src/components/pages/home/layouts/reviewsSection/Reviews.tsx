@@ -8,18 +8,20 @@ import Blob from "../../../../../assets/svg/blobs/reviews-blob.svg";
 const Reviews = () => {
   return (
     <Stack>
-      <SectionHeaders
-        heading="Reviews"
-        subheading="What our clients say about us?"
-      />
       <Stack>
-        {arrOfreviwes.map((el) => (
-          <ReviewCard
-            key={el.profileImg}
-            profileImg={el.profileImg}
-            review={el.review}
-          />
-        ))}
+        <SectionHeaders
+          heading="Reviews"
+          subheading="What our clients say about us?"
+        />
+        <Stack>
+          {arrOfreviwes.map((el) => (
+            <ReviewCard
+              key={el.profileImg}
+              profileImg={el.profileImg}
+              review={el.review}
+            />
+          ))}
+        </Stack>
       </Stack>
     </Stack>
   );

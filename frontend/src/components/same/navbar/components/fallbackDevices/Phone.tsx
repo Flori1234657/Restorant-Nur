@@ -1,10 +1,11 @@
-/**
- * InshaaAllah skeleton loading for
- * heading and nav of PHONE
- */
+import { Skeleton } from "@mui/joy";
 
 const Phone = () => {
-  return <div>Phone</div>;
+  return (
+    <nav>
+      <Skeleton />
+    </nav>
+  );
 };
 
 export default Phone;

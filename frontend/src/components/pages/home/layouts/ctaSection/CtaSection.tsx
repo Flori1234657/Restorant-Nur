@@ -8,13 +8,17 @@ const CtaSection = () => {
   return (
     <Stack>
       <Stack>
-        <Typography>So what are you waiting for?</Typography>
-        <Typography>Book your table before someone else take’s it!</Typography>
+        <Stack>
+          <Typography>So what are you waiting for?</Typography>
+          <Typography>
+            Book your table before someone else take’s it!
+          </Typography>
+        </Stack>
+        <AspectRatio objectFit="contain">
+          <img src={Illustration} alt="" />
+        </AspectRatio>
+        <Button startDecorator={<Icon />}>Book My Table Now</Button>
       </Stack>
-      <AspectRatio objectFit="contain">
-        <img src={Illustration} alt="" />
-      </AspectRatio>
-      <Button startDecorator={<Icon />}>Book My Table Now</Button>
     </Stack>
   );
 };

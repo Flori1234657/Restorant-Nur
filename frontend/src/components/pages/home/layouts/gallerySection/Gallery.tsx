@@ -8,17 +8,19 @@ import Blob from "../../../../../assets/svg/blobs/gallery-blob.svg";
 const Gallery = () => {
   return (
     <Stack>
-      <SectionHeaders
-        heading="Gallery"
-        subheading="Some images of our seafood restaurant."
-      />
-      <Grid container>
-        {mapImages.map((el) => (
-          <Grid key={el.path} xs={el.gridColumns}>
-            <Image path={el.path} />
-          </Grid>
-        ))}
-      </Grid>
+      <Stack>
+        <SectionHeaders
+          heading="Gallery"
+          subheading="Some images of our seafood restaurant."
+        />
+        <Grid container>
+          {mapImages.map((el) => (
+            <Grid key={el.path} xs={el.gridColumns}>
+              <Image path={el.path} />
+            </Grid>
+          ))}
+        </Grid>
+      </Stack>
     </Stack>
   );
 };

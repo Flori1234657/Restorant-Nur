@@ -5,16 +5,18 @@ import { Brand, Contact, Newsletter, MapLocation, Copyright } from "./sections";
 
 const Footer = () => {
   return (
-    <Stack>
-      <ReactSVG src={Wave} />
+    <footer>
       <Stack>
-        <Brand />
-        <Contact />
-        <Newsletter />
-        <MapLocation />
+        <ReactSVG src={Wave} />
+        <Stack>
+          <Brand />
+          <Contact />
+          <Newsletter />
+          <MapLocation />
+        </Stack>
+        <Copyright />
       </Stack>
-      <Copyright />
-    </Stack>
+    </footer>
   );
 };
 

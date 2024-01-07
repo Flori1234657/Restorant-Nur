@@ -8,16 +8,18 @@ import FoodCardsMap from "./FoodCardsMap";
 const OurFoods = () => {
   return (
     <Stack>
-      <SectionHeaders
-        heading="Our food"
-        subheading="100% halal food from our halal restaurant!"
-      />
       <Stack>
+        <SectionHeaders
+          heading="Our food"
+          subheading="100% halal food from our halal restaurant!"
+        />
         <Stack>
-          <FoodCardsMap />
-          <ReactSVG src={Decor} />
+          <Stack>
+            <FoodCardsMap />
+            <ReactSVG src={Decor} />
+          </Stack>
+          <Button startDecorator={<Icon />}>View Menu</Button>
         </Stack>
-        <Button startDecorator={<Icon />}>View Menu</Button>
       </Stack>
     </Stack>
   );

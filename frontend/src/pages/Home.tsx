@@ -6,7 +6,6 @@ import {
   Reviews,
   CtaSection,
 } from "../components/pages/home/layouts";
-import Footer from "../components/same/footer/Footer";
 
 const Home = () => {
   return (
@@ -17,7 +16,6 @@ const Home = () => {
       <OurFoods />
       <Reviews />
       <CtaSection />
-      <Footer />
     </>
   );
 };

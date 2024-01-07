@@ -3,14 +3,16 @@ import Logo from "../../../assets/logo.svg";
 
 const PhoneHeader = () => {
   return (
-    <Stack>
+    <header>
       <Stack>
-        <AspectRatio>
-          <img src={Logo} alt="Restaurant logo" />
-        </AspectRatio>
-        <Typography level="h2">Restorant Nur</Typography>
+        <Stack>
+          <AspectRatio>
+            <img src={Logo} alt="Restaurant logo" />
+          </AspectRatio>
+          <Typography level="h2">Restorant Nur</Typography>
+        </Stack>
       </Stack>
-    </Stack>
+    </header>
   );
 };
 

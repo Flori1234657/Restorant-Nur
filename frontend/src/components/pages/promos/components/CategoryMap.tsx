@@ -1,7 +1,14 @@
-import React from "react";
+import { Stack } from "@mui/joy";
+import CardMap from "./CardMap";
 
 const CategoryMap = () => {
-  return <div>CategoryMap</div>;
+  return (
+    <Stack>
+      {["Economic", "Dinner", "Breakfast"].map((el) => (
+        <CardMap categoryName={el} />
+      ))}
+    </Stack>
+  );
 };
 
 export default CategoryMap;

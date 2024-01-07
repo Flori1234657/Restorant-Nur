@@ -1,11 +1,10 @@
-import FoodCardPh from "../../../../same/cards/FoodCardPh";
-import FoodCardPc from "../../../../same/cards/FoodCardPc";
+import FoodCard from "../../../../same/cards/FoodCard";
 
 const FoodCardsMap = () => {
   return (
     <>
       {[1, 2, 3].map((el) => (
-        <FoodCardPh key={el} />
+        <FoodCard key={el} />
       ))}
     </>
   );

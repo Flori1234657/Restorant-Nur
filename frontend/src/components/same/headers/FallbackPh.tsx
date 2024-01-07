@@ -1,6 +1,6 @@
 import { Skeleton } from "@mui/joy";
 
-const Pc = () => {
+const FallbackPh = () => {
   return (
     <header>
       <Skeleton />
@@ -8,4 +8,4 @@ const Pc = () => {
   );
 };
 
-export default Pc;
+export default FallbackPh;
