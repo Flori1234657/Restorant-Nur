@@ -6,10 +6,13 @@ import {
   IconButton,
   Stack,
   Typography,
+  Chip,
 } from "@mui/joy";
 import { IoHeart as IconWish } from "react-icons/io5";
+import { FaClock, FaCheck } from "react-icons/fa6";
+import { FaUserFriends as UsersIcon } from "react-icons/fa";
 
-const FoodCardPh = () => {
+const FoodCardPc = ({ promo }: { promo: boolean }) => {
   return (
     <Card>
       <CardOverflow>
@@ -27,13 +30,21 @@ const FoodCardPh = () => {
             Linguine with shrimp and spice
           </Typography>
           <Stack>
-            <Typography level="title-lg">$15.99</Typography>
-            <Typography level="body-lg">-20%</Typography>
+            {promo ? (
+              <Chip startDecorator={<UsersIcon />}>4 persons</Chip>
+            ) : (
+              <Chip startDecorator={<FaClock />}>10 Min</Chip>
+            )}
+            <Chip startDecorator={<FaCheck />}>Available</Chip>
           </Stack>
+        </Stack>
+        <Stack>
+          <Typography level="title-lg">$15.99</Typography>
+          <Typography level="body-lg">-20%</Typography>
         </Stack>
       </CardContent>
     </Card>
   );
 };
 
-export default FoodCardPh;
+export default FoodCardPc;

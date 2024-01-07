@@ -1,7 +1,14 @@
-import React from "react";
+import { Stack } from "@mui/joy";
+import MenuNav from "./components/MenuNav";
+import Content from "./components/Content";
 
 const MenuCard = () => {
-  return <div>MenuCard</div>;
+  return (
+    <Stack>
+      <MenuNav />
+      <Content />
+    </Stack>
+  );
 };
 
 export default MenuCard;
