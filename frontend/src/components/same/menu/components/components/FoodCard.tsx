@@ -8,6 +8,7 @@ import {
 } from "@mui/joy";
 
 const FoodCard = () => {
+  // Use zustand to add to selected cards for reservation page
   return (
     <Card>
       <CardOverflow>

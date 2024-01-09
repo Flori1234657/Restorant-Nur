@@ -1,7 +1,13 @@
-import React from "react";
+import { Stack, Typography } from "@mui/joy";
+import BookDetails from "../../form/steps/BookDetails";
 
 const ReservationItOpen = () => {
-  return <div>ReservationItOpen</div>;
+  return (
+    <Stack>
+      <Typography>Details</Typography>
+      <BookDetails />
+    </Stack>
+  );
 };
 
 export default ReservationItOpen;

@@ -1,5 +1,6 @@
 import { Stack } from "@mui/joy";
 import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt";
+import Content from "../components/pages/reservation/Content";
 
 const Reservation = () => {
   return (
@@ -8,6 +9,7 @@ const Reservation = () => {
         heading="Lorem ipsum dolor sit amet consectegur."
         subheading="Lorem ipsum dolor sit amet consectetur. At odio nisi turpis feugiat sed eget quisque commodo rutrum."
       />
+      <Content />
     </Stack>
   );
 };

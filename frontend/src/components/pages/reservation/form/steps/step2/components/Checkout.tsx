@@ -1,7 +1,13 @@
-import React from "react";
+import { Stack, Typography } from "@mui/joy";
+import BookDetails from "../../BookDetails";
 
 const Checkout = () => {
-  return <div>Checkout</div>;
+  return (
+    <Stack>
+      <Typography>Checkout</Typography>
+      <BookDetails />
+    </Stack>
+  );
 };
 
 export default Checkout;
