@@ -3,10 +3,10 @@ import { AspectRatio } from "@mui/joy";
 const Image = (props: { path: string }) => {
   const imagePath = import.meta.env.PROD
     ? `path for build here`
-    : `../../../../../assets/webp/home/gallery-img-${props.path}`;
+    : `/src/assets/webp/home/gallery-img-${props.path}`;
 
   return (
-    <AspectRatio objectFit="cover">
+    <AspectRatio sx={{ height: "5.375rem" }}>
       <img src={imagePath} alt="Gallery Image for restaurant" />
     </AspectRatio>
   );

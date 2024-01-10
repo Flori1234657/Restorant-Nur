@@ -9,7 +9,7 @@ import { GiNotebook as IconBook } from "react-icons/gi";
 
 const PhoneNav = () => {
   return (
-    <nav>
+    <nav style={{ width: "100%", position: "fixed", bottom: 0, zIndex: "100" }}>
       <Stack>
         <IconButton href="/wishlist" aria-label="Wishlist page link">
           <IconWish />

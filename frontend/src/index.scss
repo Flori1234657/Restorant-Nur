@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap"); //'La Belle Aurore', cursive;
+
 *,
 ::after,
 ::before {
@@ -5,4 +7,20 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+html {
+  width: 100%;
+}
+body {
+  background-color: #282828;
+  width: 100%;
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.MuiAspectRatio-content {
+  background-color: transparent !important;
 }

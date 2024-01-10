@@ -80,6 +80,22 @@ const theme = extendTheme({
       },
     },
   },
+  components: {
+    JoyButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+        },
+      },
+    },
+    JoyInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+        },
+      },
+    },
+  },
 });
 
 export default theme;
