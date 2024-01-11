@@ -80,8 +80,18 @@ const theme = extendTheme({
       },
     },
   },
+  shadow: {
+    xs: "0px 0px 24px -45px #FF9F0D, 0px 2px 20px 0px #FF9F0D",
+  },
   components: {
     JoyButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+        },
+      },
+    },
+    JoyIconButton: {
       styleOverrides: {
         root: {
           borderRadius: "8px",
@@ -92,6 +102,13 @@ const theme = extendTheme({
       styleOverrides: {
         root: {
           borderRadius: "8px",
+        },
+      },
+    },
+    JoyTypography: {
+      styleOverrides: {
+        root: {
+          lineHeight: "150%",
         },
       },
     },

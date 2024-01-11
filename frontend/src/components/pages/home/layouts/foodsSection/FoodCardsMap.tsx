@@ -1,12 +1,15 @@
+import { Stack } from "@mui/joy";
 import FoodCard from "../../../../same/cards/FoodCard";
 
 const FoodCardsMap = () => {
   return (
-    <>
-      {[1, 2, 3].map((el) => (
-        <FoodCard key={el} />
+    <Stack gap="1rem">
+      {["1", "0.9", "0.8"].map((el) => (
+        <Stack alignItems="center" key={el} fontSize={`${el}rem`}>
+          <FoodCard />
+        </Stack>
       ))}
-    </>
+    </Stack>
   );
 };
 

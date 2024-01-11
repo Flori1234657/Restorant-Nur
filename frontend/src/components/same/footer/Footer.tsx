@@ -1,13 +1,14 @@
-import { Stack } from "@mui/joy";
-import { ReactSVG } from "react-svg";
-import Wave from "../../../assets/svg/waves/footer-wave.svg";
+import { AspectRatio, Stack } from "@mui/joy";
+import Wave from "../../../assets/svg/waves/footer-ph-wave.svg";
 import { Brand, Contact, Newsletter, MapLocation, Copyright } from "./sections";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{ width: "100%" }}>
       <Stack>
-        <ReactSVG src={Wave} />
+        <AspectRatio ratio="3.4">
+          <img src={Wave} alt="Wave shape" />
+        </AspectRatio>
         <Stack>
           <Brand />
           <Contact />
