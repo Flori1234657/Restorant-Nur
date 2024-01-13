@@ -3,9 +3,11 @@ import Logo from "../../../../assets/logo.svg";
 
 const Brand = () => {
   return (
-    <Stack>
-      <Typography level="h1">Restorant Nur</Typography>
-      <AspectRatio objectFit="contain">
+    <Stack gap="0.5rem">
+      <Typography color="primary" level="h1" fontSize="1.5rem" fontWeight={600}>
+        Restorant Nur
+      </Typography>
+      <AspectRatio ratio="1/1" sx={{ width: "6.25rem" }} objectFit="contain">
         <img src={Logo} alt="Logo of restaurant" />
       </AspectRatio>
     </Stack>

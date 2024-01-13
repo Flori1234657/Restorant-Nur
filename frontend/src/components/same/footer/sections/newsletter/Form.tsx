@@ -6,12 +6,20 @@ import { MdEmail, MdCloudSync } from "react-icons/md";
 
 const Form = () => {
   return (
-    <Stack>
+    <Stack gap="0.5rem">
       <FormControl>
-        <FormLabel>Email</FormLabel>
-        <Input startDecorator={<MdEmail />} placeholder="example@email.com" />
+        <FormLabel sx={(theme) => ({ color: theme.palette.primary[300] })}>
+          Email
+        </FormLabel>
+        <Input
+          sx={{ boxShadow: "none" }}
+          startDecorator={<MdEmail />}
+          placeholder="example@email.com"
+        />
       </FormControl>
-      <Button startDecorator={<MdCloudSync />}>Subscribe</Button>
+      <Button color="primary" startDecorator={<MdCloudSync />}>
+        Subscribe
+      </Button>
     </Stack>
   );
 };
