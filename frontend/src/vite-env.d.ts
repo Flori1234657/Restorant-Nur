@@ -22,4 +22,8 @@ declare module "@mui/joy/styles" {
       gray5: string;
     };
   }
+
+  interface Shadow {
+    navItMobile: string;
+  }
 }

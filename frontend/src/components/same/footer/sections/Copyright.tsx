@@ -6,11 +6,11 @@ const Copyright = () => {
       sx={(theme) => ({
         bgcolor: theme.palette.secondary.black1,
         borderTop: `1px solid ${theme.palette.secondary.black3}`,
+        pb: "4.813rem",
       })}
       alignItems="center"
     >
       <Typography
-        level="h4"
         fontSize="0.75rem"
         lineHeight="166%"
         sx={(theme) => ({

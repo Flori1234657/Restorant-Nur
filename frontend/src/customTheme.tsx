@@ -82,6 +82,7 @@ const theme = extendTheme({
   },
   shadow: {
     xs: "0px 0px 24px -45px #FF9F0D, 0px 2px 20px 0px #FF9F0D",
+    navItMobile: "0px 0px 24px -45px #331F02, 0px 2px 20px 0px #331F02",
   },
   components: {
     JoyButton: {
@@ -93,9 +94,7 @@ const theme = extendTheme({
     },
     JoyIconButton: {
       styleOverrides: {
-        root: {
-          borderRadius: "8px",
-        },
+        root: { borderRadius: "8px" },
       },
     },
     JoyInput: {

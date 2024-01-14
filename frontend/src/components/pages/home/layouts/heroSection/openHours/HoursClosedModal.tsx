@@ -26,6 +26,7 @@ const HoursClosedModal = () => {
         </Typography>
       </CardContent>
       <IconButton
+        aria-label="Open operating hours modal"
         sx={(theme) => ({
           height: "2rem",
           bgcolor: "rgba(255, 159, 13, 0.37)",

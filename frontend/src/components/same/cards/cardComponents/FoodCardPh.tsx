@@ -22,6 +22,7 @@ const FoodCardPh = () => {
           <img src={PlaceholderImg} alt="Food Image" />
         </AspectRatio>
         <IconButton
+          aria-label="Add to wishlist"
           variant="solid"
           color="primary"
           size="sm"
