@@ -88,19 +88,19 @@ const theme = extendTheme({
     JoyButton: {
       styleOverrides: {
         root: {
-          borderRadius: "8px",
+          borderRadius: "0.5rem",
         },
       },
     },
     JoyIconButton: {
       styleOverrides: {
-        root: { borderRadius: "8px" },
+        root: { borderRadius: "0.5rem" },
       },
     },
     JoyInput: {
       styleOverrides: {
         root: {
-          borderRadius: "8px",
+          borderRadius: "0.5rem",
         },
       },
     },

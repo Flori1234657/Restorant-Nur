@@ -1,9 +1,8 @@
 import { AspectRatio, Button, Stack, Typography } from "@mui/joy";
-import { ReactSVG } from "react-svg";
 import HomeWave from "../../../../../assets/svg/waves/home-wave.svg";
-import HoursClosedModal from "./openHours/HoursClosedModal";
 import { GiNotebook as Icon } from "react-icons/gi";
 import BgImg from "../../../../../assets/webp/home/hero-image-placeholder.webp";
+import HoursCard from "./openHours/HoursCard";
 
 const Hero = () => {
   return (
@@ -44,7 +43,7 @@ const Hero = () => {
         </Button>
       </Stack>
       <Stack position="relative" mt="4.25rem">
-        <HoursClosedModal />
+        <HoursCard />
         <AspectRatio sx={{ width: "100%" }} ratio="2.81">
           <img src={HomeWave} alt="" />
         </AspectRatio>

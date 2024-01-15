@@ -11,6 +11,8 @@
 
 html {
   width: 100%;
+  // Font 320-600
+  font-size: clamp(1rem, 0rem + 5vw, 1.875rem); // 16px - 30px
 }
 body {
   background-color: #282828;

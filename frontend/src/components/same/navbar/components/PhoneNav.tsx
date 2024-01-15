@@ -8,7 +8,7 @@ const PhoneNav = () => {
         width: "100%",
         position: "fixed",
         bottom: 0,
-        zIndex: "10000",
+        zIndex: "1100",
       }}
     >
       <Stack
