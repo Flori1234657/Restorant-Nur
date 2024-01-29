@@ -13,6 +13,16 @@ html {
   width: 100%;
   // Font 320-600
   font-size: clamp(1rem, 0rem + 5vw, 1.875rem); // 16px - 30px
+
+  @media screen and (min-width: 601px) {
+    // Font 601-899
+    font-size: clamp(1.875rem, 0.1103rem + 4.698vw, 2.75rem); // 30 - 44px
+  }
+
+  @media screen and (min-width: 900px) {
+    // Font 900 >
+    font-size: 16px;
+  }
 }
 body {
   background-color: #282828;

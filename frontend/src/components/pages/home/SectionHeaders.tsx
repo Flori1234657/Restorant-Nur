@@ -3,14 +3,16 @@ import { PageSectionTxtHeaders as Props } from "../../../ts/types/headSubheadTxt
 
 const SectionHeaders = (text: Props) => {
   return (
-    <Stack alignItems="center" mb="1.25rem">
+    <Stack alignItems="center" sx={{ mb: { xs: "1.25rem", md: "1.5rem" } }}>
       <Typography
         textAlign="center"
         color="primary"
         level="h1"
-        fontSize="1.5rem"
+        sx={{
+          fontSize: { xs: "1.5rem", md: "1.25rem" },
+          lineHeight: { md: "155%" },
+        }}
         fontWeight="600"
-        lineHeight="150%"
       >
         {text.heading}
       </Typography>

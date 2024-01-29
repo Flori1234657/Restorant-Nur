@@ -14,10 +14,10 @@ const HoursClosedModal = (props: Props) => {
         zIndex: "10",
         flexDirection: "row",
         alignItems: "center",
-        gap: "1rem",
+        gap: { xs: "1rem", md: "0.5rem" },
         p: "0.5rem",
         bgcolor: "rgba(255, 159, 13, 0.37)",
-        ml: "2rem",
+        ml: { xs: "2rem", md: "8.44rem" },
         border: "none",
         borderRadius: "0.5rem",
       }}
@@ -32,12 +32,12 @@ const HoursClosedModal = (props: Props) => {
       </CardContent>
       <IconButton
         aria-label="Open operating hours modal"
+        size="sm"
         sx={(theme) => ({
           height: "2rem",
           bgcolor: "rgba(255, 159, 13, 0.37)",
           color: theme.palette.primary[100],
         })}
-        size="sm"
         variant="solid"
         color="primary"
         onClick={() => props.openModal(true)}

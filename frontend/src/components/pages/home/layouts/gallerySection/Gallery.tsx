@@ -7,14 +7,34 @@ import Blob from "../../../../../assets/svg/blobs/gallery-blob.svg";
 const Gallery = () => {
   return (
     <Stack mt="3.25rem" position="relative">
-      <Stack mx="2rem" pt="1rem">
+      <Stack
+        sx={{ mx: { xs: "2rem", md: "8.44rem" } }}
+        pt="1rem"
+        alignItems="center"
+      >
         <SectionHeaders
           heading="Gallery"
           subheading="Some images of our seafood restaurant."
         />
-        <Grid container columns={6} rowGap="0.25rem" columnGap="0.25rem">
+        <Grid
+          container
+          columns={6}
+          sx={{
+            maxWidth: "25.875rem",
+            columnGap: { xs: "0.25rem", md: "auto" },
+            rowGap: { xs: "0.25rem", md: "auto" },
+            placeContent: "center",
+          }}
+        >
           {mapImages.map((el) => (
-            <Grid key={el.path} xs={el.gridColumns} width={el.width}>
+            <Grid
+              key={el.path}
+              xs={el.gridColumns}
+              sx={{
+                width: { xs: el.width, md: el.pcWidth },
+              }}
+              width={el.width}
+            >
               <Image path={el.path} ratio={el.ratio} />
             </Grid>
           ))}
