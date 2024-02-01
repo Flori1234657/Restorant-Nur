@@ -25,5 +25,6 @@ declare module "@mui/joy/styles" {
 
   interface Shadow {
     navItMobile: string;
+    pcFoodCard: string;
   }
 }

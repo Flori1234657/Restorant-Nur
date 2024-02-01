@@ -7,7 +7,10 @@ const AboutUs = () => {
   const { size } = useSizeResponsive();
 
   return (
-    <Stack sx={{ mx: { xs: "2rem", md: "8.44rem" } }} alignItems="center">
+    <Stack
+      sx={{ mx: { xs: "2rem", md: "8.44rem" }, mt: { md: "3rem" } }}
+      alignItems="center"
+    >
       <SectionHeaders
         heading="About us"
         subheading="Why come to our fish restaurant?"

@@ -10,7 +10,7 @@ const FoodCard = () => {
 
   return (
     <Suspense fallback={<Fallback />}>
-      {vw < 900 ? <FoodCardPh /> : <FoodCardPc promo={false} />}
+      {vw < 1200 ? <FoodCardPh /> : <FoodCardPc promo={false} />}
     </Suspense>
   );
 };

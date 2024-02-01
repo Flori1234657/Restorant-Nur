@@ -65,7 +65,10 @@ const FoodCardPh = () => {
             fontSize="0.75em"
             fontWeight={600}
             level="body-lg"
-            sx={(theme) => ({ color: theme.palette.success[300] })}
+            sx={(theme) => ({
+              color: theme.palette.success[300],
+              textDecoration: "line-through",
+            })}
           >
             -20%
           </Typography>

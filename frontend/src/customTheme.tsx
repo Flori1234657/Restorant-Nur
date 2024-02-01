@@ -83,6 +83,8 @@ const theme = extendTheme({
   shadow: {
     xs: "0px 0px 24px -45px #FF9F0D, 0px 2px 20px 0px #FF9F0D",
     navItMobile: "0px 0px 24px -45px #331F02, 0px 2px 20px 0px #331F02",
+    pcFoodCard:
+      "0px 2px 20px 2px rgba(255,159,13,1),0px 0px 24px -45px rgba(255,159,13,1)",
   },
   components: {
     JoyButton: {

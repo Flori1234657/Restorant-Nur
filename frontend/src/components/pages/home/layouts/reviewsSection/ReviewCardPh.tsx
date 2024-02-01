@@ -1,4 +1,4 @@
-import { AspectRatio, Avatar, Stack, Typography } from "@mui/joy";
+import { AspectRatio, Stack, Typography } from "@mui/joy";
 import { ReviewsObj } from "./reviewsObj";
 import PlaceholderImg from "../../../../../assets/webp/reviews/profile-placeholder.png";
 
