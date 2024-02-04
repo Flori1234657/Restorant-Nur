@@ -6,7 +6,7 @@ const Copyright = () => {
       sx={(theme) => ({
         bgcolor: theme.palette.secondary.black1,
         borderTop: `1px solid ${theme.palette.secondary.black3}`,
-        pb: "4.813rem",
+        pb: { xs: "4.813rem", md: 0 },
       })}
       alignItems="center"
     >
@@ -15,7 +15,7 @@ const Copyright = () => {
         lineHeight="166%"
         sx={(theme) => ({
           color: theme.palette.primary[50],
-          py: "0.31rem",
+          py: { xs: "0.31rem", md: "0.25rem" },
           fontWeight: 600,
         })}
       >

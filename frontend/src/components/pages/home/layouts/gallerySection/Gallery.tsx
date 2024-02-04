@@ -30,12 +30,12 @@ const Gallery = () => {
           position: "absolute",
           zIndex: -1,
           top: 0,
-          left: { xs: "-1.75rem", md: "16.406rem" },
+          left: { xs: "-1.75rem", md: "30%" },
           width: "23.438rem",
         }}
         ratio="1.15"
       >
-        <img src={Blob} alt="Blob shape" />{" "}
+        <img src={Blob} alt="Blob shape" />
       </AspectRatio>
     </Stack>
   );

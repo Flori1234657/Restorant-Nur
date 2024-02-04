@@ -8,7 +8,7 @@ import { Theme } from "@mui/joy";
 
 export const footerTextInfo = (theme: Theme) => ({
   color: theme.palette.primary[100],
-  fontSize: "0.875rem",
+  fontSize: { xs: "0.875rem", md: "0.75rem" },
   lineHeight: "142%",
 });
 
@@ -23,7 +23,7 @@ export const startDecStyles = {
 
 export const footerHeading = (theme: Theme) => ({
   color: theme.palette.primary[500],
-  fontSize: "1.125rem",
+  fontSize: { xs: "1.125rem", md: "1rem" },
   fontWeight: 600,
   lineHeight: "166%",
 });

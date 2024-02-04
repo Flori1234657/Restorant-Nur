@@ -3,8 +3,11 @@ import FormControl from "@mui/joy/FormControl";
 import FormLabel from "@mui/joy/FormLabel";
 import Input from "@mui/joy/Input";
 import { MdEmail, MdCloudSync } from "react-icons/md";
+import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
 
 const Form = () => {
+  const { size } = useSizeResponsive();
+
   return (
     <Stack gap="0.5rem">
       <FormControl>
@@ -12,12 +15,13 @@ const Form = () => {
           Email
         </FormLabel>
         <Input
+          size={size}
           sx={{ boxShadow: "none" }}
           startDecorator={<MdEmail />}
           placeholder="example@email.com"
         />
       </FormControl>
-      <Button color="primary" startDecorator={<MdCloudSync />}>
+      <Button size={size} color="primary" startDecorator={<MdCloudSync />}>
         Subscribe
       </Button>
     </Stack>

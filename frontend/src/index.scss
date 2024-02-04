@@ -20,8 +20,8 @@ html {
   }
 
   @media screen and (min-width: 900px) {
-    // Font 900 >
-    font-size: 16px;
+    // Font 900 > 1199
+    font-size: clamp(1rem, 0.2475rem + 1.3378vi, 1.25rem); // 16-20
   }
 }
 body {

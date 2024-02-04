@@ -4,7 +4,7 @@ import { footerHeading, footerTextInfo } from "../sxObjs/textInfo";
 
 const Newsletter = () => {
   return (
-    <Stack gap="0.75rem">
+    <Stack gap="0.75rem" sx={{ maxWidth: { md: "8.063rem" } }}>
       <Stack>
         <Typography level="h2" sx={(theme) => footerHeading(theme)}>
           Newsletter
