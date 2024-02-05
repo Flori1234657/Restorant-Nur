@@ -11,12 +11,11 @@ const Gallery = () => {
   const { vw } = useViewPortWidth();
 
   return (
-    <Stack sx={{ mt: { xs: "3.25rem", md: "8.563rem" } }} position="relative">
-      <Stack
-        sx={{ mx: { xs: "2rem", md: "8.44rem" } }}
-        pt="1rem"
-        alignItems="center"
-      >
+    <Stack
+      sx={{ mt: { xs: "3.25rem", md: "8.563rem", lg: "13.7rem" } }}
+      position="relative"
+    >
+      <Stack sx={{ mx: "2rem" }} pt="1rem" alignItems="center">
         <SectionHeaders
           heading="Gallery"
           subheading="Some images of our seafood restaurant."
@@ -30,7 +29,8 @@ const Gallery = () => {
           position: "absolute",
           zIndex: -1,
           top: 0,
-          left: { xs: "-1.75rem", md: "30%" },
+          left: { xs: "-1.75rem", md: "50%" },
+          transform: { md: "translate(-50%)" },
           width: "23.438rem",
         }}
         ratio="1.15"

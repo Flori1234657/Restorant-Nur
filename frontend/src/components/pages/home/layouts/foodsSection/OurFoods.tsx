@@ -11,23 +11,28 @@ const OurFoods = () => {
   const { size } = useSizeResponsive();
 
   return (
-    <Stack sx={{ mt: { xs: "3.25rem", md: "8.563rem" } }} mx="2rem">
+    <Stack
+      sx={{
+        mt: { xs: "3.25rem", md: "8.563rem", lg: "13.7rem" },
+        mx: { xs: "2rem" },
+      }}
+    >
       <SectionHeaders
         heading="Our food"
         subheading="100% halal food from our halal restaurant!"
       />
-      <Stack gap="1rem" alignItems="center">
+      <Stack sx={{ gap: { xs: "1rem", lg: "0.8rem" } }} alignItems="center">
         <Stack
           sx={{ pt: { xs: "3rem" }, pb: { xs: "1.57rem" } }}
           position="relative"
           alignItems="center"
         >
           <FoodCardsMap />
-          {vw < 1200 ? (
+          {vw < 1536 ? (
             <AspectRatio
               ratio="0.09"
               sx={{
-                width: "2.15rem",
+                width: { xs: "2.15rem", lg: "2.05rem" },
                 position: "absolute",
                 top: 0,
                 zIndex: -1,

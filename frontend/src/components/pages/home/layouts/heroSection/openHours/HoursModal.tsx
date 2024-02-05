@@ -30,6 +30,7 @@ const HoursModal = (props: Props) => {
       <ModalDialog
         sx={(theme) => ({
           width: { xs: "100%", md: "auto" },
+          maxWidth: { lg: "26.25rem" },
           borderRadius: "0.5rem",
           bgcolor: theme.palette.primary[100],
         })}

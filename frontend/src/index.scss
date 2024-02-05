@@ -23,6 +23,11 @@ html {
     // Font 900 > 1199
     font-size: clamp(1rem, 0.2475rem + 1.3378vi, 1.25rem); // 16-20
   }
+
+  @media screen and (min-width: 1200px) {
+    // Font 1200 > 1535
+    font-size: clamp(1.25rem, -0.3172rem + 2.0896vi, 1.6875rem); // 20-27
+  }
 }
 body {
   background-color: #282828;

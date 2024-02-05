@@ -8,7 +8,10 @@ const AboutUs = () => {
 
   return (
     <Stack
-      sx={{ mx: { xs: "2rem", md: "8.44rem" }, mt: { md: "3rem" } }}
+      sx={{
+        mx: "2rem",
+        mt: { md: "3rem", lg: "6rem" },
+      }}
       alignItems="center"
     >
       <SectionHeaders
@@ -17,8 +20,10 @@ const AboutUs = () => {
       />
       <Stack
         alignItems="center"
-        gap="1rem"
-        sx={{ maxWidth: { md: "25.875rem" } }}
+        sx={{
+          maxWidth: { md: "25.875rem", lg: "27.2rem" },
+          gap: { xs: "1rem", lg: "0.2rem" },
+        }}
       >
         <Typography
           textAlign="center"
@@ -26,7 +31,7 @@ const AboutUs = () => {
           fontFamily="'La Belle Aurore', cursive"
           sx={(theme) => ({
             color: theme.palette.primary[100],
-            fontSize: { xs: "0.75rem", md: "1rem" },
+            fontSize: { xs: "0.75rem", md: "1rem", lg: "0.9rem" },
           })}
         >
           If you are on vacation in Ksamil and are thinking for a fish

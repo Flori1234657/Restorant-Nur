@@ -11,10 +11,10 @@ const CtaSection = () => {
     <Stack
       mx="2rem"
       sx={{
-        mt: { xs: "6.25rem", md: "14.313rem" },
+        mt: { xs: "6.25rem", md: "14.313rem", lg: "13.7rem" },
         mb: { xs: "4.25rem", md: "7.5rem" },
+        gap: { xs: "1.25rem", lg: "1.2rem" },
       }}
-      gap="1.25rem"
       alignItems="center"
       position="relative"
     >
@@ -36,7 +36,7 @@ const CtaSection = () => {
           fontWeight={400}
           sx={(theme) => ({
             color: theme.palette.primary[100],
-            fontSize: { xs: "1rem", md: "0.875rem" },
+            fontSize: { xs: "1rem", md: "0.875rem", lg: "0.8rem" },
             lineHeight: { md: "1.33" },
           })}
         >

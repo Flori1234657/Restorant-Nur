@@ -10,7 +10,7 @@ const ReviewCardPc = ({ fontS }: { fontS: string }) => {
         alignItems: "center",
         position: "relative",
         fontSize: fontS,
-        maxWidth: "12em",
+        maxWidth: { md: "12em", lg: "13.767em" },
         mt: "1.5em",
         height: "0",
       })}
@@ -18,11 +18,11 @@ const ReviewCardPc = ({ fontS }: { fontS: string }) => {
       <AspectRatio
         ratio="1/1"
         sx={(theme) => ({
-          width: "3.264em",
+          width: { md: "3.264em", lg: "3.424em" },
           borderRadius: "50%",
           border: `0.30em solid ${theme.palette.primary[100]}`,
           position: "absolute",
-          top: "-1.632em",
+          top: { md: "-1.632em", lg: "-1.712em" },
         })}
       >
         <img src={PlaceholderImg} alt="Client profile image" />
@@ -31,9 +31,9 @@ const ReviewCardPc = ({ fontS }: { fontS: string }) => {
         sx={(theme) => ({
           color: theme.palette.primary[900],
           fontFamily: "'La Belle Aurore', cursive",
-          fontSize: "0.75em",
-          px: "1.098em",
-          py: "1.885em",
+          fontSize: { md: "0.75em" },
+          px: { md: "1.098em", lg: "1.151em" },
+          py: { md: "1.885em", lg: "2.4em" },
           textAlign: "center",
         })}
       >

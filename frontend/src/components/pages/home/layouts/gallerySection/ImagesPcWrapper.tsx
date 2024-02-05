@@ -10,7 +10,7 @@ const ImagesPcWrapper = () => {
       </Stack>
       <Stack gap="0.25rem" width="7.5rem">
         <Image path="2.png" ratio="1.08" />
-        <Image path="5.png" ratio="2.23" />
+        <Image path="5.png" ratio="2.22" />
       </Stack>
       <Stack gap="0.25rem" width="9.5rem">
         <Image path="3.png" ratio="1.88" />

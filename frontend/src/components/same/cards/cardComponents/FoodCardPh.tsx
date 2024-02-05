@@ -9,7 +9,7 @@ const FoodCardPh = () => {
       sx={(theme) => ({
         width: "16em",
         bgcolor: theme.palette.secondary.black1,
-        gap: "0.75em",
+        gap: { xs: "0.75em", lg: "0.6em" },
         border: `1px solid  ${theme.palette.primary[500]}`,
         alignItems: "center",
         borderRadius: "0.5rem",
@@ -18,7 +18,10 @@ const FoodCardPh = () => {
       boxShadow="xs"
     >
       <Stack sx={{ position: "relative" }}>
-        <AspectRatio ratio={1.22} sx={{ width: "7.625em" }}>
+        <AspectRatio
+          ratio={1.22}
+          sx={{ width: { xs: "7.625em", lg: "7.225em" } }}
+        >
           <img src={PlaceholderImg} alt="Food Image" />
         </AspectRatio>
         <IconButton
@@ -40,34 +43,43 @@ const FoodCardPh = () => {
         </IconButton>
       </Stack>
 
-      <Stack sx={{ mr: "0.75em" }}>
-        <Typography color="primary" level="h1" fontSize="1em" fontWeight={600}>
+      <Stack sx={{ mr: { xs: "0.75em", lg: "0.6em" } }}>
+        <Typography
+          color="primary"
+          level="h1"
+          sx={{ fontSize: { xs: "1em", lg: "0.9em" } }}
+          fontWeight={600}
+        >
           Grilled fish
         </Typography>
         <Typography
           level="body-lg"
-          fontSize="0.75em"
           fontWeight="500"
           lineHeight={1.2}
-          sx={(theme) => ({ color: theme.palette.primary[100] })}
+          sx={(theme) => ({
+            color: theme.palette.primary[100],
+            fontSize: { xs: "0.75em", lg: "0.7em" },
+          })}
         >
           Grilled koce fish with spice
         </Typography>
         <Stack mt="0.25em" direction="row" gap="0.5em" justifyContent="center">
           <Typography
-            fontSize="1em"
-            sx={(theme) => ({ color: theme.palette.primary[100] })}
+            sx={(theme) => ({
+              color: theme.palette.primary[100],
+              fontSize: { xs: "1em", lg: "0.9em" },
+            })}
             level="title-lg"
           >
             $15.99
           </Typography>
           <Typography
-            fontSize="0.75em"
             fontWeight={600}
             level="body-lg"
             sx={(theme) => ({
               color: theme.palette.success[300],
               textDecoration: "line-through",
+              fontSize: { xs: "0.75em", lg: "0.7em" },
             })}
           >
             -20%

@@ -21,11 +21,11 @@ const Hero = () => {
     >
       <Stack
         sx={{
-          mx: { xs: "2rem", md: "8.44rem" },
+          mx: { xs: "2rem", md: "8.44rem", lg: "9.35rem" },
           mt: { xs: "7.06rem", md: "8.625rem" },
+          gap: { xs: "0.5rem", lg: "0.6rem" },
         }}
         alignItems="center"
-        gap="0.5rem"
       >
         <Typography
           level="h1"
@@ -33,7 +33,7 @@ const Hero = () => {
           sx={{
             maxWidth: { md: "20rem" },
             fontSize: { xs: "2.25rem", md: "1.5rem" },
-            lineHeight: { xs: "133%", md: "150%" },
+            lineHeight: { xs: "133%", md: "150%", lg: "133%" },
           }}
           textAlign="center"
         >
@@ -43,7 +43,7 @@ const Hero = () => {
           textAlign="center"
           sx={(theme) => ({
             color: theme.palette.primary[100],
-            fontSize: { xs: "1rem", md: "0.875rem" },
+            fontSize: { xs: "1rem", md: "0.875rem", lg: "0.8rem" },
             maxWidth: { md: "20rem" },
             lineHeight: { md: "133%" },
           })}
@@ -55,7 +55,7 @@ const Hero = () => {
           fullWidth={vw < 900}
           size={size}
           sx={{
-            mt: "0.5rem",
+            mt: { xs: "0.5rem" },
             height: { xs: "40px", md: "auto" },
             borderRadius: "0.5rem",
           }}

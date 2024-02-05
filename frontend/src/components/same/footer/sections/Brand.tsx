@@ -7,7 +7,10 @@ const Brand = () => {
       <Typography
         color="primary"
         level="h1"
-        sx={{ fontSize: { xs: "1.5rem", md: "1.25rem" }, fontWeight: 600 }}
+        sx={{
+          fontSize: { xs: "1.5rem", md: "1.25rem", lg: "1.2rem" },
+          fontWeight: 600,
+        }}
       >
         Restorant Nur
       </Typography>

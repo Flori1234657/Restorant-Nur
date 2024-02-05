@@ -8,7 +8,7 @@ const Image = (props: { path: string; ratio: string }) => {
   return (
     <AspectRatio
       sx={{
-        borderRadius: "0.375rem",
+        borderRadius: { xs: "0.375rem", lg: "0.5rem" },
       }}
       ratio={props.ratio}
     >

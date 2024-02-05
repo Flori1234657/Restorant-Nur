@@ -11,10 +11,10 @@ const Copyright = () => {
       alignItems="center"
     >
       <Typography
-        fontSize="0.75rem"
         lineHeight="166%"
         sx={(theme) => ({
           color: theme.palette.primary[50],
+          fontSize: { xs: "0.75rem", lg: "0.7rem" },
           py: { xs: "0.31rem", md: "0.25rem" },
           fontWeight: 600,
         })}

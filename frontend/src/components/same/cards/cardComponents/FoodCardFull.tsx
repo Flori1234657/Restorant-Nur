@@ -23,25 +23,26 @@ const FoodCardPc = ({ promo }: { promo: boolean }) => {
         boxShadow: theme.shadow.pcFoodCard,
         position: "relative",
         overflow: "hidden",
-        borderRadius: "1rem",
-        maxWidth: "12.125rem",
+        borderRadius: "0.8rem",
+        maxWidth: { lg: "9.7rem" },
       })}
     >
       <CardOverflow>
-        <AspectRatio ratio="1.74">
+        <AspectRatio ratio="1.75">
           <img src={PlaceholderImg} alt="Food Image" />
         </AspectRatio>
       </CardOverflow>
       <IconButton
         color="primary"
         variant="solid"
+        size="sm"
         sx={{
           position: "absolute",
           right: 0,
           top: 0,
           borderBottomRightRadius: 0,
           borderTopLeftRadius: 0,
-          borderBottomLeftRadius: "1rem",
+          borderBottomLeftRadius: "0.8rem",
           color: theme.palette.primary[100],
         }}
       >
@@ -53,13 +54,13 @@ const FoodCardPc = ({ promo }: { promo: boolean }) => {
             level="h1"
             color="primary"
             fontWeight={600}
-            sx={{ fontSize: "0.97rem" }}
+            sx={{ fontSize: { lg: "0.776rem" } }}
           >
             Shrimp linguine
           </Typography>
           <Typography
             sx={(theme) => ({
-              fontSize: "0.776rem",
+              fontSize: { lg: "0.621rem" },
               color: theme.palette.primary[100],
               lineHeight: "122%",
             })}
@@ -74,6 +75,7 @@ const FoodCardPc = ({ promo }: { promo: boolean }) => {
                 color="primary"
                 variant="solid"
                 size="sm"
+                sx={{ fontSize: { lg: "0.5rem" }, fontWeight: { lg: "bold" } }}
                 startDecorator={<FaClock />}
               >
                 10 Min
@@ -83,6 +85,7 @@ const FoodCardPc = ({ promo }: { promo: boolean }) => {
               color="primary"
               variant="solid"
               size="sm"
+              sx={{ fontSize: { lg: "0.5rem" }, fontWeight: { lg: "bold" } }}
               startDecorator={<FaCheck />}
             >
               Available
@@ -93,7 +96,7 @@ const FoodCardPc = ({ promo }: { promo: boolean }) => {
           <Typography
             level="title-lg"
             sx={(theme) => ({
-              fontSize: "1.455rem",
+              fontSize: { lg: "1.164rem" },
               lineHeight: "133%",
               color: theme.palette.primary[100],
             })}
@@ -103,7 +106,7 @@ const FoodCardPc = ({ promo }: { promo: boolean }) => {
           <Typography
             level="body-lg"
             sx={(theme) => ({
-              fontSize: "0.75rem",
+              fontSize: { lg: "0.7rem" },
               fontWeight: 700,
               color: theme.palette.success[500],
               textDecoration: "line-through",

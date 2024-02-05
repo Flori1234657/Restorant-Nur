@@ -5,9 +5,9 @@ import { FaPhone } from "react-icons/fa6";
 const PcNav = () => {
   const navItStyles = {
     underline: "none",
-    fontSize: "0.75rem",
+    fontSize: { md: "0.75rem", lg: "0.7rem" },
     fontWeight: 600,
-    lineHeight: 1.66,
+    lineHeight: { md: 1.66, lg: 1.42 },
     textDecoration: "none",
     color: "#FFEBCE",
   };
@@ -23,8 +23,10 @@ const PcNav = () => {
       }}
     >
       <Stack
-        py="1rem"
-        mx="8.44rem"
+        sx={{
+          mx: { md: "8.44rem", lg: "9.35rem" },
+          py: { md: "1rem", lg: "0.825rem" },
+        }}
         direction="row"
         justifyContent="space-between"
         alignItems="center"
@@ -33,22 +35,24 @@ const PcNav = () => {
           <AspectRatio
             objectFit="contain"
             ratio="1/1"
-            sx={{ width: "1.625rem" }}
+            sx={{ width: { md: "1.625rem", lg: "1.6rem" } }}
           >
             <img src={Logo} alt="Logo of restaurant" />
           </AspectRatio>
           <Typography
             level="h2"
             color="primary"
-            fontSize="0.875rem"
-            lineHeight="142%"
+            sx={{
+              fontSize: { md: "0.875rem", lg: "0.9rem" },
+              lineHeight: { md: "142%", lg: "166%" },
+            }}
             fontWeight={600}
           >
             Restorant Nur
           </Typography>
         </Stack>
         <nav>
-          <Stack gap="1.25rem" direction="row">
+          <Stack sx={{ gap: { md: "1.25rem", lg: "1.4rem" } }} direction="row">
             <Link sx={navItStyles} href="/">
               Home
             </Link>
