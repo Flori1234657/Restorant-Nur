@@ -6,11 +6,17 @@ import Blob from "../../../../../assets/svg/blobs/reviews-blob.svg";
 const Reviews = () => {
   return (
     <Stack
-      sx={{ mt: { xs: "4.25rem", md: "8.563rem", lg: "13.7rem" } }}
+      sx={{
+        mt: { xs: "4.25rem", md: "8.563rem", lg: "13.7rem", xl: "18.692rem" },
+      }}
       position="relative"
       alignItems="center"
     >
-      <Stack sx={{ mx: { xs: "2rem", md: "8.44rem", lg: "9.35rem" } }}>
+      <Stack
+        sx={{
+          mx: { xs: "2rem", md: "8.44rem", lg: "9.35rem", xl: "9.773rem" },
+        }}
+      >
         <SectionHeaders
           heading="Reviews"
           subheading="What our clients say about us?"

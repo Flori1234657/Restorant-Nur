@@ -1,14 +1,21 @@
-import { Stack, Typography, Button } from "@mui/joy";
+import { Stack, Typography, Button, AspectRatio } from "@mui/joy";
 import { MdRestaurantMenu as Icon } from "react-icons/md";
 import SectionHeaders from "../../SectionHeaders";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
 
 const AboutUs = () => {
-  const { size } = useSizeResponsive();
+  const { size } = useSizeResponsive(false);
+  const { vw } = useViewPortWidth();
+
+  const blob = import.meta.env.PROD
+    ? `path for build here`
+    : `/src/assets/svg/blobs/about-us-blob.svg`;
 
   return (
     <Stack
       sx={{
+        position: "relative",
         mx: "2rem",
         mt: { md: "3rem", lg: "6rem" },
       }}
@@ -21,8 +28,8 @@ const AboutUs = () => {
       <Stack
         alignItems="center"
         sx={{
-          maxWidth: { md: "25.875rem", lg: "27.2rem" },
-          gap: { xs: "1rem", lg: "0.2rem" },
+          maxWidth: { md: "25.875rem", lg: "27.2rem", xl: "28.282rem" },
+          gap: { xs: "1rem", lg: "0.2rem", xl: "0.65rem" },
         }}
       >
         <Typography
@@ -31,7 +38,12 @@ const AboutUs = () => {
           fontFamily="'La Belle Aurore', cursive"
           sx={(theme) => ({
             color: theme.palette.primary[100],
-            fontSize: { xs: "0.75rem", md: "1rem", lg: "0.9rem" },
+            fontSize: {
+              xs: "0.75rem",
+              md: "1rem",
+              lg: "0.9rem",
+              xl: "0.975rem",
+            },
           })}
         >
           If you are on vacation in Ksamil and are thinking for a fish
@@ -46,6 +58,21 @@ const AboutUs = () => {
           Our Menu
         </Button>
       </Stack>
+      {vw > 899 ? (
+        <AspectRatio
+          sx={{
+            position: "absolute",
+            zIndex: -1,
+            top: 0,
+            width: { md: "23.438rem", xl: "30rem" },
+          }}
+          ratio="1.15"
+        >
+          <img src={blob} alt="Blob shape" />
+        </AspectRatio>
+      ) : (
+        ""
+      )}
     </Stack>
   );
 };

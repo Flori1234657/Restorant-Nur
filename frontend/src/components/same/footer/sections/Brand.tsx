@@ -8,7 +8,13 @@ const Brand = () => {
         color="primary"
         level="h1"
         sx={{
-          fontSize: { xs: "1.5rem", md: "1.25rem", lg: "1.2rem" },
+          fontSize: {
+            xs: "1.5rem",
+            md: "1.25rem",
+            lg: "1.2rem",
+            xl: "1.219rem",
+          },
+          lineHeight: { xl: "133%" },
           fontWeight: 600,
         }}
       >

@@ -14,7 +14,7 @@ const Copyright = () => {
         lineHeight="166%"
         sx={(theme) => ({
           color: theme.palette.primary[50],
-          fontSize: { xs: "0.75rem", lg: "0.7rem" },
+          fontSize: { xs: "0.75rem", lg: "0.7rem", xl: "0.65rem" },
           py: { xs: "0.31rem", md: "0.25rem" },
           fontWeight: 600,
         })}

@@ -5,13 +5,13 @@ import Blob from "../../../../../assets/svg/blobs/cta-blob.svg";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
 
 const CtaSection = () => {
-  const { size } = useSizeResponsive();
+  const { size } = useSizeResponsive(false);
 
   return (
     <Stack
       mx="2rem"
       sx={{
-        mt: { xs: "6.25rem", md: "14.313rem", lg: "13.7rem" },
+        mt: { xs: "6.25rem", md: "14.313rem", lg: "13.7rem", xl: "18.692rem" },
         mb: { xs: "4.25rem", md: "7.5rem" },
         gap: { xs: "1.25rem", lg: "1.2rem" },
       }}
@@ -24,7 +24,7 @@ const CtaSection = () => {
           textAlign="center"
           color="primary"
           sx={{
-            fontSize: { xs: "1.875rem", md: "1.5rem" },
+            fontSize: { xs: "1.875rem", md: "1.5rem", xl: "1.707rem" },
             lineHeight: { xs: "1.33", md: "1.5" },
           }}
         >
@@ -36,7 +36,12 @@ const CtaSection = () => {
           fontWeight={400}
           sx={(theme) => ({
             color: theme.palette.primary[100],
-            fontSize: { xs: "1rem", md: "0.875rem", lg: "0.8rem" },
+            fontSize: {
+              xs: "1rem",
+              md: "0.875rem",
+              lg: "0.8rem",
+              xl: "0.731rem",
+            },
             lineHeight: { md: "1.33" },
           })}
         >

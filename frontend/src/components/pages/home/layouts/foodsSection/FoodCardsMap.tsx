@@ -7,7 +7,7 @@ const FoodCardsMap = () => {
 
   return (
     <Stack
-      sx={{ gap: { xs: "1rem" } }}
+      sx={{ gap: { xs: "1rem", xl: "2rem" } }}
       direction={vw >= 1536 ? "row" : "column"}
     >
       {["1", "0.9", "0.8"].map((el) => (

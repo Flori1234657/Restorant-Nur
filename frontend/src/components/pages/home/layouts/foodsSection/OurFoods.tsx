@@ -8,22 +8,28 @@ import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
 
 const OurFoods = () => {
   const { vw } = useViewPortWidth();
-  const { size } = useSizeResponsive();
+  const { size } = useSizeResponsive(false);
 
   return (
     <Stack
       sx={{
-        mt: { xs: "3.25rem", md: "8.563rem", lg: "13.7rem" },
-        mx: { xs: "2rem" },
+        mt: { xs: "3.25rem", md: "8.563rem", lg: "13.7rem", xl: "18.692rem" },
+        mx: { xs: "2rem", xl: "9.773rem" },
       }}
     >
       <SectionHeaders
         heading="Our food"
         subheading="100% halal food from our halal restaurant!"
       />
-      <Stack sx={{ gap: { xs: "1rem", lg: "0.8rem" } }} alignItems="center">
+      <Stack
+        sx={{ gap: { xs: "1rem", lg: "0.8rem", xl: "1.75rem" } }}
+        alignItems="center"
+      >
         <Stack
-          sx={{ pt: { xs: "3rem" }, pb: { xs: "1.57rem" } }}
+          sx={{
+            pt: { xs: "3rem", xl: 0 },
+            pb: { xs: "1.57rem", xl: 0 },
+          }}
           position="relative"
           alignItems="center"
         >

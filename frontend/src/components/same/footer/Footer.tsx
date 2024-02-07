@@ -22,7 +22,7 @@ const Footer = () => {
       >
         <Stack
           sx={{
-            mx: { xs: "2rem", md: "8.44rem", lg: "9.35rem" },
+            mx: { xs: "2rem", md: "8.44rem", lg: "9.35rem", xl: "9.773rem" },
             flexDirection: { md: "row" },
             gap: { xs: "1.5rem", md: 0 },
             justifyContent: { md: "space-between" },

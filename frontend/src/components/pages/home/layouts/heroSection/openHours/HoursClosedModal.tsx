@@ -17,7 +17,7 @@ const HoursClosedModal = (props: Props) => {
         gap: { xs: "1rem", md: "0.5rem", lg: "0.4rem" },
         p: { xs: "0.5rem", lg: "0.4rem" },
         bgcolor: "rgba(255, 159, 13, 0.37)",
-        ml: { xs: "2rem", md: "8.44rem", lg: "9.35rem" },
+        ml: { xs: "2rem", md: "8.44rem", lg: "9.35rem", xl: "9.773rem" },
         border: "none",
         borderRadius: "0.5rem",
       }}
@@ -34,8 +34,6 @@ const HoursClosedModal = (props: Props) => {
         aria-label="Open operating hours modal"
         size="sm"
         sx={(theme) => ({
-          height: { xs: "2rem", lg: "1.6rem" },
-          width: { lg: "1.6rem" },
           bgcolor: "rgba(255, 159, 13, 0.37)",
           color: theme.palette.primary[100],
         })}

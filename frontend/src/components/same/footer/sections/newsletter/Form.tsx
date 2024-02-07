@@ -6,12 +6,17 @@ import { MdEmail, MdCloudSync } from "react-icons/md";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
 
 const Form = () => {
-  const { size } = useSizeResponsive();
+  const { size } = useSizeResponsive(true);
 
   return (
     <Stack gap="0.5rem">
       <FormControl>
-        <FormLabel sx={(theme) => ({ color: theme.palette.primary[300] })}>
+        <FormLabel
+          sx={(theme) => ({
+            color: theme.palette.primary[300],
+            fontSize: { xl: "0.65rem" },
+          })}
+        >
           Email
         </FormLabel>
         <Input

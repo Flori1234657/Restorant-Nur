@@ -12,7 +12,9 @@ const Gallery = () => {
 
   return (
     <Stack
-      sx={{ mt: { xs: "3.25rem", md: "8.563rem", lg: "13.7rem" } }}
+      sx={{
+        mt: { xs: "3.25rem", md: "8.563rem", lg: "13.7rem", xl: "18.692rem" },
+      }}
       position="relative"
     >
       <Stack sx={{ mx: "2rem" }} pt="1rem" alignItems="center">
@@ -31,7 +33,7 @@ const Gallery = () => {
           top: 0,
           left: { xs: "-1.75rem", md: "50%" },
           transform: { md: "translate(-50%)" },
-          width: "23.438rem",
+          width: { xs: "23.438rem", xl: "30rem" },
         }}
         ratio="1.15"
       >

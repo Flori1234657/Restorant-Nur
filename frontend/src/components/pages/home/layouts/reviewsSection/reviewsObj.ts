@@ -8,21 +8,18 @@ export type ReviewsObj = {
 export const arrOfreviwes: ReviewsObj[] = [
   {
     profileImg: "1.webp",
-    review: `"Lorem ipsum dolor sit amet consectetur. Fames malesuada id magna enim
-    faucibus eu turpis"`,
+    review: `“This fish restaurant is without a doubt the best IN Ksamil! Also I found it to be halal.” `,
     fontSize: "0.95rem",
   },
   {
     profileImg: "2.webp",
-    review: `"Lorem ipsum dolor sit amet consectetur. Fames malesuada id magna enim
-    faucibus eu turpis"`,
+    review: `“Wonderful view from this near the sea restaurant! Excellent sea food here!”`,
     order: true,
     fontSize: "1rem",
   },
   {
     profileImg: "3.webp",
-    review: `"Lorem ipsum dolor sit amet consectetur. Fames malesuada id magna enim
-    faucibus eu turpis"`,
+    review: `"“If you are searching for halal restaurant In Ksamil I recommend you come here!”"`,
     fontSize: "0.95rem",
   },
 ];

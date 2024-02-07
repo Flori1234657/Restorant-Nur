@@ -26,7 +26,11 @@ const ReviewCardsMap = () => {
               order={el.order}
             />
           ) : (
-            <ReviewCardPc key={el.profileImg} fontS={el.fontSize || "1rem"} />
+            <ReviewCardPc
+              key={el.profileImg}
+              fontS={el.fontSize || "1rem"}
+              rvObj={el}
+            />
           )
         )}
       </Suspense>

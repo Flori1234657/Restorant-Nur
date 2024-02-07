@@ -1,7 +1,13 @@
 import { AspectRatio, Stack, Typography } from "@mui/joy";
 import PlaceholderImg from "../../../../../assets/webp/reviews/placeholder-pc.jpg";
+import { ReviewsObj } from "./reviewsObj";
 
-const ReviewCardPc = ({ fontS }: { fontS: string }) => {
+type Props = {
+  rvObj: ReviewsObj;
+  fontS: string;
+};
+
+const ReviewCardPc = ({ fontS, rvObj }: Props) => {
   return (
     <Stack
       sx={(theme) => ({
@@ -18,11 +24,11 @@ const ReviewCardPc = ({ fontS }: { fontS: string }) => {
       <AspectRatio
         ratio="1/1"
         sx={(theme) => ({
-          width: { md: "3.264em", lg: "3.424em" },
+          width: { md: "3.264em", lg: "3.424em", xl: "3.558rem" },
           borderRadius: "50%",
           border: `0.30em solid ${theme.palette.primary[100]}`,
           position: "absolute",
-          top: { md: "-1.632em", lg: "-1.712em" },
+          top: { md: "-1.632em", lg: "-1.712em", xl: "-1.779em" },
         })}
       >
         <img src={PlaceholderImg} alt="Client profile image" />
@@ -32,13 +38,12 @@ const ReviewCardPc = ({ fontS }: { fontS: string }) => {
           color: theme.palette.primary[900],
           fontFamily: "'La Belle Aurore', cursive",
           fontSize: { md: "0.75em" },
-          px: { md: "1.098em", lg: "1.151em" },
+          px: { md: "1.098em", lg: "1.151em", xl: "2em" },
           py: { md: "1.885em", lg: "2.4em" },
           textAlign: "center",
         })}
       >
-        Lorem ipsum dolor sit amet consectetur. Fames malesuada id magna enim
-        faucibus eu turpis
+        {rvObj.review}
       </Typography>
     </Stack>
   );

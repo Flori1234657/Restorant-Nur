@@ -109,9 +109,16 @@ const theme = extendTheme({
     },
     JoyInput: {
       styleOverrides: {
-        root: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.size === "xs" && {
+            "--Icon-fontSize": "1rem",
+            minHeight: "1.625rem",
+            fontSize: "0.75rem",
+            paddingBlock: "2px",
+            paddingInline: "0.5rem",
+          }),
           borderRadius: "0.5rem",
-        },
+        }),
       },
     },
     JoyTypography: {

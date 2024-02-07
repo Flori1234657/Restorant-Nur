@@ -8,7 +8,7 @@ type Props = {
 
 const HoursModal = (props: Props) => {
   const placeholderData = [
-    { opensAt: "07 : 45", closesAt: "11 : 45" },
+    { firstDay: "(mon)", opensAt: "07 : 45", closesAt: "11 : 45" },
     { opensAt: "07 : 45", closesAt: "11 : 45" },
     { opensAt: "07 : 45", closesAt: "11 : 45" },
     { opensAt: "07 : 45", closesAt: "11 : 45" },
@@ -46,7 +46,7 @@ const HoursModal = (props: Props) => {
           <tbody>
             {placeholderData.map((el, i) => (
               <tr key={i}>
-                <td style={styles.data}>{i + 1}</td>
+                <td style={styles.data}>{el.firstDay || i + 1}</td>
                 <td style={styles.data}>{el.opensAt}</td>
                 <td style={styles.data}>{el.closesAt}</td>
               </tr>

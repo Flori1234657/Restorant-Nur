@@ -21,12 +21,17 @@ html {
 
   @media screen and (min-width: 900px) {
     // Font 900 > 1199
-    font-size: clamp(1rem, 0.2475rem + 1.3378vi, 1.25rem); // 16-20
+    font-size: clamp(1rem, 0.2475rem + 1.3378vi, 1.25rem); // 16-20px
   }
 
   @media screen and (min-width: 1200px) {
     // Font 1200 > 1535
-    font-size: clamp(1.25rem, -0.3172rem + 2.0896vi, 1.6875rem); // 20-27
+    font-size: clamp(1.25rem, -0.3172rem + 2.0896vi, 1.6875rem); // 20-27px
+  }
+
+  @media screen and (min-width: 1536px) {
+    // Font 1535 > 1920 > ...
+    font-size: clamp(1.5381rem, 1.1903rem + 0.3622vi, 1.625rem); //24.609 - 26px
   }
 }
 body {

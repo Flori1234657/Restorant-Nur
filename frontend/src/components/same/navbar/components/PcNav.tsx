@@ -5,7 +5,7 @@ import { FaPhone } from "react-icons/fa6";
 const PcNav = () => {
   const navItStyles = {
     underline: "none",
-    fontSize: { md: "0.75rem", lg: "0.7rem" },
+    fontSize: { md: "0.75rem", lg: "0.7rem", xl: "0.65rem" },
     fontWeight: 600,
     lineHeight: { md: 1.66, lg: 1.42 },
     textDecoration: "none",
@@ -24,8 +24,8 @@ const PcNav = () => {
     >
       <Stack
         sx={{
-          mx: { md: "8.44rem", lg: "9.35rem" },
-          py: { md: "1rem", lg: "0.825rem" },
+          mx: { md: "8.44rem", lg: "9.35rem", xl: "9.773rem" },
+          py: { md: "1rem", lg: "0.825rem", xl: "0.796rem" },
         }}
         direction="row"
         justifyContent="space-between"
@@ -35,7 +35,7 @@ const PcNav = () => {
           <AspectRatio
             objectFit="contain"
             ratio="1/1"
-            sx={{ width: { md: "1.625rem", lg: "1.6rem" } }}
+            sx={{ width: { md: "1.625rem", lg: "1.6rem", xl: "1.626rem" } }}
           >
             <img src={Logo} alt="Logo of restaurant" />
           </AspectRatio>
@@ -43,8 +43,8 @@ const PcNav = () => {
             level="h2"
             color="primary"
             sx={{
-              fontSize: { md: "0.875rem", lg: "0.9rem" },
-              lineHeight: { md: "142%", lg: "166%" },
+              fontSize: { md: "0.875rem", lg: "0.9rem", xl: "0.813rem" },
+              lineHeight: { md: "142%", lg: "166%", xl: "155%" },
             }}
             fontWeight={600}
           >
