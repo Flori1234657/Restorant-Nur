@@ -1,7 +1,7 @@
 import { AspectRatio, Button, Stack, Typography } from "@mui/joy";
 import HomeWave from "../../../../../assets/svg/waves/home-wave.svg";
 import { GiNotebook as Icon } from "react-icons/gi";
-import BgImg from "../../../../../assets/webp/home/hero-image-placeholder.webp";
+import BgImg from "../../../../../assets/webp/home/hero/hero-image-2400.webp";
 import HoursCard from "./openHours/HoursCard";
 import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive";

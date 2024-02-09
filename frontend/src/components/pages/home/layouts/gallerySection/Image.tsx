@@ -12,7 +12,7 @@ const Image = (props: { path: string; ratio: string }) => {
       }}
       ratio={props.ratio}
     >
-      <img src={imagePath} alt="Gallery Image for restaurant" />
+      <img src={imagePath} alt="Gallery Image for restaurant" loading="lazy" />
     </AspectRatio>
   );
 };

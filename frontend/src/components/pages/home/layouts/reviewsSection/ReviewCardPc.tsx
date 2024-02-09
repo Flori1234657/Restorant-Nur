@@ -1,5 +1,4 @@
 import { AspectRatio, Stack, Typography } from "@mui/joy";
-import PlaceholderImg from "../../../../../assets/webp/reviews/placeholder-pc.jpg";
 import { ReviewsObj } from "./reviewsObj";
 
 type Props = {
@@ -8,6 +7,10 @@ type Props = {
 };
 
 const ReviewCardPc = ({ fontS, rvObj }: Props) => {
+  const imagePath = import.meta.env.PROD
+    ? `path for build here`
+    : `/src/assets/webp/home/reviews/review-pc-${rvObj.profileImg}.webp`;
+
   return (
     <Stack
       sx={(theme) => ({
@@ -31,7 +34,7 @@ const ReviewCardPc = ({ fontS, rvObj }: Props) => {
           top: { md: "-1.632em", lg: "-1.712em", xl: "-1.779em" },
         })}
       >
-        <img src={PlaceholderImg} alt="Client profile image" />
+        <img src={imagePath} alt="Client profile image" loading="lazy" />
       </AspectRatio>
       <Typography
         sx={(theme) => ({
