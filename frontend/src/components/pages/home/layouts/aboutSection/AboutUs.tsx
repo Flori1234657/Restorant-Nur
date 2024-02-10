@@ -3,14 +3,16 @@ import { MdRestaurantMenu as Icon } from "react-icons/md";
 import SectionHeaders from "../../SectionHeaders";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
 import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
+import useImagePath from "../../../../../hooks/useImagePath";
 
 const AboutUs = () => {
   const { size } = useSizeResponsive(false);
   const { vw } = useViewPortWidth();
 
-  const blob = import.meta.env.PROD
-    ? `path for build here`
-    : `/src/assets/svg/blobs/about-us-blob.svg`;
+  const blob = useImagePath({
+    buildPath: "__",
+    developmentPath: `svg/blobs/about-us-blob.svg`,
+  });
 
   return (
     <Stack
@@ -68,7 +70,7 @@ const AboutUs = () => {
           }}
           ratio="1.15"
         >
-          <img src={blob} alt="Blob shape" />
+          <img src={blob.imagePath} alt="Blob shape" />
         </AspectRatio>
       ) : (
         ""

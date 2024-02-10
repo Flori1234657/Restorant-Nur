@@ -1,15 +1,17 @@
 import { AspectRatio, Stack, Typography } from "@mui/joy";
 import { ReviewsObj } from "./reviewsObj";
+import useImagePath from "../../../../../hooks/useImagePath";
 
 const ReviewCard = (props: ReviewsObj) => {
-  const ImgPath = import.meta.env.PROD
-    ? `path after build`
-    : `/src/assets/webp/home/reviews/review-ph-${props.profileImg}.png`;
+  const { imagePath } = useImagePath({
+    buildPath: "__",
+    developmentPath: `webp/home/reviews/review-ph-${props.profileImg}.png`,
+  });
 
   return (
     <Stack direction="row" gap="0.5rem" alignItems="center">
       <AspectRatio ratio="1/1" sx={{ width: "5rem", order: props.order && 2 }}>
-        <img src={ImgPath} alt="Client profile image" loading="lazy" />
+        <img src={imagePath} alt="Client profile image" loading="lazy" />
       </AspectRatio>
       <Typography
         level="body-md"

@@ -1,15 +1,8 @@
 import { AspectRatio, Stack } from "@mui/joy";
-import SectionHeaders from "../../SectionHeaders";
 import Blob from "../../../../../assets/svg/blobs/gallery-blob.svg";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
-import { Suspense, lazy } from "react";
-
-const ImagesPhWrapper = lazy(() => import("./ImagesPhWrapper"));
-const ImagesPcWrapper = lazy(() => import("./ImagesPcWrapper"));
+import Content from "./Content";
 
 const Gallery = () => {
-  const { vw } = useViewPortWidth();
-
   return (
     <Stack
       sx={{
@@ -17,15 +10,7 @@ const Gallery = () => {
       }}
       position="relative"
     >
-      <Stack sx={{ mx: "2rem" }} pt="1rem" alignItems="center">
-        <SectionHeaders
-          heading="Gallery"
-          subheading="Some images of our seafood restaurant."
-        />
-        <Suspense fallback="">
-          {vw < 900 ? <ImagesPhWrapper /> : <ImagesPcWrapper />}
-        </Suspense>
-      </Stack>
+      <Content />
       <AspectRatio
         sx={{
           position: "absolute",

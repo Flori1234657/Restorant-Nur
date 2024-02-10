@@ -1,5 +1,6 @@
 import { AspectRatio, Stack, Typography } from "@mui/joy";
 import { ReviewsObj } from "./reviewsObj";
+import useImagePath from "../../../../../hooks/useImagePath";
 
 type Props = {
   rvObj: ReviewsObj;
@@ -7,9 +8,10 @@ type Props = {
 };
 
 const ReviewCardPc = ({ fontS, rvObj }: Props) => {
-  const imagePath = import.meta.env.PROD
-    ? `path for build here`
-    : `/src/assets/webp/home/reviews/review-pc-${rvObj.profileImg}.webp`;
+  const { imagePath } = useImagePath({
+    buildPath: "__",
+    developmentPath: `webp/home/reviews/review-pc-${rvObj.profileImg}.webp`,
+  });
 
   return (
     <Stack
