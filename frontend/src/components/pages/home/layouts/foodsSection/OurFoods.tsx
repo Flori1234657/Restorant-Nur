@@ -1,13 +1,17 @@
-import { AspectRatio, Button, Stack } from "@mui/joy";
+import { Button, Stack } from "@mui/joy";
 import SectionHeaders from "../../SectionHeaders";
-import Decor from "../../../../../assets/svg/others/our-foods-ph-decor.svg";
 import { MdRestaurantMenu as Icon } from "react-icons/md";
-import FoodCardsMap from "./FoodCardsMap";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
+import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver";
+import { Suspense, lazy, useRef } from "react";
+import Fallback from "../../../../same/loading/Fallback";
+
+const FoodCardsWrapper = lazy(() => import("./FoodCardsWrapper"));
 
 const OurFoods = () => {
-  const { vw } = useViewPortWidth();
+  const element = useRef<HTMLDivElement | null>(null);
+  const { isIntersecting } = useIntersectionObserver({ element });
+
   const { size } = useSizeResponsive(false);
 
   return (
@@ -25,31 +29,22 @@ const OurFoods = () => {
         sx={{ gap: { xs: "1rem", lg: "0.8rem", xl: "1.75rem" } }}
         alignItems="center"
       >
-        <Stack
-          sx={{
-            pt: { xs: "3rem", xl: 0 },
-            pb: { xs: "1.57rem", xl: 0 },
-          }}
-          position="relative"
-          alignItems="center"
-        >
-          <FoodCardsMap />
-          {vw < 1536 ? (
-            <AspectRatio
-              ratio="0.09"
-              sx={{
-                width: { xs: "2.15rem", lg: "2.05rem" },
-                position: "absolute",
-                top: 0,
-                zIndex: -1,
-              }}
+        <div ref={element}>
+          {isIntersecting && (
+            <Suspense
+              fallback={
+                <Fallback
+                  height="23.818rem"
+                  heightMd="23.818rem"
+                  heightLg="12.763rem"
+                />
+              }
             >
-              <img src={Decor} alt="" />
-            </AspectRatio>
-          ) : (
-            ""
+              <FoodCardsWrapper />
+            </Suspense>
           )}
-        </Stack>
+        </div>
+        {/* @ts-ignore */}
         <Button size={size} startDecorator={<Icon />}>
           View Menu
         </Button>

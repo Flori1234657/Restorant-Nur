@@ -56,6 +56,7 @@ const AboutUs = () => {
           the 1st restaurant in Ksamil to offer online table reservation! You
           need to try our food to believe us!
         </Typography>
+        {/*@ts-ignore*/}
         <Button size={size} startDecorator={<Icon />}>
           Our Menu
         </Button>

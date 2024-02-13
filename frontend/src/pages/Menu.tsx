@@ -1,7 +1,6 @@
 import MenuCard from "../components/same/menu/MenuCard";
 import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt";
 import { Stack } from "@mui/joy";
-import { ReactSVG } from "react-svg";
 import Blob from "../assets/svg/blobs/menu-blob.svg";
 
 const Menu = () => {

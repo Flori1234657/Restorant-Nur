@@ -21,8 +21,8 @@ const useBluredImage = ({ src, hash, altTxt }: Props) => {
     return (
       <Blurhash
         hash={hash}
-        width={200}
-        height={200}
+        width={400}
+        height={400}
         resolutionX={32}
         resolutionY={32}
         punch={1}

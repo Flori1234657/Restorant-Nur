@@ -7,7 +7,12 @@ const FoodCardsMap = () => {
 
   return (
     <Stack
-      sx={{ gap: { xs: "1rem", xl: "2rem" } }}
+      sx={{
+        gap: { xs: "1rem", xl: "2rem" },
+        minHeight: { xs: "19.248rem", lg: "12.763rem" },
+        alignItems: "center",
+        justifyContent: "center",
+      }}
       direction={vw >= 1536 ? "row" : "column"}
     >
       {["1", "0.9", "0.8"].map((el) => (

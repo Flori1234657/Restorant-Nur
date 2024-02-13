@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Loading from "./components/same/loading/Loading";
 import NavigationBar from "./components/same/navbar/NavigationBar";
 import useViewPortWidth from "./hooks/useViewPortWidth";
 import FallbackPh from "./components/same/headers/FallbackPh";
@@ -29,7 +28,7 @@ function App() {
         ""
       )}
       <NavigationBar />
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={""}>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
