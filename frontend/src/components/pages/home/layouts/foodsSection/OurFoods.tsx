@@ -44,7 +44,6 @@ const OurFoods = () => {
             </Suspense>
           )}
         </div>
-        {/* @ts-ignore */}
         <Button size={size} startDecorator={<Icon />}>
           View Menu
         </Button>

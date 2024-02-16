@@ -32,7 +32,15 @@ const ReservationForm = () => {
               Book My Table
             </Button>
           )}
-          <Button startDecorator={<IconPromo />}>Use A Promo</Button>
+          <Button
+            startDecorator={<IconPromo />}
+            onClick={() => {
+              //PLaceholder only for build
+              setToggleStep("step1");
+            }}
+          >
+            Use A Promo
+          </Button>
         </Stack>
       </form>
       <Suspense fallback="Loading Component">

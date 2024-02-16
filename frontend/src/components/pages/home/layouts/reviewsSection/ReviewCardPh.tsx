@@ -1,12 +1,11 @@
 import { AspectRatio, Stack, Typography } from "@mui/joy";
 import { ReviewsObj } from "./reviewsObj";
-import useImagePath from "../../../../../hooks/useImagePath";
+import { getImagePath } from "../../../../../utils/getImagePath";
 
 const ReviewCard = (props: ReviewsObj) => {
-  const { imagePath } = useImagePath({
-    buildPath: "__",
-    developmentPath: `webp/home/reviews/review-ph-${props.profileImg}.png`,
-  });
+  const imagePath = getImagePath(
+    `webp/home/reviews/review-ph-${props.profileImg}.png`
+  );
 
   return (
     <Stack direction="row" gap="0.5rem" alignItems="center">

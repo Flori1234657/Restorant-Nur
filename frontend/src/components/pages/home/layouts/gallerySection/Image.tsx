@@ -1,15 +1,10 @@
 import { AspectRatio } from "@mui/joy";
-import useImagePath from "../../../../../hooks/useImagePath";
+import { getImagePath } from "../../../../../utils/getImagePath";
 import useBluredImage from "../../../../../hooks/useBluredImage";
 
 const Image = (props: { path: string; ratio: string }) => {
-  const { imagePath } = useImagePath({
-    buildPath: "__",
-    developmentPath: `webp/home/gallery-img-${props.path}`,
-  });
-
   const Img = useBluredImage({
-    src: imagePath,
+    src: getImagePath(`webp/home/gallery-img-${props.path}`),
     hash: "LUF5EBIp4;tR~UIpIV%LS6WBn$xZ",
     altTxt: "Gallery Image for restaurant",
   });

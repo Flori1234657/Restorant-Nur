@@ -1,4 +1,11 @@
-import { Card, CardContent, IconButton, Stack, Typography } from "@mui/joy";
+import {
+  Button,
+  Card,
+  CardContent,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/joy";
 import ReservationItClosed from "./ReservationItClosed";
 import ReservationItOpen from "./ReservationItOpen";
 import { useState } from "react";
@@ -21,6 +28,12 @@ const ReservationItem = () => {
         ) : (
           <ReservationItClosed />
         )}
+        <Button
+          onClick={() => {
+            // the button component is a PLaceholder only for build
+            setToggleOpen(true);
+          }}
+        />
       </CardContent>
     </Card>
   );

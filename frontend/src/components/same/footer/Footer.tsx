@@ -1,15 +1,14 @@
 import { AspectRatio, Stack } from "@mui/joy";
 import { Brand, Contact, Newsletter, MapLocation, Copyright } from "./sections";
 import useViewPortWidth from "../../../hooks/useViewPortWidth";
+import { getImagePath } from "../../../utils/getImagePath";
 
 const Footer = () => {
   const { vw } = useViewPortWidth();
 
-  const imagePath = import.meta.env.PROD
-    ? `path for build here`
-    : vw < 900
-    ? `/src/assets/svg/waves/footer-ph-wave.svg`
-    : `/src/assets/svg/waves/footer-pc-wave.svg`;
+  const imagePath = getImagePath(
+    vw < 900 ? `svg/waves/footer-ph-wave.svg` : `svg/waves/footer-pc-wave.svg`
+  );
 
   return (
     <footer style={{ width: "100%" }}>

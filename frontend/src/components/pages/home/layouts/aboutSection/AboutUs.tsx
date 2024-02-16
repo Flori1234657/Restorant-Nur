@@ -3,16 +3,13 @@ import { MdRestaurantMenu as Icon } from "react-icons/md";
 import SectionHeaders from "../../SectionHeaders";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
 import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
-import useImagePath from "../../../../../hooks/useImagePath";
+import { getImagePath } from "../../../../../utils/getImagePath";
 
 const AboutUs = () => {
   const { size } = useSizeResponsive(false);
   const { vw } = useViewPortWidth();
 
-  const blob = useImagePath({
-    buildPath: "__",
-    developmentPath: `svg/blobs/about-us-blob.svg`,
-  });
+  const blob = getImagePath(`svg/blobs/about-us-blob.svg`);
 
   return (
     <Stack
@@ -56,7 +53,6 @@ const AboutUs = () => {
           the 1st restaurant in Ksamil to offer online table reservation! You
           need to try our food to believe us!
         </Typography>
-        {/*@ts-ignore*/}
         <Button size={size} startDecorator={<Icon />}>
           Our Menu
         </Button>
@@ -71,7 +67,7 @@ const AboutUs = () => {
           }}
           ratio="1.15"
         >
-          <img src={blob.imagePath} alt="Blob shape" />
+          <img src={blob} alt="Blob shape" />
         </AspectRatio>
       ) : (
         ""
