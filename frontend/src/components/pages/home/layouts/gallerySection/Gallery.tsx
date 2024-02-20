@@ -1,6 +1,6 @@
 import { AspectRatio, Stack } from "@mui/joy";
 import Blob from "../../../../../assets/svg/blobs/gallery-blob.svg";
-import Content from "./Content";
+import Content from "./Content.tsx";
 
 const Gallery = () => {
   return (

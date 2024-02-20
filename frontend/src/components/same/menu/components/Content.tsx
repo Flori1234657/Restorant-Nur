@@ -1,5 +1,5 @@
 import { AspectRatio, Stack } from "@mui/joy";
-import CardsWrapper from "./components/CardsWrapper";
+import CardsWrapper from "./components/CardsWrapper.tsx";
 
 const Content = () => {
   return (

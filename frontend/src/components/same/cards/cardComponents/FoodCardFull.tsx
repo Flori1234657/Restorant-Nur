@@ -12,7 +12,7 @@ import { IoHeart as IconWish } from "react-icons/io5";
 import { FaClock, FaCheck } from "react-icons/fa6";
 import { FaUserFriends as UsersIcon } from "react-icons/fa";
 import PlaceholderImg from "../../../../assets/webp/cards/food-placeholder.jpg";
-import theme from "../../../../customTheme";
+import theme from "../../../../customTheme.tsx";
 
 const FoodCardPc = ({ promo }: { promo: boolean }) => {
   return (

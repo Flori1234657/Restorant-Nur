@@ -1,5 +1,5 @@
 import { Stack } from "@mui/joy";
-import Loading from "./Loading";
+import Loading from "./Loading.tsx";
 
 type Props = {
   height: string;

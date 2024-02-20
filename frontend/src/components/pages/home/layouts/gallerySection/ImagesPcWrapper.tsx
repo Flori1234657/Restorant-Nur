@@ -1,5 +1,5 @@
 import { Stack } from "@mui/joy";
-import Image from "./Image";
+import Image from "./Image.tsx";
 
 const ImagesPcWrapper = () => {
   return (

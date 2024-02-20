@@ -1,5 +1,5 @@
 import { Stack } from "@mui/joy";
-import ItemMap from "./phoneItems/ItemMap";
+import ItemMap from "./phoneItems/ItemMap.tsx";
 
 const PhoneNav = () => {
   return (

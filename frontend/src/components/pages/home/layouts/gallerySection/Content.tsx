@@ -1,9 +1,9 @@
 import { Suspense, lazy, useRef } from "react";
-import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver";
+import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver.tsx";
 import { Stack } from "@mui/joy";
-import SectionHeaders from "../../SectionHeaders";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
-import Fallback from "../../../../same/loading/Fallback";
+import SectionHeaders from "../../SectionHeaders.tsx";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
+import Fallback from "../../../../same/loading/Fallback.tsx";
 
 const ImagesPhWrapper = lazy(() => import("./ImagesPhWrapper"));
 const ImagesPcWrapper = lazy(() => import("./ImagesPcWrapper"));

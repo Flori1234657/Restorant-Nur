@@ -1,6 +1,6 @@
 import { Card, CardContent, IconButton, Typography } from "@mui/joy";
 import { IoIosArrowDown as Icon } from "react-icons/io";
-import { closedModalTxt } from "../../sxObj/sxHoursModal";
+import { closedModalTxt } from "../../sxObj/sxHoursModal.tsx";
 
 type Props = {
   openModal: React.Dispatch<React.SetStateAction<boolean>>;

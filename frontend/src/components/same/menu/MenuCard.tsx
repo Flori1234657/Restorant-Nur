@@ -1,6 +1,6 @@
 import { Stack } from "@mui/joy";
-import MenuNav from "./components/MenuNav";
-import Content from "./components/Content";
+import MenuNav from "./components/MenuNav.tsx";
+import Content from "./components/Content.tsx";
 
 const MenuCard = () => {
   return (

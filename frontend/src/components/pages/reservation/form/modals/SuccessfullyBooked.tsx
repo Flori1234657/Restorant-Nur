@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, IconButton, Modal, Stack, Typography } from "@mui/joy";
 import { IoClose } from "react-icons/io5";
-import { ReactSVG } from "react-svg";
 import TickImg from "../../../../../assets/svg/others/successfully-reserved-icon.svg";
 
 type Props = {
@@ -23,7 +22,7 @@ const SuccessfullyBooked = (props: Props) => {
         <IconButton onClick={() => props.setOpen(false)}>
           <IoClose />
         </IconButton>
-        <ReactSVG src={TickImg} />
+        <img src={TickImg} alt="" />
         <Button
           startDecorator={<IoClose />}
           onClick={() => props.setOpen(false)}

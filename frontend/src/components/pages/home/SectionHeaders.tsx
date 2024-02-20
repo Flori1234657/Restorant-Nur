@@ -1,5 +1,5 @@
 import { Stack, Typography } from "@mui/joy";
-import { PageSectionTxtHeaders as Props } from "../../../ts/types/headSubheadTxt";
+import { PageSectionTxtHeaders as Props } from "../../../ts/types/headSubheadTxt.tsx";
 
 const SectionHeaders = (text: Props) => {
   return (

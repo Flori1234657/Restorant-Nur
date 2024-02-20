@@ -1,8 +1,8 @@
 import { Stack, Typography } from "@mui/joy";
-import { footerHeading } from "./sxObjs/textInfo";
+import { footerHeading } from "./sxObjs/textInfo.tsx";
 import { Suspense, lazy, useRef } from "react";
-import Fallback from "../../loading/Fallback";
-import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
+import Fallback from "../../loading/Fallback.tsx";
+import useIntersectionObserver from "../../../../hooks/useIntersectionObserver.tsx";
 
 const Map = lazy(() => import("./map/Map"));
 

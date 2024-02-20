@@ -1,5 +1,5 @@
-import Phone from "./fallbackDevices/Phone";
-import Pc from "./fallbackDevices/Pc";
+import Phone from "./fallbackDevices/Phone.tsx";
+import Pc from "./fallbackDevices/Pc.tsx";
 
 /**
  * InshaaAllah toggle the skeleton

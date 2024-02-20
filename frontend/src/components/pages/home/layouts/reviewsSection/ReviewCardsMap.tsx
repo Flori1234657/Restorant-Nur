@@ -1,10 +1,10 @@
 import { Stack } from "@mui/joy";
-import { arrOfreviwes } from "./reviewsObj";
+import { arrOfreviwes } from "./reviewsObj.ts";
 import { Suspense, lazy } from "react";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
 
-const ReviewCardPc = lazy(() => import("./ReviewCardPc"));
-const ReviewCardPh = lazy(() => import("./ReviewCardPh"));
+const ReviewCardPc = lazy(() => import("./ReviewCardPc.tsx"));
+const ReviewCardPh = lazy(() => import("./ReviewCardPh.tsx"));
 
 const ReviewCardsMap = () => {
   const { vw } = useViewPortWidth();

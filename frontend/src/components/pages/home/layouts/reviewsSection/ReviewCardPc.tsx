@@ -1,6 +1,6 @@
 import { AspectRatio, Stack, Typography } from "@mui/joy";
-import { ReviewsObj } from "./reviewsObj";
-import { getImagePath } from "../../../../../utils/getImagePath";
+import { ReviewsObj } from "./reviewsObj.ts";
+import { getImagePath } from "../../../../../utils/getImagePath.ts";
 
 type Props = {
   rvObj: ReviewsObj;

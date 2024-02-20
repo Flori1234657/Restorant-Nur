@@ -1,8 +1,8 @@
 import { Stack } from "@mui/joy";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
-import Bottom from "./components/Bottom";
-import Content from "./components/Content";
-import heroBckImg from "./utils/getProperImage";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
+import Bottom from "./components/Bottom.tsx";
+import Content from "./components/Content.tsx";
+import heroBckImg from "./utils/getProperImage.ts";
 
 const Hero = () => {
   const { vw } = useViewPortWidth();

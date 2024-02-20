@@ -3,7 +3,7 @@ import FormControl from "@mui/joy/FormControl";
 import FormLabel from "@mui/joy/FormLabel";
 import Input from "@mui/joy/Input";
 import { MdEmail, MdCloudSync } from "react-icons/md";
-import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
+import useSizeResponsive from "../../../../../hooks/useSizeResponsive.tsx";
 
 const Form = () => {
   const { size } = useSizeResponsive(true);

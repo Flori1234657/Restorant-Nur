@@ -1,5 +1,4 @@
 import { Link, Stack } from "@mui/joy";
-import { ReactSVG } from "react-svg";
 import Wave from "../../../../assets/svg/waves/menu-nav-wave.svg";
 
 const MenuNav = () => {
@@ -14,7 +13,7 @@ const MenuNav = () => {
         <Link href="#">Drinks</Link>
         <Link href="#">Others</Link>
       </Stack>
-      <ReactSVG src={Wave} />
+      <img src={Wave} alt="" />
     </Stack>
   );
 };

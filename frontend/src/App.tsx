@@ -1,18 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import NavigationBar from "./components/same/navbar/NavigationBar";
-import useViewPortWidth from "./hooks/useViewPortWidth";
-import FallbackPh from "./components/same/headers/FallbackPh";
-import Footer from "./components/same/footer/Footer";
+import NavigationBar from "./components/same/navbar/NavigationBar.tsx";
+import useViewPortWidth from "./hooks/useViewPortWidth.tsx";
+import FallbackPh from "./components/same/headers/FallbackPh.tsx";
+import Footer from "./components/same/footer/Footer.tsx";
 
-const Home = lazy(() => import("./pages/Home"));
-const Wishlist = lazy(() => import("./pages/Wishlist"));
-const Promos = lazy(() => import("./pages/Promos"));
-const Menu = lazy(() => import("./pages/Menu"));
-const Reservation = lazy(() => import("./pages/Reservation"));
-const NotFound404 = lazy(() => import("./pages/NotFound404"));
+const Home = lazy(() => import("./pages/Home.tsx"));
+const Wishlist = lazy(() => import("./pages/Wishlist.tsx"));
+const Promos = lazy(() => import("./pages/Promos.tsx"));
+const Menu = lazy(() => import("./pages/Menu.tsx"));
+const Reservation = lazy(() => import("./pages/Reservation.tsx"));
+const NotFound404 = lazy(() => import("./pages/NotFound404.tsx"));
 
-const PhoneHeader = lazy(() => import("./components/same/headers/PhoneHeader"));
+const PhoneHeader = lazy(
+  () => import("./components/same/headers/PhoneHeader.tsx")
+);
 
 function App() {
   // Check for viewport changes

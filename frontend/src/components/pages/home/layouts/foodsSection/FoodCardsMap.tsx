@@ -1,6 +1,6 @@
 import { Stack } from "@mui/joy";
-import FoodCard from "../../../../same/cards/FoodCard";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
+import FoodCard from "../../../../same/cards/FoodCard.tsx";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
 
 const FoodCardsMap = () => {
   const { vw } = useViewPortWidth();

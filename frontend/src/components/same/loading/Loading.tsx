@@ -1,3 +1,5 @@
+import "./loading.css";
+
 const Loading = ({ w }: { w: string }) => {
   return (
     <div

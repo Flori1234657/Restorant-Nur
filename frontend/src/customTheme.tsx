@@ -1,4 +1,4 @@
-import { extendTheme } from "@mui/joy/styles";
+import extendTheme from "@mui/joy/styles/extendTheme";
 
 const theme = extendTheme({
   colorSchemes: {

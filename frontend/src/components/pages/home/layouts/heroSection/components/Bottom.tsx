@@ -1,7 +1,7 @@
 import { AspectRatio, Stack } from "@mui/joy";
 import HomeWave from "../../../../../../assets/svg/waves/home-wave.svg";
-import HoursCard from "../openHours/HoursCard";
-import useViewPortWidth from "../../../../../../hooks/useViewPortWidth";
+import HoursCard from "../openHours/HoursCard.tsx";
+import useViewPortWidth from "../../../../../../hooks/useViewPortWidth.tsx";
 
 const Bottom = () => {
   const { vw } = useViewPortWidth();

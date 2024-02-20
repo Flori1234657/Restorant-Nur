@@ -1,7 +1,7 @@
 import { AspectRatio, Stack } from "@mui/joy";
 import Decor from "../../../../../assets/svg/others/our-foods-ph-decor.svg";
-import FoodCardsMap from "./FoodCardsMap";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
+import FoodCardsMap from "./FoodCardsMap.tsx";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
 
 const FoodCardsWrapper = () => {
   const { vw } = useViewPortWidth();

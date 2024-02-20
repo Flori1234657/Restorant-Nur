@@ -1,7 +1,7 @@
 import { AspectRatio, Stack } from "@mui/joy";
 import { Brand, Contact, Newsletter, MapLocation, Copyright } from "./sections";
-import useViewPortWidth from "../../../hooks/useViewPortWidth";
-import { getImagePath } from "../../../utils/getImagePath";
+import useViewPortWidth from "../../../hooks/useViewPortWidth.tsx";
+import { getImagePath } from "../../../utils/getImagePath.ts";
 
 const Footer = () => {
   const { vw } = useViewPortWidth();

@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/joy";
-import Form from "./Form";
-import { footerHeading, footerTextInfo } from "../sxObjs/textInfo";
+import Form from "./Form.tsx";
+import { footerHeading, footerTextInfo } from "../sxObjs/textInfo.tsx";
 
 const Newsletter = () => {
   return (

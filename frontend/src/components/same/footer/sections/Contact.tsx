@@ -5,7 +5,7 @@ import {
   footerHeading,
   footerTextInfo,
   startDecStyles,
-} from "./sxObjs/textInfo";
+} from "./sxObjs/textInfo.tsx";
 
 const Contact = () => {
   return (

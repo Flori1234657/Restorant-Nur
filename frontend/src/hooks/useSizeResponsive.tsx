@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useViewPortWidth from "./useViewPortWidth";
+import useViewPortWidth from "./useViewPortWidth.tsx";
 
 const useSizeResponsive = (navFooter: boolean) => {
   const [size, setSize] = useState<"xs" | "sm" | "md" | "lg">("xs");

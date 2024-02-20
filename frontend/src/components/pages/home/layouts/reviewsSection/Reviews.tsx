@@ -1,6 +1,6 @@
 import { AspectRatio, Stack } from "@mui/joy";
-import SectionHeaders from "../../SectionHeaders";
-import ReviewCardsMap from "./ReviewCardsMap";
+import SectionHeaders from "../../SectionHeaders.tsx";
+import ReviewCardsMap from "./ReviewCardsMap.tsx";
 import Blob from "../../../../../assets/svg/blobs/reviews-blob.svg";
 
 const Reviews = () => {

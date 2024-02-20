@@ -7,4 +7,10 @@ export default defineConfig({
   server: {
     open: true,
   },
+  css: {
+    transformer: "lightningcss",
+  },
+  build: {
+    cssMinify: "lightningcss",
+  },
 });

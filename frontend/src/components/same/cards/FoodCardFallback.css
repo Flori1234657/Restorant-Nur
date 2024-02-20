@@ -1,0 +1,37 @@
+.food-card-fallback {
+  position: relative;
+  width: 3.125rem;
+  aspect-ratio: 1;
+  background: #ff9f0d;
+  transform: rotateX(65deg) rotate(45deg);
+  /*  remove bellows command for perspective change */
+  /* transform: perspective(200px) rotateX(65deg) rotate(45deg); */
+  color: #fff;
+  animation: layers1 1s linear infinite alternate;
+  /* margin: 23.818rem 0; -- 23.818rem 12.763rem */
+}
+.food-card-fallback:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  animation: layerTr 1s linear infinite alternate;
+}
+
+@keyframes layers1 {
+  0% {
+    box-shadow: 0px 0px 0 0px;
+  }
+  90%,
+  100% {
+    box-shadow: 1.25rem 1.25rem 0 -0.25px;
+  }
+}
+@keyframes layerTr {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-1.563rem, -1.563rem) scale(1);
+  }
+}

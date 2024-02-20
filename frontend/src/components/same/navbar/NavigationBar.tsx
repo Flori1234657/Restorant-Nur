@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
-import useViewPortWidth from "../../../hooks/useViewPortWidth";
-import Fallback from "./components/Fallback";
+import useViewPortWidth from "../../../hooks/useViewPortWidth.tsx";
+import Fallback from "./components/Fallback.tsx";
 
-const PcNav = lazy(() => import("./components/PcNav"));
-const PhoneNav = lazy(() => import("./components/PhoneNav"));
+const PcNav = lazy(() => import("./components/PcNav.tsx"));
+const PhoneNav = lazy(() => import("./components/PhoneNav.tsx"));
 
 const NavigationBar = () => {
   // Check for viewport changes

@@ -1,9 +1,9 @@
 import { Stack, Typography, Button, AspectRatio } from "@mui/joy";
 import { MdRestaurantMenu as Icon } from "react-icons/md";
-import SectionHeaders from "../../SectionHeaders";
-import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
-import { getImagePath } from "../../../../../utils/getImagePath";
+import SectionHeaders from "../../SectionHeaders.tsx";
+import useSizeResponsive from "../../../../../hooks/useSizeResponsive.tsx";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
+import { getImagePath } from "../../../../../utils/getImagePath.ts";
 
 const AboutUs = () => {
   const { size } = useSizeResponsive(false);

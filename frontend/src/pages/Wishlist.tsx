@@ -1,6 +1,6 @@
 import { Stack } from "@mui/joy";
-import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt";
-import Content from "../components/pages/wishlist/Content";
+import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt.tsx";
+import Content from "../components/pages/wishlist/Content.tsx";
 
 const Wishlist = () => {
   return (

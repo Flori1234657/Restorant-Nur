@@ -1,6 +1,6 @@
 import { AspectRatio } from "@mui/joy";
-import { getImagePath } from "../../../../../utils/getImagePath";
-import useBluredImage from "../../../../../hooks/useBluredImage";
+import { getImagePath } from "../../../../../utils/getImagePath.ts";
+import useBluredImage from "../../../../../hooks/useBluredImage.tsx";
 
 const Image = (props: { path: string; ratio: string }) => {
   const Img = useBluredImage({

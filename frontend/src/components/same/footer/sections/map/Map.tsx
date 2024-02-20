@@ -2,7 +2,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 import LocationIcn from "../../../../../assets/svg/icons/location.svg";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth";
+import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
 
 const Map = () => {
   const { vw } = useViewPortWidth();

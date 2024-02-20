@@ -2,7 +2,7 @@ import { AspectRatio, Button, Stack, Typography } from "@mui/joy";
 import Illustration from "../../../../../assets/svg/illustrations/home-cta.svg";
 import { GiNotebook as Icon } from "react-icons/gi";
 import Blob from "../../../../../assets/svg/blobs/cta-blob.svg";
-import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
+import useSizeResponsive from "../../../../../hooks/useSizeResponsive.tsx";
 
 const CtaSection = () => {
   const { size } = useSizeResponsive(false);

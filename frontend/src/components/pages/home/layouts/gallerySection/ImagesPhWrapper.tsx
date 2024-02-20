@@ -1,6 +1,6 @@
 import { Grid } from "@mui/joy";
-import { arrOfImgObjs as mapImages } from "./imgsObj";
-import Image from "./Image";
+import { arrOfImgObjs as mapImages } from "./imgsObj.ts";
+import Image from "./Image.tsx";
 
 const ImagesPhWrapper = () => {
   return (

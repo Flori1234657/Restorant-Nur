@@ -1,6 +1,6 @@
 import { Button, Stack, Typography } from "@mui/joy";
-import useViewPortWidth from "../../../../../../hooks/useViewPortWidth";
-import useSizeResponsive from "../../../../../../hooks/useSizeResponsive";
+import useViewPortWidth from "../../../../../../hooks/useViewPortWidth.tsx";
+import useSizeResponsive from "../../../../../../hooks/useSizeResponsive.tsx";
 import { GiNotebook as Icon } from "react-icons/gi";
 
 const Content = () => {

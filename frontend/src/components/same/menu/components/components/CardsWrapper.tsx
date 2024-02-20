@@ -1,5 +1,5 @@
 import { Grid } from "@mui/joy";
-import FoodCard from "./FoodCard";
+import FoodCard from "./FoodCard.tsx";
 
 const CardsWrapper = () => {
   return (

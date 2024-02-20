@@ -1,6 +1,6 @@
-import MenuCard from "../components/same/menu/MenuCard";
-import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt";
-import { Stack } from "@mui/joy";
+import MenuCard from "../components/same/menu/MenuCard.tsx";
+import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt.tsx";
+import Stack from "@mui/joy/Stack";
 //import Blob from "../assets/svg/blobs/menu-blob.svg";
 
 const Menu = () => {

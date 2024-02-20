@@ -1,4 +1,4 @@
-import { getImagePath } from "../../../../../../utils/getImagePath";
+import { getImagePath } from "../../../../../../utils/getImagePath.ts";
 
 const heroBckImg = (screenWidth: number): string => {
   const breakpoint = [600, 900, 1200, 1500, 2000, 2400];

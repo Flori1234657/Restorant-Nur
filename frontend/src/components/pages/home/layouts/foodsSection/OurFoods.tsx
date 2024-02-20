@@ -1,10 +1,10 @@
 import { Button, Stack } from "@mui/joy";
-import SectionHeaders from "../../SectionHeaders";
+import SectionHeaders from "../../SectionHeaders.tsx";
 import { MdRestaurantMenu as Icon } from "react-icons/md";
-import useSizeResponsive from "../../../../../hooks/useSizeResponsive";
-import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver";
+import useSizeResponsive from "../../../../../hooks/useSizeResponsive.tsx";
+import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver.tsx";
 import { Suspense, lazy, useRef } from "react";
-import Fallback from "../../../../same/loading/Fallback";
+import Fallback from "../../../../same/loading/Fallback.tsx";
 
 const FoodCardsWrapper = lazy(() => import("./FoodCardsWrapper"));
 

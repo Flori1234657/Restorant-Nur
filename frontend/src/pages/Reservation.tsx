@@ -1,6 +1,6 @@
 import { Stack } from "@mui/joy";
-import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt";
-import Content from "../components/pages/reservation/Content";
+import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt.tsx";
+import Content from "../components/pages/reservation/Content.tsx";
 
 const Reservation = () => {
   return (
