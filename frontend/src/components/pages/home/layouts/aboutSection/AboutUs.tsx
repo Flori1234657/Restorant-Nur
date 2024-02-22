@@ -1,15 +1,15 @@
-import { Stack, Typography, Button, AspectRatio } from "@mui/joy";
+import { Stack, Typography, Button } from "@mui/joy";
 import { MdRestaurantMenu as Icon } from "react-icons/md";
 import SectionHeaders from "../../SectionHeaders.tsx";
 import useSizeResponsive from "../../../../../hooks/useSizeResponsive.tsx";
 import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
-import { getImagePath } from "../../../../../utils/getImagePath.ts";
+import { Suspense, lazy } from "react";
+
+const PcBlob = lazy(() => import("./PcBlob.tsx"));
 
 const AboutUs = () => {
   const { size } = useSizeResponsive(false);
   const { vw } = useViewPortWidth();
-
-  const blob = getImagePath(`svg/blobs/about-us-blob.svg`);
 
   return (
     <Stack
@@ -58,17 +58,9 @@ const AboutUs = () => {
         </Button>
       </Stack>
       {vw > 899 ? (
-        <AspectRatio
-          sx={{
-            position: "absolute",
-            zIndex: -1,
-            top: 0,
-            width: { md: "23.438rem", xl: "30rem" },
-          }}
-          ratio="1.15"
-        >
-          <img src={blob} alt="Blob shape" />
-        </AspectRatio>
+        <Suspense fallback="">
+          <PcBlob />
+        </Suspense>
       ) : (
         ""
       )}

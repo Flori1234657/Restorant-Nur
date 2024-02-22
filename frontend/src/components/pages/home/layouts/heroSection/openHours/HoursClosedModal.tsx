@@ -4,6 +4,7 @@ import { closedModalTxt } from "../../sxObj/sxHoursModal.tsx";
 
 type Props = {
   openModal: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpening: boolean;
 };
 
 const HoursClosedModal = (props: Props) => {

@@ -18,11 +18,8 @@ const useToggleActiveNav = () => {
   };
 
   const [activeMap, setActiveMap] = useState<NavActiveItems>({
-    Promos: false,
-    Wishlist: false,
+    ...defaultObj,
     Home: true,
-    Menu: false,
-    Book: false,
   });
 
   const changeActive = (

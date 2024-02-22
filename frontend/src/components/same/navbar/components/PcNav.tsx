@@ -1,6 +1,7 @@
 import { AspectRatio, Button, Link, Stack, Typography } from "@mui/joy";
 import Logo from "../../../../assets/logo.svg";
 import { FaPhone } from "react-icons/fa6";
+import { Link as RouterLink } from "react-router-dom";
 
 const PcNav = () => {
   const navItStyles = {
@@ -53,19 +54,19 @@ const PcNav = () => {
         </Stack>
         <nav>
           <Stack sx={{ gap: { md: "1.25rem", lg: "1.4rem" } }} direction="row">
-            <Link sx={navItStyles} href="/">
+            <Link sx={navItStyles} component={RouterLink} to="/">
               Home
             </Link>
-            <Link sx={navItStyles} href="/wishlist">
+            <Link sx={navItStyles} component={RouterLink} to="/wishlist">
               Wishlist
             </Link>
-            <Link sx={navItStyles} href="/promos">
+            <Link sx={navItStyles} component={RouterLink} to="/promos">
               Promos
             </Link>
-            <Link sx={navItStyles} href="/menu">
+            <Link sx={navItStyles} component={RouterLink} to="/menu">
               Menu
             </Link>
-            <Link sx={navItStyles} href="/reservation">
+            <Link sx={navItStyles} component={RouterLink} to="/reservation">
               Reservation
             </Link>
           </Stack>

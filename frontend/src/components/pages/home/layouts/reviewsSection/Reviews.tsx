@@ -1,9 +1,16 @@
 import { AspectRatio, Stack } from "@mui/joy";
 import SectionHeaders from "../../SectionHeaders.tsx";
-import ReviewCardsMap from "./ReviewCardsMap.tsx";
 import Blob from "../../../../../assets/svg/blobs/reviews-blob.svg";
+import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver.tsx";
+import { Suspense, lazy, useRef } from "react";
+import Fallback from "../../../../same/loading/Fallback.tsx";
+
+const ReviewCardsMap = lazy(() => import("./ReviewCardsMap.tsx"));
 
 const Reviews = () => {
+  const ref = useRef<HTMLImageElement | null>(null);
+  const { isIntersecting } = useIntersectionObserver({ element: ref });
+
   return (
     <Stack
       sx={{
@@ -21,7 +28,22 @@ const Reviews = () => {
           heading="Reviews"
           subheading="What our clients say about us?"
         />
-        <ReviewCardsMap />
+
+        {isIntersecting && (
+          <Stack sx={{ minHeight: { xs: "16rem" } }} alignItems="center">
+            <Suspense
+              fallback={
+                <Fallback
+                  height="16.647rem"
+                  heightMd="10.609rem"
+                  heightLg="13.387rem"
+                />
+              }
+            >
+              <ReviewCardsMap />
+            </Suspense>
+          </Stack>
+        )}
       </Stack>
       <AspectRatio
         ratio="0.96"
@@ -31,7 +53,7 @@ const Reviews = () => {
           zIndex: -1,
         }}
       >
-        <img src={Blob} alt="Blob shape" />
+        <img src={Blob} alt="Blob shape" ref={ref} />
       </AspectRatio>
     </Stack>
   );

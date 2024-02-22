@@ -4,6 +4,7 @@ import NavigationBar from "./components/same/navbar/NavigationBar.tsx";
 import useViewPortWidth from "./hooks/useViewPortWidth.tsx";
 import FallbackPh from "./components/same/headers/FallbackPh.tsx";
 import Footer from "./components/same/footer/Footer.tsx";
+import PageLoading from "./components/same/loading/PageLoading.tsx";
 
 const Home = lazy(() => import("./pages/Home.tsx"));
 const Wishlist = lazy(() => import("./pages/Wishlist.tsx"));
@@ -30,7 +31,7 @@ function App() {
         ""
       )}
       <NavigationBar />
-      <Suspense fallback={""}>
+      <Suspense fallback={<PageLoading />}>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

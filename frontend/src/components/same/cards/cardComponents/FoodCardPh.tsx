@@ -1,8 +1,14 @@
 import { AspectRatio, IconButton, Stack, Typography } from "@mui/joy";
 import { IoHeart as IconWish } from "react-icons/io5";
-import PlaceholderImg from "../../../../assets/webp/cards/food-placeholder.jpg";
+import useBluredImage from "../../../../hooks/useBluredImage";
 
 const FoodCardPh = () => {
+  const PlaceholderImg = useBluredImage({
+    src: "/src/assets/webp/cards/food-placeholder.jpg",
+    hash: "LUF5EBIp4;tR~UIpIV%LS6WBn$xZ",
+    altTxt: "Food Image",
+  });
+
   return (
     <Stack
       direction="row"
@@ -22,7 +28,7 @@ const FoodCardPh = () => {
           ratio={1.22}
           sx={{ width: { xs: "7.625em", lg: "7.225em" } }}
         >
-          <img src={PlaceholderImg} alt="Food Image" />
+          {PlaceholderImg}
         </AspectRatio>
         <IconButton
           aria-label="Add to wishlist"

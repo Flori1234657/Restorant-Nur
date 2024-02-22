@@ -11,10 +11,16 @@ import {
 import { IoHeart as IconWish } from "react-icons/io5";
 import { FaClock, FaCheck } from "react-icons/fa6";
 import { FaUserFriends as UsersIcon } from "react-icons/fa";
-import PlaceholderImg from "../../../../assets/webp/cards/food-placeholder.jpg";
 import theme from "../../../../customTheme.tsx";
+import useBluredImage from "../../../../hooks/useBluredImage.tsx";
 
 const FoodCardPc = ({ promo }: { promo: boolean }) => {
+  const PlaceholderImg = useBluredImage({
+    src: "/src/assets/webp/cards/food-placeholder.jpg",
+    hash: "LUF5EBIp4;tR~UIpIV%LS6WBn$xZ",
+    altTxt: "Food Image",
+  });
+
   return (
     <Card
       sx={(theme) => ({
@@ -28,9 +34,7 @@ const FoodCardPc = ({ promo }: { promo: boolean }) => {
       })}
     >
       <CardOverflow>
-        <AspectRatio ratio="1.75">
-          <img src={PlaceholderImg} alt="Food Image" />
-        </AspectRatio>
+        <AspectRatio ratio="1.75">{PlaceholderImg}</AspectRatio>
       </CardOverflow>
       <IconButton
         color="primary"

@@ -7,7 +7,7 @@ import {
 import { IoHeart as IconWish } from "react-icons/io5";
 import { GiNotebook as IconBook } from "react-icons/gi";
 import { NavItProps } from "./Item.tsx";
-import useToggleActiveNav from "../../../../../hooks/useToggleActiveNav.tsx";
+import useToggleActiveNav from "./hooks/useToggleActiveNav.tsx";
 
 const ItemMap = () => {
   const { activeMap, changeActive } = useToggleActiveNav();

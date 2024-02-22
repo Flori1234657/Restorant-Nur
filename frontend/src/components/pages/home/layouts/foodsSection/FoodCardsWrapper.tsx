@@ -1,7 +1,9 @@
-import { AspectRatio, Stack } from "@mui/joy";
-import Decor from "../../../../../assets/svg/others/our-foods-ph-decor.svg";
+import { Stack } from "@mui/joy";
 import FoodCardsMap from "./FoodCardsMap.tsx";
 import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
+import { Suspense, lazy } from "react";
+
+const Decoration = lazy(() => import("./MobileDecoration.tsx"));
 
 const FoodCardsWrapper = () => {
   const { vw } = useViewPortWidth();
@@ -16,17 +18,9 @@ const FoodCardsWrapper = () => {
     >
       <FoodCardsMap />
       {vw < 1536 ? (
-        <AspectRatio
-          ratio="0.09"
-          sx={{
-            width: { xs: "2.15rem", lg: "2.05rem" },
-            position: "absolute",
-            top: 0,
-            zIndex: -1,
-          }}
-        >
-          <img src={Decor} alt="Svg decoration" />
-        </AspectRatio>
+        <Suspense fallback="">
+          <Decoration />
+        </Suspense>
       ) : (
         ""
       )}

@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 import HoursClosedModal from "./HoursClosedModal.tsx";
-import HoursModal from "./HoursModal.tsx";
+
+const HoursModal = lazy(() => import("./HoursModal.tsx"));
 
 const HoursCard = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   return (
     <>
-      <HoursClosedModal openModal={setOpenModal} />
-      <HoursModal open={openModal} setOpen={setOpenModal} />
+      <HoursClosedModal openModal={setOpenModal} isOpening={openModal} />
+      {openModal && (
+        <Suspense fallback="">
+          <HoursModal open={openModal} setOpen={setOpenModal} />
+        </Suspense>
+      )}
     </>
   );
 };

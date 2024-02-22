@@ -1,7 +1,7 @@
 import { IconButton, Stack, Typography } from "@mui/joy";
 import React from "react";
 import { navIt, navItActive } from "../../sxObj/phNavSx.ts";
-import { NavActiveItems } from "../../../../../hooks/useToggleActiveNav.tsx";
+import { NavActiveItems } from "./hooks/useToggleActiveNav.tsx";
 import { useNavigate } from "react-router-dom";
 
 export type NavItProps = {
