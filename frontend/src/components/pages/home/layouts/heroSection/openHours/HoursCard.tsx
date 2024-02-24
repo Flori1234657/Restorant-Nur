@@ -1,9 +1,9 @@
-import { Suspense, lazy, useState } from "react";
-import HoursClosedModal from "./HoursClosedModal.tsx";
+import { Suspense, lazy, useState } from 'react';
+import HoursClosedModal from './HoursClosedModal';
 
-const HoursModal = lazy(() => import("./HoursModal.tsx"));
+const HoursModal = lazy(() => import('./HoursModal'));
 
-const HoursCard = () => {
+function HoursCard() {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   return (
@@ -16,6 +16,6 @@ const HoursCard = () => {
       )}
     </>
   );
-};
+}
 
 export default HoursCard;

@@ -5,9 +5,9 @@ import {
   OurFoods,
   Reviews,
   CtaSection,
-} from "../components/pages/home/layouts";
+} from '@/components/pages/home/layouts';
 
-const Home = () => {
+function Home() {
   return (
     <>
       <Hero />
@@ -18,6 +18,6 @@ const Home = () => {
       <CtaSection />
     </>
   );
-};
+}
 
 export default Home;

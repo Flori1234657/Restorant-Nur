@@ -1,5 +1,6 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,9 +9,12 @@ export default defineConfig({
     open: true,
   },
   css: {
-    transformer: "lightningcss",
+    transformer: 'lightningcss',
   },
   build: {
-    cssMinify: "lightningcss",
+    cssMinify: 'lightningcss',
+  },
+  resolve: {
+    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   },
 });

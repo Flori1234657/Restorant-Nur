@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export type NavActiveItems = {
   Promos: boolean;
@@ -23,7 +23,7 @@ const useToggleActiveNav = () => {
   });
 
   const changeActive = (
-    name: "Promos" | "Wishlist" | "Home" | "Menu" | "Book"
+    name: 'Promos' | 'Wishlist' | 'Home' | 'Menu' | 'Book'
   ) => {
     const newObj = structuredClone(defaultObj);
     setActiveMap({ ...newObj, [name]: true });

@@ -1,9 +1,9 @@
-import { AspectRatio, Stack, Typography } from "@mui/joy";
-import Logo from "../../../assets/logo.svg";
+import { AspectRatio, Stack, Typography } from '@mui/joy';
+import Logo from '@/assets/logo.svg';
 
-const PhoneHeader = () => {
+function PhoneHeader() {
   return (
-    <header style={{ width: "100%", position: "absolute" }}>
+    <header style={{ width: '100%', position: 'absolute' }}>
       <Stack
         px="2rem"
         py="0.5rem"
@@ -14,7 +14,7 @@ const PhoneHeader = () => {
           borderBottom: `1px solid ${theme.palette.primary[100]}`,
         })}
       >
-        <AspectRatio ratio="1/1" sx={{ width: "2.5rem" }}>
+        <AspectRatio ratio="1/1" sx={{ width: '2.5rem' }}>
           <img src={Logo} alt="Restaurant logo" />
         </AspectRatio>
         <Typography
@@ -28,6 +28,6 @@ const PhoneHeader = () => {
       </Stack>
     </header>
   );
-};
+}
 
 export default PhoneHeader;

@@ -1,9 +1,9 @@
-import { Stack } from "@mui/joy";
-import ActionsPanel from "./components/ActionsPanel";
-import Wave from "../../../assets/svg/waves/wishlist-wave.svg";
-import ContentWrapper from "./components/ContentWrapper";
+import { Stack } from '@mui/joy';
+import ActionsPanel from './components/ActionsPanel';
+import Wave from '@/assets/svg/waves/wishlist-wave.svg';
+import ContentWrapper from './components/ContentWrapper';
 
-const Content = () => {
+function Content() {
   return (
     <Stack>
       <ActionsPanel />
@@ -11,6 +11,6 @@ const Content = () => {
       <ContentWrapper />
     </Stack>
   );
-};
+}
 
 export default Content;

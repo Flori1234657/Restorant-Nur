@@ -1,15 +1,15 @@
-import { AspectRatio, Stack } from "@mui/joy";
-import CardsWrapper from "./components/CardsWrapper.tsx";
+import { AspectRatio, Stack } from '@mui/joy';
+import CardsWrapper from './components/CardsWrapper';
 
-const Content = () => {
+function Content() {
   return (
     <Stack>
       <AspectRatio>
-        <img src="" alt="Food image" />
+        <img src="" alt="Food" />
       </AspectRatio>
       <CardsWrapper />
     </Stack>
   );
-};
+}
 
 export default Content;

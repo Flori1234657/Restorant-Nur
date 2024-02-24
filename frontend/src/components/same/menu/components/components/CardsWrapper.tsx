@@ -1,7 +1,7 @@
-import { Grid } from "@mui/joy";
-import FoodCard from "./FoodCard.tsx";
+import { Grid } from '@mui/joy';
+import FoodCard from './FoodCard';
 
-const CardsWrapper = () => {
+function CardsWrapper() {
   return (
     <Grid container columns={6}>
       {[1, 2, 3, 4, 5, 6].map((el) => (
@@ -11,6 +11,6 @@ const CardsWrapper = () => {
       ))}
     </Grid>
   );
-};
+}
 
 export default CardsWrapper;

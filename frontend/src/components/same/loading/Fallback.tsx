@@ -1,5 +1,5 @@
-import { Stack } from "@mui/joy";
-import Loading from "./Loading.tsx";
+import { Stack } from '@mui/joy';
+import Loading from './Loading';
 
 type Props = {
   height: string;
@@ -7,17 +7,22 @@ type Props = {
   heightLg?: string;
 };
 
-const Fallback = ({ height, heightMd, heightLg }: Props) => {
+function Fallback({ height, heightMd, heightLg }: Props) {
   return (
     <Stack
       sx={{
-        height: { xs: height, md: heightMd || "auto", lg: heightLg || "auto" },
-        justifyContent: "center",
+        height: { xs: height, md: heightMd, lg: heightLg },
+        justifyContent: 'center',
       }}
     >
       <Loading w="3.125rem" />
     </Stack>
   );
+}
+
+Fallback.defaultProps = {
+  heightMd: 'auto',
+  heightLg: 'auto',
 };
 
 export default Fallback;

@@ -1,13 +1,13 @@
-import { Link, Stack, Typography } from "@mui/joy";
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+import { Link, Stack, Typography } from '@mui/joy';
+import { FaPhone } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
 import {
   footerHeading,
   footerTextInfo,
   startDecStyles,
-} from "./sxObjs/textInfo.tsx";
+} from './sxObjs/textInfo';
 
-const Contact = () => {
+function Contact() {
   return (
     <Stack gap="0.25rem">
       <Typography level="h2" sx={(theme) => footerHeading(theme)}>
@@ -15,7 +15,7 @@ const Contact = () => {
       </Typography>
       <Stack gap="0.25rem">
         <Link
-          href="#"
+          href="tel:+355 68 839 3968"
           startDecorator={<FaPhone />}
           sx={(theme) => footerTextInfo(theme)}
           slotProps={startDecStyles}
@@ -23,7 +23,7 @@ const Contact = () => {
           +355 68 839 3968
         </Link>
         <Link
-          href="#"
+          href="tel:+355 68 839 3968"
           startDecorator={<FaPhone />}
           sx={(theme) => footerTextInfo(theme)}
           slotProps={startDecStyles}
@@ -31,7 +31,7 @@ const Contact = () => {
           +355 68 596 3254
         </Link>
         <Link
-          href="#"
+          href="mailto:floriandollani15@gmail.com"
           startDecorator={<MdEmail />}
           sx={(theme) => footerTextInfo(theme)}
           slotProps={startDecStyles}
@@ -41,6 +41,6 @@ const Contact = () => {
       </Stack>
     </Stack>
   );
-};
+}
 
 export default Contact;

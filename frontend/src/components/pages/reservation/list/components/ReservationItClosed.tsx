@@ -1,6 +1,6 @@
-import { Table } from "@mui/joy";
+import { Table } from '@mui/joy';
 
-const ReservationItClosed = () => {
+function ReservationItClosed() {
   return (
     <Table aria-label="Card Info Table">
       <thead>
@@ -23,6 +23,6 @@ const ReservationItClosed = () => {
       </tbody>
     </Table>
   );
-};
+}
 
 export default ReservationItClosed;

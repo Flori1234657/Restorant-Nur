@@ -1,21 +1,18 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { lazy, Suspense } from "react";
-import NavigationBar from "./components/same/navbar/NavigationBar.tsx";
-import useViewPortWidth from "./hooks/useViewPortWidth.tsx";
-import FallbackPh from "./components/same/headers/FallbackPh.tsx";
-import Footer from "./components/same/footer/Footer.tsx";
-import PageLoading from "./components/same/loading/PageLoading.tsx";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import NavigationBar from '@/components/same/navbar/NavigationBar';
+import useViewPortWidth from '@/hooks/useViewPortWidth';
+import Footer from '@/components/same/footer/Footer';
+import PageLoading from '@/components/same/loading/PageLoading';
 
-const Home = lazy(() => import("./pages/Home.tsx"));
-const Wishlist = lazy(() => import("./pages/Wishlist.tsx"));
-const Promos = lazy(() => import("./pages/Promos.tsx"));
-const Menu = lazy(() => import("./pages/Menu.tsx"));
-const Reservation = lazy(() => import("./pages/Reservation.tsx"));
-const NotFound404 = lazy(() => import("./pages/NotFound404.tsx"));
+const Home = lazy(() => import('@/pages/Home'));
+const Wishlist = lazy(() => import('@/pages/Wishlist'));
+const Promos = lazy(() => import('@/pages/Promos'));
+const Menu = lazy(() => import('@/pages/Menu'));
+const Reservation = lazy(() => import('@/pages/Reservation'));
+const NotFound404 = lazy(() => import('@/pages/NotFound404'));
 
-const PhoneHeader = lazy(
-  () => import("./components/same/headers/PhoneHeader.tsx")
-);
+const PhoneHeader = lazy(() => import('@/components/same/headers/PhoneHeader'));
 
 function App() {
   // Check for viewport changes
@@ -24,11 +21,11 @@ function App() {
   return (
     <BrowserRouter>
       {vw < 900 ? (
-        <Suspense fallback={<FallbackPh />}>
+        <Suspense fallback={''}>
           <PhoneHeader />
         </Suspense>
       ) : (
-        ""
+        ''
       )}
       <NavigationBar />
       <Suspense fallback={<PageLoading />}>

@@ -1,10 +1,10 @@
-import { Stack, Typography } from "@mui/joy";
-import Form from "./Form.tsx";
-import { footerHeading, footerTextInfo } from "../sxObjs/textInfo.tsx";
+import { Stack, Typography } from '@mui/joy';
+import Form from './Form';
+import { footerHeading, footerTextInfo } from '../sxObjs/textInfo';
 
-const Newsletter = () => {
+function Newsletter() {
   return (
-    <Stack gap="0.75rem" sx={{ maxWidth: { md: "8.063rem" } }}>
+    <Stack gap="0.75rem" sx={{ maxWidth: { md: '8.063rem' } }}>
       <Stack>
         <Typography level="h2" sx={(theme) => footerHeading(theme)}>
           Newsletter
@@ -16,6 +16,6 @@ const Newsletter = () => {
       <Form />
     </Stack>
   );
-};
+}
 
 export default Newsletter;

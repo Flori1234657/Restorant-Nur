@@ -1,7 +1,7 @@
-import { Stack } from "@mui/joy";
-import FoodCard from "../../../../../same/cards/FoodCard";
+import { Stack } from '@mui/joy';
+import FoodCard from '../../../../../same/cards/FoodCard';
 
-const FromWishCards = () => {
+function FromWishCards() {
   return (
     <Stack>
       {[1, 2, 3].map((el) => (
@@ -11,6 +11,6 @@ const FromWishCards = () => {
       ))}
     </Stack>
   );
-};
+}
 
 export default FromWishCards;

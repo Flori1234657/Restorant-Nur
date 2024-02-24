@@ -5,13 +5,13 @@ import {
   IconButton,
   Stack,
   Typography,
-} from "@mui/joy";
-import ReservationItClosed from "./ReservationItClosed";
-import ReservationItOpen from "./ReservationItOpen";
-import { useState } from "react";
-import { IoIosArrowDown as ArrIcon } from "react-icons/io";
+} from '@mui/joy';
+import { useState } from 'react';
+import { IoIosArrowDown as ArrIcon } from 'react-icons/io';
+import ReservationItClosed from './ReservationItClosed';
+import ReservationItOpen from './ReservationItOpen';
 
-const ReservationItem = () => {
+function ReservationItem() {
   const [toggleOpen, setToggleOpen] = useState<boolean>(false);
 
   return (
@@ -37,6 +37,6 @@ const ReservationItem = () => {
       </CardContent>
     </Card>
   );
-};
+}
 
 export default ReservationItem;

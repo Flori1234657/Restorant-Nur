@@ -5,29 +5,29 @@
  * components
  */
 
-import { lazy, useState } from "react";
+import { lazy, useState } from 'react';
 
-const TapToSelect = lazy(() => import("./TapToSelect"));
-const ConfirmBooking = lazy(() => import("./ConfirmBooking"));
-const BookingFailed = lazy(() => import("./BookingFailedModal"));
-const SuccessfullyBooked = lazy(() => import("./SuccessfullyBooked"));
+const TapToSelect = lazy(() => import('./TapToSelect'));
+const ConfirmBooking = lazy(() => import('./ConfirmBooking'));
+const BookingFailed = lazy(() => import('./BookingFailedModal'));
+const SuccessfullyBooked = lazy(() => import('./SuccessfullyBooked'));
 
-const BookingModalsWrapper = () => {
+function BookingModalsWrapper() {
   // Zustand state to return the specified modal
-  const sampleZustandState = "Confirm";
+  const sampleZustandState = 'Confirm';
 
   const [open, setOpen] = useState<boolean>(true);
-  //@ts-ignore  <-- only before initializing zustand_/
-  if (sampleZustandState === "SelectDishes")
+  // @ts-ignore  <-- only before initializing zustand_/
+  if (sampleZustandState === 'SelectDishes')
     return <TapToSelect open={open} setOpen={setOpen} />;
-  if (sampleZustandState === "Confirm")
+  if (sampleZustandState === 'Confirm')
     return <ConfirmBooking open={open} setOpen={setOpen} />;
-  if (sampleZustandState === "Failed")
+  if (sampleZustandState === 'Failed')
     return <BookingFailed open={open} setOpen={setOpen} />;
-  if (sampleZustandState === "Success")
+  if (sampleZustandState === 'Success')
     return <SuccessfullyBooked open={open} setOpen={setOpen} />;
 
   return <></>;
-};
+}
 
 export default BookingModalsWrapper;

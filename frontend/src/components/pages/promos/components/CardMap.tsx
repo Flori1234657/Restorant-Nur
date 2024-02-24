@@ -1,7 +1,7 @@
-import { Stack, Typography } from "@mui/joy";
-import FoodCard from "../../../same/cards/FoodCard";
+import { Stack, Typography } from '@mui/joy';
+import FoodCard from '@/components/same/cards/FoodCard';
 
-const CardMap = ({ categoryName }: { categoryName: string }) => {
+function CardMap({ categoryName }: { categoryName: string }) {
   return (
     <Stack>
       <Typography level="h1">{categoryName}</Typography>
@@ -12,6 +12,6 @@ const CardMap = ({ categoryName }: { categoryName: string }) => {
       </Stack>
     </Stack>
   );
-};
+}
 
 export default CardMap;

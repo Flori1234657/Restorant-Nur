@@ -8,18 +8,18 @@ import {
   Typography,
   Chip,
   Modal,
-} from "@mui/joy";
-import { IoHeart as IconWish } from "react-icons/io5";
-import { FaClock, FaCheck } from "react-icons/fa6";
-import { FaUserFriends as UsersIcon, FaCalendar } from "react-icons/fa";
+} from '@mui/joy';
+import { IoHeart as IconWish } from 'react-icons/io5';
+import { FaClock, FaCheck } from 'react-icons/fa6';
+import { FaUserFriends as UsersIcon, FaCalendar } from 'react-icons/fa';
 
-const WishlistCardOpen = () => {
+function WishlistCardOpen() {
   return (
     <Modal open={false}>
       <Card>
         <CardOverflow>
           <AspectRatio>
-            <img src="" alt="Food Image" />
+            <img src="" alt="Food" />
           </AspectRatio>
         </CardOverflow>
         <IconButton>
@@ -48,6 +48,6 @@ const WishlistCardOpen = () => {
       </Card>
     </Modal>
   );
-};
+}
 
 export default WishlistCardOpen;

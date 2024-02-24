@@ -1,14 +1,14 @@
-import { Stack } from "@mui/joy";
-import CardMap from "./CardMap";
+import { Stack } from '@mui/joy';
+import CardMap from './CardMap';
 
-const CategoryMap = () => {
+function CategoryMap() {
   return (
     <Stack>
-      {["Economic", "Dinner", "Breakfast"].map((el) => (
+      {['Economic', 'Dinner', 'Breakfast'].map((el) => (
         <CardMap categoryName={el} />
       ))}
     </Stack>
   );
-};
+}
 
 export default CategoryMap;

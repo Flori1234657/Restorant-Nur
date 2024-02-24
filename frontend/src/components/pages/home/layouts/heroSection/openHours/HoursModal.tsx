@@ -1,37 +1,37 @@
-import { Button, Modal, ModalDialog, Table } from "@mui/joy";
-import { IoIosArrowUp as Icon } from "react-icons/io";
+import { Button, Modal, ModalDialog, Table } from '@mui/joy';
+import { IoIosArrowUp as Icon } from 'react-icons/io';
 
 type Props = {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const HoursModal = (props: Props) => {
+function HoursModal({ open, setOpen }: Props) {
   const placeholderData = [
-    { firstDay: "(mon)", opensAt: "07 : 45", closesAt: "11 : 45" },
-    { opensAt: "07 : 45", closesAt: "11 : 45" },
-    { opensAt: "07 : 45", closesAt: "11 : 45" },
-    { opensAt: "07 : 45", closesAt: "11 : 45" },
-    { opensAt: "14 : 30", closesAt: "11 : 45" },
-    { opensAt: "07 : 45", closesAt: "11 : 45" },
-    { opensAt: "07 : 45", closesAt: "11 : 45" },
+    { firstDay: '(mon)', opensAt: '07 : 45', closesAt: '11 : 45' },
+    { opensAt: '07 : 45', closesAt: '11 : 45' },
+    { opensAt: '07 : 45', closesAt: '11 : 45' },
+    { opensAt: '07 : 45', closesAt: '11 : 45' },
+    { opensAt: '14 : 30', closesAt: '11 : 45' },
+    { opensAt: '07 : 45', closesAt: '11 : 45' },
+    { opensAt: '07 : 45', closesAt: '11 : 45' },
   ];
 
   const styles = {
     head: {
-      fontSize: "0.875rem",
-      backgroundColor: "transparent",
+      fontSize: '0.875rem',
+      backgroundColor: 'transparent',
     },
-    data: { fontSize: "0.75rem", fontWeight: "bold" },
+    data: { fontSize: '0.75rem', fontWeight: 'bold' },
   };
 
   return (
-    <Modal open={props.open}>
+    <Modal open={open}>
       <ModalDialog
         sx={(theme) => ({
-          width: { xs: "100%", md: "auto" },
-          maxWidth: { lg: "26.25rem" },
-          borderRadius: "0.5rem",
+          width: { xs: '100%', md: 'auto' },
+          maxWidth: { lg: '26.25rem' },
+          borderRadius: '0.5rem',
           bgcolor: theme.palette.primary[100],
         })}
       >
@@ -45,6 +45,7 @@ const HoursModal = (props: Props) => {
           </thead>
           <tbody>
             {placeholderData.map((el, i) => (
+              // eslint-disable-next-line react/no-array-index-key
               <tr key={i}>
                 <td style={styles.data}>{el.firstDay || i + 1}</td>
                 <td style={styles.data}>{el.opensAt}</td>
@@ -53,12 +54,12 @@ const HoursModal = (props: Props) => {
             ))}
           </tbody>
         </Table>
-        <Button startDecorator={<Icon />} onClick={() => props.setOpen(false)}>
+        <Button startDecorator={<Icon />} onClick={() => setOpen(false)}>
           Close
         </Button>
       </ModalDialog>
     </Modal>
   );
-};
+}
 
 export default HoursModal;

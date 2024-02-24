@@ -5,15 +5,15 @@ import {
   AspectRatio,
   Stack,
   Typography,
-} from "@mui/joy";
+} from '@mui/joy';
 
-const FoodCard = () => {
+function FoodCard() {
   // Use zustand to add to selected cards for reservation page
   return (
     <Card>
       <CardOverflow>
         <AspectRatio>
-          <img src="" alt="Food Image" />
+          <img src="" alt="Food" />
         </AspectRatio>
       </CardOverflow>
       <CardContent>
@@ -26,6 +26,6 @@ const FoodCard = () => {
       </CardContent>
     </Card>
   );
-};
+}
 
 export default FoodCard;

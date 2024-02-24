@@ -1,10 +1,10 @@
-import { Stack, Typography } from "@mui/joy";
-import Inputs from "./Inputs";
-import { useState, lazy } from "react";
+import { Stack, Typography } from '@mui/joy';
+import { useState, lazy } from 'react';
+import Inputs from './Inputs';
 
-const TableMap = lazy(() => import("./tableMap/TableMap"));
+const TableMap = lazy(() => import('./tableMap/TableMap'));
 
-const StepOne = () => {
+function StepOne() {
   const [toggleTableMap, setToggleTableMap] = useState<boolean>(false);
 
   return (
@@ -19,6 +19,6 @@ const StepOne = () => {
       )}
     </Stack>
   );
-};
+}
 
 export default StepOne;

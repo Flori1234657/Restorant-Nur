@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Blurhash } from "react-blurhash";
+import { useEffect, useState } from 'react';
+import { Blurhash } from 'react-blurhash';
 
 type Props = {
   src: string;

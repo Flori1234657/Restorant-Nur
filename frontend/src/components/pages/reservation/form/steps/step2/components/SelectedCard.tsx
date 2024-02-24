@@ -1,7 +1,7 @@
-import { AspectRatio, Badge, IconButton } from "@mui/joy";
-import { FiMinus } from "react-icons/fi";
+import { AspectRatio, Badge, IconButton } from '@mui/joy';
+import { FiMinus } from 'react-icons/fi';
 
-const SelectedCard = () => {
+function SelectedCard() {
   return (
     <Badge
       badgeContent={
@@ -11,10 +11,10 @@ const SelectedCard = () => {
       }
     >
       <AspectRatio>
-        <img src="" alt="Food image" />
+        <img src="" alt="Food" />
       </AspectRatio>
     </Badge>
   );
-};
+}
 
 export default SelectedCard;

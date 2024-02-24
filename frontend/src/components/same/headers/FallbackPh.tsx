@@ -1,11 +1,11 @@
-import { Skeleton } from "@mui/joy";
+import { Skeleton } from '@mui/joy';
 
-const FallbackPh = () => {
+function FallbackPh() {
   return (
     <header>
       <Skeleton />
     </header>
   );
-};
+}
 
 export default FallbackPh;

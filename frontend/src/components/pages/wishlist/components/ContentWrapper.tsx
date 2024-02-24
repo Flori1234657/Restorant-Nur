@@ -1,7 +1,7 @@
-import { Grid } from "@mui/joy";
-import FoodCard from "../../../same/cards/FoodCard";
+import { Grid } from '@mui/joy';
+import FoodCard from '../../../same/cards/FoodCard';
 
-const ContentWrapper = () => {
+function ContentWrapper() {
   return (
     <Grid container>
       {[1, 2, 3, 4].map((el) => (
@@ -11,6 +11,6 @@ const ContentWrapper = () => {
       ))}
     </Grid>
   );
-};
+}
 
 export default ContentWrapper;

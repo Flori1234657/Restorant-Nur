@@ -1,8 +1,8 @@
 /// <reference types="vite/client" />
 // You can put this to any file that's included in your tsconfig
-import type { PaletteRange } from "@mui/joy/styles";
+import type { PaletteRange } from '@mui/joy/styles';
 
-declare module "@mui/joy/styles" {
+declare module '@mui/joy/styles' {
   interface ColorPalettePropOverrides {
     // apply to all Joy UI components that support `color` prop
     secondary: true;

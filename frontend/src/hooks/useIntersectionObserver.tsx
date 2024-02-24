@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from "react";
+import { RefObject, useEffect, useState } from 'react';
 
 type Props<T extends HTMLElement> = {
   element: RefObject<T>;
@@ -29,6 +29,7 @@ const useIntersectionObserver = <T extends HTMLElement>({
 
     io.observe(target);
 
+    // eslint-disable-next-line consistent-return
     return () => io.disconnect();
   }, [element]);
 

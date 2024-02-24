@@ -1,13 +1,13 @@
-import { Stack, Typography } from "@mui/joy";
-import { PageSectionTxtHeaders as Props } from "../../../ts/types/headSubheadTxt.ts";
+import { Stack, Typography } from '@mui/joy';
+import { PageSectionTxtHeaders as Props } from '@/ts/types/headSubheadTxt';
 
-const PagesHeaderTxt = (text: Props) => {
+function PagesHeaderTxt({ heading, subheading }: Props) {
   return (
     <Stack>
-      <Typography>{text.heading}</Typography>
-      <Typography>{text.subheading}</Typography>
+      <Typography>{heading}</Typography>
+      <Typography>{subheading}</Typography>
     </Stack>
   );
-};
+}
 
 export default PagesHeaderTxt;

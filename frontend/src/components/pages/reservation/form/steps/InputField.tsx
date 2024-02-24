@@ -1,4 +1,4 @@
-import { FormControl, FormHelperText, FormLabel, Input } from "@mui/joy";
+import { FormControl, FormHelperText, FormLabel, Input } from '@mui/joy';
 
 type InputProps = {
   label: string;
@@ -8,18 +8,24 @@ type InputProps = {
   actions?: () => void;
 };
 
-const InputField = (props: InputProps) => {
+function InputField({
+  errorText,
+  label,
+  placeholder,
+  type,
+  actions,
+}: InputProps) {
   return (
     <FormControl>
-      <FormLabel>{props.label}</FormLabel>
+      <FormLabel>{label}</FormLabel>
       <Input
-        type={props.type}
-        placeholder={props.placeholder}
-        onClick={props.actions && props.actions}
+        type={type}
+        placeholder={placeholder}
+        onClick={actions && actions}
       />
-      <FormHelperText>{props.errorText}</FormHelperText>
+      <FormHelperText>{errorText}</FormHelperText>
     </FormControl>
   );
-};
+}
 
 export default InputField;

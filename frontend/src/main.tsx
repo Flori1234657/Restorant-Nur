@@ -1,11 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-import theme from "./customTheme.tsx";
-import { CssVarsProvider } from "@mui/joy/styles/CssVarsProvider";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { CssVarsProvider } from '@mui/joy/styles/CssVarsProvider';
+import App from '@/App';
+import '@/index.css';
+import theme from '@/customTheme';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <CssVarsProvider theme={theme}>
       <App />

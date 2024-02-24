@@ -1,20 +1,20 @@
-import { Stack } from "@mui/joy";
-import { arrOfreviwes } from "./reviewsObj.ts";
-import { Suspense, lazy } from "react";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
+import { Stack } from '@mui/joy';
+import { Suspense, lazy } from 'react';
+import { arrOfreviwes } from './reviewsObj';
+import useViewPortWidth from '@/hooks/useViewPortWidth';
 
-const ReviewCardPc = lazy(() => import("./ReviewCardPc.tsx"));
-const ReviewCardPh = lazy(() => import("./ReviewCardPh.tsx"));
+const ReviewCardPc = lazy(() => import('./ReviewCardPc'));
+const ReviewCardPh = lazy(() => import('./ReviewCardPh'));
 
-const ReviewCardsMap = () => {
+function ReviewCardsMap() {
   const { vw } = useViewPortWidth();
 
   return (
     <Stack
       sx={{
-        gap: { xs: "0.5rem", md: "1.5rem" },
+        gap: { xs: '0.5rem', md: '1.5rem' },
       }}
-      direction={vw >= 900 ? "row" : "column"}
+      direction={vw >= 900 ? 'row' : 'column'}
     >
       <Suspense fallback="">
         {arrOfreviwes.map((el) =>
@@ -28,7 +28,7 @@ const ReviewCardsMap = () => {
           ) : (
             <ReviewCardPc
               key={el.profileImg}
-              fontS={el.fontSize || "1rem"}
+              fontS={el.fontSize || '1rem'}
               rvObj={el}
             />
           )
@@ -36,6 +36,6 @@ const ReviewCardsMap = () => {
       </Suspense>
     </Stack>
   );
-};
+}
 
 export default ReviewCardsMap;

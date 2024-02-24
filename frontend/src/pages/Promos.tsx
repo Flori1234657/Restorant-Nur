@@ -1,8 +1,8 @@
-import { Stack } from "@mui/joy";
-import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt.tsx";
-import Content from "../components/pages/promos/Content.tsx";
+import { Stack } from '@mui/joy';
+import PagesHeaderTxt from '@/components/same/headers/PagesHeaderTxt';
+import Content from '@/components/pages/promos/Content';
 
-const Promos = () => {
+function Promos() {
   return (
     <Stack>
       <PagesHeaderTxt
@@ -12,6 +12,6 @@ const Promos = () => {
       <Content />
     </Stack>
   );
-};
+}
 
 export default Promos;

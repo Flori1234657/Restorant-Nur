@@ -1,6 +1,6 @@
-import { Button, IconButton, Modal, Stack, Typography } from "@mui/joy";
-import React from "react";
-import { IoClose } from "react-icons/io5";
+import { Button, IconButton, Modal, Stack, Typography } from '@mui/joy';
+import React from 'react';
+import { IoClose } from 'react-icons/io5';
 
 type Props = {
   text: string;
@@ -20,29 +20,36 @@ type Props = {
   };
 };
 
-const TwoOptionsModal = (props: Props) => {
+function TwoOptionsModal({
+  btn1,
+  btn2,
+  setOpenModal,
+  text,
+  toggleState,
+  helperTxt,
+}: Props) {
   return (
     <>
-      {" "}
-      <Modal open={props.toggleState}>
+      {' '}
+      <Modal open={toggleState}>
         <Stack>
-          <Typography>{props.text}</Typography>
-          <IconButton onClick={() => props.setOpenModal(false)}>
+          <Typography>{text}</Typography>
+          <IconButton onClick={() => setOpenModal(false)}>
             <IoClose />
           </IconButton>
           <Stack>
-            <Button startDecorator={props.btn1.icn}>{props.btn1.txt}</Button>
-            <Button startDecorator={props.btn2.icn}>{props.btn2.txt}</Button>
+            <Button startDecorator={btn1.icn}>{btn1.txt}</Button>
+            <Button startDecorator={btn2.icn}>{btn2.txt}</Button>
           </Stack>
-          {props.helperTxt && (
-            <Typography startDecorator={props.helperTxt.icon}>
-              {props.helperTxt.txt}
+          {helperTxt && (
+            <Typography startDecorator={helperTxt.icon}>
+              {helperTxt.txt}
             </Typography>
           )}
         </Stack>
       </Modal>
     </>
   );
-};
+}
 
 export default TwoOptionsModal;

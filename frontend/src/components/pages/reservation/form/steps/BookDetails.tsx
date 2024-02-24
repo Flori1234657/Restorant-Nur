@@ -1,13 +1,13 @@
-import { Stack, Typography } from "@mui/joy";
+import { Stack, Typography } from '@mui/joy';
 import {
   FaUserFriends as PersonsIcon,
   FaCalendar as DateIcon,
   FaClock as ClockIcon,
-} from "react-icons/fa";
-import { GiMeal as DishIcon } from "react-icons/gi";
-import { MdTableBar as TableIcon } from "react-icons/md";
+} from 'react-icons/fa';
+import { GiMeal as DishIcon } from 'react-icons/gi';
+import { MdTableBar as TableIcon } from 'react-icons/md';
 
-const BookDetails = () => {
+function BookDetails() {
   return (
     <Stack>
       <Typography startDecorator={<PersonsIcon />}>
@@ -37,6 +37,6 @@ const BookDetails = () => {
       </Stack>
     </Stack>
   );
-};
+}
 
 export default BookDetails;

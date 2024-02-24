@@ -1,5 +1,5 @@
-const TableUnavailable = () => {
+function TableUnavailable() {
   return <div>TableUnavailable</div>;
-};
+}
 
 export default TableUnavailable;

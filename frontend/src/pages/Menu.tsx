@@ -1,9 +1,9 @@
-import MenuCard from "../components/same/menu/MenuCard.tsx";
-import PagesHeaderTxt from "../components/same/headers/PagesHeaderTxt.tsx";
-import Stack from "@mui/joy/Stack";
-//import Blob from "../assets/svg/blobs/menu-blob.svg";
+import Stack from '@mui/joy/Stack';
+import MenuCard from '@/components/same/menu/MenuCard';
+import PagesHeaderTxt from '@/components/same/headers/PagesHeaderTxt';
+// import Blob from "../assets/svg/blobs/menu-blob.svg";
 
-const Menu = () => {
+function Menu() {
   return (
     <Stack>
       <PagesHeaderTxt
@@ -13,6 +13,6 @@ const Menu = () => {
       <MenuCard />
     </Stack>
   );
-};
+}
 
 export default Menu;

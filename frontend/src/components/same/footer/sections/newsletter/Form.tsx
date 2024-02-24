@@ -1,11 +1,11 @@
-import { Button, Stack } from "@mui/joy";
-import FormControl from "@mui/joy/FormControl";
-import FormLabel from "@mui/joy/FormLabel";
-import Input from "@mui/joy/Input";
-import { MdEmail, MdCloudSync } from "react-icons/md";
-import useSizeResponsive from "../../../../../hooks/useSizeResponsive.tsx";
+import { Button, Stack } from '@mui/joy';
+import FormControl from '@mui/joy/FormControl';
+import FormLabel from '@mui/joy/FormLabel';
+import Input from '@mui/joy/Input';
+import { MdEmail, MdCloudSync } from 'react-icons/md';
+import useSizeResponsive from '@/hooks/useSizeResponsive';
 
-const Form = () => {
+function Form() {
   const { size } = useSizeResponsive(true);
 
   return (
@@ -14,14 +14,14 @@ const Form = () => {
         <FormLabel
           sx={(theme) => ({
             color: theme.palette.primary[300],
-            fontSize: { xl: "0.65rem" },
+            fontSize: { xl: '0.65rem' },
           })}
         >
           Email
         </FormLabel>
         <Input
           size={size}
-          sx={{ boxShadow: "none" }}
+          sx={{ boxShadow: 'none' }}
           startDecorator={<MdEmail />}
           placeholder="example@email.com"
         />
@@ -31,6 +31,6 @@ const Form = () => {
       </Button>
     </Stack>
   );
-};
+}
 
 export default Form;

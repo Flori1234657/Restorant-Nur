@@ -1,21 +1,21 @@
-import { Suspense, lazy, useRef } from "react";
-import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver.tsx";
-import { Stack } from "@mui/joy";
-import SectionHeaders from "../../SectionHeaders.tsx";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
-import Fallback from "../../../../same/loading/Fallback.tsx";
+import { Suspense, lazy, useRef } from 'react';
+import { Stack } from '@mui/joy';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import SectionHeaders from '../../SectionHeaders';
+import useViewPortWidth from '@/hooks/useViewPortWidth';
+import Fallback from '@/components/same/loading/Fallback';
 
-const ImagesPhWrapper = lazy(() => import("./ImagesPhWrapper"));
-const ImagesPcWrapper = lazy(() => import("./ImagesPcWrapper"));
+const ImagesPhWrapper = lazy(() => import('./ImagesPhWrapper'));
+const ImagesPcWrapper = lazy(() => import('./ImagesPcWrapper'));
 
-const Content = () => {
+function Content() {
   const ref = useRef<HTMLDivElement | null>(null);
   const { isIntersecting } = useIntersectionObserver({ element: ref });
 
   const { vw } = useViewPortWidth();
 
   return (
-    <Stack sx={{ mx: "2rem" }} pt="1rem" alignItems="center">
+    <Stack sx={{ mx: '2rem' }} pt="1rem" alignItems="center">
       <SectionHeaders
         heading="Gallery"
         subheading="Some images of our seafood restaurant."
@@ -37,6 +37,6 @@ const Content = () => {
       </div>
     </Stack>
   );
-};
+}
 
 export default Content;

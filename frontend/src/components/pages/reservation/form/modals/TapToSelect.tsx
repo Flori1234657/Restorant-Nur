@@ -1,21 +1,21 @@
-import { Button, Modal, Stack, Typography } from "@mui/joy";
-import FromWishCards from "./tapToSelectFrom/FromWishCards";
-import MenuCard from "../../../../same/menu/MenuCard";
-import { GoArrowRight as ArrIcon } from "react-icons/go";
-import { IoClose as CloseIcon } from "react-icons/io5";
-import Wave from "../../../../../assets/svg/waves/tap-to-select-modal-wave.svg";
+import { Button, Modal, Stack, Typography } from '@mui/joy';
+import { GoArrowRight as ArrIcon } from 'react-icons/go';
+import { IoClose as CloseIcon } from 'react-icons/io5';
+import FromWishCards from './tapToSelectFrom/FromWishCards';
+import MenuCard from '../../../../same/menu/MenuCard';
+import Wave from '../../../../../assets/svg/waves/tap-to-select-modal-wave.svg';
 
 type Props = {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const TapToSelect = (props: Props) => {
+function TapToSelect({ open, setOpen }: Props) {
   // Use a zustand state to toggle
-  const zustandSampleModalType: "wishlist" | "menu" = "wishlist";
+  const zustandSampleModalType: 'wishlist' | 'menu' = 'wishlist';
 
   return (
-    <Modal open={props.open}>
+    <Modal open={open}>
       <Stack>
         <Stack>
           <Typography>Tab to select</Typography>
@@ -25,7 +25,7 @@ const TapToSelect = (props: Props) => {
            */}
           <Typography>1 selected</Typography>
         </Stack>
-        {zustandSampleModalType === "wishlist" ? (
+        {zustandSampleModalType === 'wishlist' ? (
           <FromWishCards />
         ) : (
           <MenuCard />
@@ -38,6 +38,6 @@ const TapToSelect = (props: Props) => {
       </Stack>
     </Modal>
   );
-};
+}
 
 export default TapToSelect;

@@ -1,17 +1,17 @@
-import { Stack } from "@mui/joy";
-import FoodCardsMap from "./FoodCardsMap.tsx";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
-import { Suspense, lazy } from "react";
+import { Stack } from '@mui/joy';
+import { Suspense, lazy } from 'react';
+import FoodCardsMap from './FoodCardsMap';
+import useViewPortWidth from '@/hooks/useViewPortWidth';
 
-const Decoration = lazy(() => import("./MobileDecoration.tsx"));
+const Decoration = lazy(() => import('./MobileDecoration'));
 
-const FoodCardsWrapper = () => {
+function FoodCardsWrapper() {
   const { vw } = useViewPortWidth();
   return (
     <Stack
       sx={{
-        pt: { xs: "3rem", xl: 0 },
-        pb: { xs: "1.57rem", xl: 0 },
+        pt: { xs: '3rem', xl: 0 },
+        pb: { xs: '1.57rem', xl: 0 },
       }}
       position="relative"
       alignItems="center"
@@ -22,10 +22,10 @@ const FoodCardsWrapper = () => {
           <Decoration />
         </Suspense>
       ) : (
-        ""
+        ''
       )}
     </Stack>
   );
-};
+}
 
 export default FoodCardsWrapper;

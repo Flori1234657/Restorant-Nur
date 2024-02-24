@@ -1,18 +1,18 @@
-import useViewPortWidth from "../../../hooks/useViewPortWidth.tsx";
-import { Suspense, lazy } from "react";
-import "./FoodCardFallback.css";
+import { Suspense, lazy } from 'react';
+import useViewPortWidth from '@/hooks/useViewPortWidth';
+import './FoodCardFallback.css';
 
-const FoodCardPh = lazy(() => import("./cardComponents/FoodCardPh.tsx"));
-const FoodCardPc = lazy(() => import("./cardComponents/FoodCardFull.tsx"));
+const FoodCardPh = lazy(() => import('./cardComponents/FoodCardPh'));
+const FoodCardPc = lazy(() => import('./cardComponents/FoodCardFull'));
 
-const FoodCard = () => {
+function FoodCard() {
   const { vw } = useViewPortWidth();
 
   return (
-    <Suspense fallback={<span className="food-card-fallback"></span>}>
+    <Suspense fallback={<span className="food-card-fallback" />}>
       {vw < 1536 ? <FoodCardPh /> : <FoodCardPc promo={false} />}
     </Suspense>
   );
-};
+}
 
 export default FoodCard;

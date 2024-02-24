@@ -1,10 +1,10 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import { Icon } from "leaflet";
-import LocationIcn from "../../../../../assets/svg/icons/location.svg";
-import useViewPortWidth from "../../../../../hooks/useViewPortWidth.tsx";
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import { Icon } from 'leaflet';
+import LocationIcn from '@/assets/svg/icons/location.svg';
+import useViewPortWidth from '@/hooks/useViewPortWidth';
 
-const Map = () => {
+function Map() {
   const { vw } = useViewPortWidth();
 
   const customIcon = new Icon({
@@ -16,9 +16,9 @@ const Map = () => {
       center={[39.768669, 19.993046]}
       zoom={13}
       style={{
-        width: vw < 900 ? "80%" : "8.084rem",
-        height: "8rem",
-        borderRadius: "0.5rem",
+        width: vw < 900 ? '80%' : '8.084rem',
+        height: '8rem',
+        borderRadius: '0.5rem',
       }}
     >
       <TileLayer
@@ -32,6 +32,6 @@ const Map = () => {
       </Marker>
     </MapContainer>
   );
-};
+}
 
 export default Map;

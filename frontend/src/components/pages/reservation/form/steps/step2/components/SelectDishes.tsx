@@ -1,13 +1,13 @@
-import { Grid, IconButton, Stack, Typography } from "@mui/joy";
-import { FaPlus } from "react-icons/fa6";
-import SelectedCard from "./SelectedCard";
-import { MdRestaurantMenu as IconMenu } from "react-icons/md";
-import { IoHeart as IconWish } from "react-icons/io5";
-import { Suspense, lazy, useState } from "react";
+import { Grid, IconButton, Stack, Typography } from '@mui/joy';
+import { FaPlus } from 'react-icons/fa6';
+import { MdRestaurantMenu as IconMenu } from 'react-icons/md';
+import { IoHeart as IconWish } from 'react-icons/io5';
+import { Suspense, lazy, useState } from 'react';
+import SelectedCard from './SelectedCard';
 
-const TwoOptionsModal = lazy(() => import("../../../modals/TwoOptionsModal"));
+const TwoOptionsModal = lazy(() => import('../../../modals/TwoOptionsModal'));
 
-const SelectDishes = () => {
+function SelectDishes() {
   const [toggleModal, setToggleModal] = useState<boolean>(false);
 
   return (
@@ -28,11 +28,11 @@ const SelectDishes = () => {
         ))}
       </Grid>
       {toggleModal && (
-        <Suspense fallback={"Loading Component"}>
+        <Suspense fallback="Loading Component">
           <TwoOptionsModal
             text="Select dishes"
-            btn1={{ txt: "From Wishlist", icn: <IconWish /> }}
-            btn2={{ txt: "From Menu", icn: <IconMenu /> }}
+            btn1={{ txt: 'From Wishlist', icn: <IconWish /> }}
+            btn2={{ txt: 'From Menu', icn: <IconMenu /> }}
             toggleState={toggleModal}
             setOpenModal={setToggleModal}
           />
@@ -40,6 +40,6 @@ const SelectDishes = () => {
       )}
     </Stack>
   );
-};
+}
 
 export default SelectDishes;

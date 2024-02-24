@@ -1,9 +1,9 @@
-import { Input, Stack } from "@mui/joy";
-import { IoSearch } from "react-icons/io5";
-import Filter from "./Filter";
-import ClearButton from "./ClearButton";
+import { Input, Stack } from '@mui/joy';
+import { IoSearch } from 'react-icons/io5';
+import Filter from './Filter';
+import ClearButton from './ClearButton';
 
-const ActionsPanel = () => {
+function ActionsPanel() {
   return (
     <Stack>
       <Stack>
@@ -13,6 +13,6 @@ const ActionsPanel = () => {
       <ClearButton />
     </Stack>
   );
-};
+}
 
 export default ActionsPanel;

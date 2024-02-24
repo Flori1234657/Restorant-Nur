@@ -1,15 +1,15 @@
-import { lazy, Suspense, useState } from "react";
-import { Button, Stack, Typography } from "@mui/joy";
-import StepOne from "./steps/step1/StepOne";
-import { GoArrowRight as ArrIcon } from "react-icons/go";
-import { MdDiscount as IconPromo } from "react-icons/md";
-import { GiNotebook as BookIcon } from "react-icons/gi";
-import BookingModalsWrapper from "./modals/BookingModalsWrapper";
+import { lazy, Suspense, useState } from 'react';
+import { Button, Stack, Typography } from '@mui/joy';
+import { GoArrowRight as ArrIcon } from 'react-icons/go';
+import { MdDiscount as IconPromo } from 'react-icons/md';
+import { GiNotebook as BookIcon } from 'react-icons/gi';
+import StepOne from './steps/step1/StepOne';
+import BookingModalsWrapper from './modals/BookingModalsWrapper';
 
-const StepTwo = lazy(() => import("./steps/step2/StepTwo"));
+const StepTwo = lazy(() => import('./steps/step2/StepTwo'));
 
-const ReservationForm = () => {
-  const [toggleStep, setToggleStep] = useState<"step1" | "step2">("step1");
+function ReservationForm() {
+  const [toggleStep, setToggleStep] = useState<'step1' | 'step2'>('step1');
   const [bookTable, setBookTable] = useState<boolean>(false); // Only for first time download <BookingModalsWrapper />
 
   return (
@@ -17,10 +17,10 @@ const ReservationForm = () => {
       <Typography>Book a table</Typography>
       <form>
         <Suspense fallback="">
-          {toggleStep === "step1" ? <StepOne /> : <StepTwo />}
+          {toggleStep === 'step1' ? <StepOne /> : <StepTwo />}
         </Suspense>
         <Stack>
-          {toggleStep === "step1" ? (
+          {toggleStep === 'step1' ? (
             <Button startDecorator={<ArrIcon />}>Next</Button>
           ) : (
             <Button
@@ -35,8 +35,8 @@ const ReservationForm = () => {
           <Button
             startDecorator={<IconPromo />}
             onClick={() => {
-              //PLaceholder only for build
-              setToggleStep("step1");
+              // PLaceholder only for build
+              setToggleStep('step1');
             }}
           >
             Use A Promo
@@ -48,6 +48,6 @@ const ReservationForm = () => {
       </Suspense>
     </Stack>
   );
-};
+}
 
 export default ReservationForm;

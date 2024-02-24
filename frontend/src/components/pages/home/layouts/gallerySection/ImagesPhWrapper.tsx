@@ -1,16 +1,16 @@
-import { Grid } from "@mui/joy";
-import { arrOfImgObjs as mapImages } from "./imgsObj.ts";
-import Image from "./Image.tsx";
+import { Grid } from '@mui/joy';
+import mapImages from './imgsObj';
+import Image from './Image';
 
-const ImagesPhWrapper = () => {
+function ImagesPhWrapper() {
   return (
     <Grid
       container
       columns={6}
       sx={{
-        columnGap: "0.25rem",
-        rowGap: "0.25rem",
-        placeContent: "center",
+        columnGap: '0.25rem',
+        rowGap: '0.25rem',
+        placeContent: 'center',
       }}
     >
       {mapImages.map((el) => (
@@ -20,6 +20,6 @@ const ImagesPhWrapper = () => {
       ))}
     </Grid>
   );
-};
+}
 
 export default ImagesPhWrapper;

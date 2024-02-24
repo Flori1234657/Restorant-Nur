@@ -1,11 +1,11 @@
-import { Stack } from "@mui/joy";
-import InputField from "../InputField";
+import { Stack } from '@mui/joy';
+import InputField from '../InputField';
 
 type Props = {
   openTableModal: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Inputs = ({ openTableModal }: Props) => {
+function Inputs({ openTableModal }: Props) {
   return (
     <Stack>
       <InputField
@@ -45,6 +45,6 @@ const Inputs = ({ openTableModal }: Props) => {
       </Stack>
     </Stack>
   );
-};
+}
 
 export default Inputs;

@@ -1,14 +1,14 @@
-import { Button, Stack } from "@mui/joy";
-import SectionHeaders from "../../SectionHeaders.tsx";
-import { MdRestaurantMenu as Icon } from "react-icons/md";
-import useSizeResponsive from "../../../../../hooks/useSizeResponsive.tsx";
-import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver.tsx";
-import { Suspense, lazy, useRef } from "react";
-import Fallback from "../../../../same/loading/Fallback.tsx";
+import { Button, Stack } from '@mui/joy';
+import { MdRestaurantMenu as Icon } from 'react-icons/md';
+import { Suspense, lazy, useRef } from 'react';
+import SectionHeaders from '../../SectionHeaders';
+import useSizeResponsive from '@/hooks/useSizeResponsive';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import Fallback from '@/components/same/loading/Fallback';
 
-const FoodCardsWrapper = lazy(() => import("./FoodCardsWrapper"));
+const FoodCardsWrapper = lazy(() => import('./FoodCardsWrapper'));
 
-const OurFoods = () => {
+function OurFoods() {
   const element = useRef<HTMLDivElement | null>(null);
   const { isIntersecting } = useIntersectionObserver({ element });
 
@@ -17,8 +17,8 @@ const OurFoods = () => {
   return (
     <Stack
       sx={{
-        mt: { xs: "3.25rem", md: "8.563rem", lg: "13.7rem", xl: "18.692rem" },
-        mx: { xs: "2rem", xl: "9.773rem" },
+        mt: { xs: '3.25rem', md: '8.563rem', lg: '13.7rem', xl: '18.692rem' },
+        mx: { xs: '2rem', xl: '9.773rem' },
       }}
     >
       <SectionHeaders
@@ -26,7 +26,7 @@ const OurFoods = () => {
         subheading="100% halal food from our halal restaurant!"
       />
       <Stack
-        sx={{ gap: { xs: "1rem", lg: "0.8rem", xl: "1.75rem" } }}
+        sx={{ gap: { xs: '1rem', lg: '0.8rem', xl: '1.75rem' } }}
         alignItems="center"
       >
         <div ref={element}>
@@ -50,6 +50,6 @@ const OurFoods = () => {
       </Stack>
     </Stack>
   );
-};
+}
 
 export default OurFoods;

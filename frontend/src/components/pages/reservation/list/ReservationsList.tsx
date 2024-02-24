@@ -1,7 +1,7 @@
-import { Stack, Typography } from "@mui/joy";
-import ReservationItem from "./components/ReservationItem";
+import { Stack, Typography } from '@mui/joy';
+import ReservationItem from './components/ReservationItem';
 
-const ReservationsList = () => {
+function ReservationsList() {
   return (
     <Stack>
       <Stack>
@@ -13,6 +13,6 @@ const ReservationsList = () => {
       ))}
     </Stack>
   );
-};
+}
 
 export default ReservationsList;

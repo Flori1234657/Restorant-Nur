@@ -1,9 +1,9 @@
-import { Stack, Typography } from "@mui/joy";
-import InputField from "../InputField";
-import SelectDishes from "./components/SelectDishes";
-import Checkout from "./components/Checkout";
+import { Stack, Typography } from '@mui/joy';
+import InputField from '../InputField';
+import SelectDishes from './components/SelectDishes';
+import Checkout from './components/Checkout';
 
-const StepTwo = () => {
+function StepTwo() {
   return (
     <Stack>
       <Typography level="body-lg">STEP 2/2</Typography>
@@ -23,6 +23,6 @@ const StepTwo = () => {
       <Checkout />
     </Stack>
   );
-};
+}
 
 export default StepTwo;
