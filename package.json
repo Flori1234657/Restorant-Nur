@@ -8,6 +8,8 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^19.0.3",
+    "@commitlint/config-conventional": "^19.0.3",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2"
   },
@@ -16,6 +18,7 @@
   },
   "lint-staged": {
     "frontend/src/**/*.{js,jsx,ts,tsx,css}": "frontend/node_modules/.bin/prettier --write --ignore-unknown",
-    "frontend/src/**/*.{js,jsx,ts,tsx}": "frontend/node_modules/.bin/eslint"
+    "frontend/src/**/*.{js,jsx,ts,tsx}": "frontend/node_modules/.bin/eslint",
+    "**.json": "frontend/node_modules/.bin/prettier --write"
   }
 }
