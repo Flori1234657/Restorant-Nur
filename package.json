@@ -1,0 +1,21 @@
+{
+  "name": "restorant-nur",
+  "version": "1.0.0",
+  "description": "\"A full stack webApp\"",
+  "main": "index.js",
+  "repository": "https://github.com/Flori1234657/Restorant-Nur.git",
+  "author": "Flori <floriandollani15@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2"
+  },
+  "scripts": {
+    "postinstall": "husky"
+  },
+  "lint-staged": {
+    "frontend/src/**/*.{js,jsx,ts,tsx,css}": "prettier --write --ignore-unknown",
+    "frontend/src/**/*.{js,jsx,ts,tsx}": "eslint"
+  }
+}

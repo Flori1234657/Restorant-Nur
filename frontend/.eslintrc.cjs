@@ -22,9 +22,10 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react-refresh', 'prettier'],
+  plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
   settings: {
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
+    react: { version: 'detect' },
   },
   rules: {
     'react-refresh/only-export-components': [
@@ -32,7 +33,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
+    // '@typescript-eslint/no-unused-vars': 'warn',
     'import/extensions': [
       'error',
       'always',
