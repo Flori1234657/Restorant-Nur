@@ -20,12 +20,17 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
+    project: require.resolve('./tsconfig.json'),
   },
   plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
   settings: {
     'import/extensions': ['.js', '.mjs', '.jsx', '.ts', '.tsx'],
     react: { version: 'detect' },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
   },
   rules: {
     'react-refresh/only-export-components': [
@@ -33,12 +38,12 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'react/react-in-jsx-scope': 'off',
-    // '@typescript-eslint/no-unused-vars': 'warn',
     'import/extensions': [
       'error',
       'always',
       {
         pattern: {
+          '': 'never',
           js: 'never',
           ts: 'never',
           jsx: 'never',
@@ -46,10 +51,5 @@ module.exports = {
         },
       },
     ],
-  },
-  'import/resolver': {
-    typescript: {
-      alwaysTryTypes: true,
-    },
   },
 };

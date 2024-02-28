@@ -11,7 +11,6 @@ const Promos = lazy(() => import('@/pages/Promos'));
 const Menu = lazy(() => import('@/pages/Menu'));
 const Reservation = lazy(() => import('@/pages/Reservation'));
 const NotFound404 = lazy(() => import('@/pages/NotFound404'));
-
 const PhoneHeader = lazy(() => import('@/components/same/headers/PhoneHeader'));
 
 function App() {
@@ -21,7 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       {vw < 900 ? (
-        <Suspense fallback={''}>
+        <Suspense fallback="">
           <PhoneHeader />
         </Suspense>
       ) : (

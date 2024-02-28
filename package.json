@@ -15,7 +15,7 @@
     "postinstall": "husky"
   },
   "lint-staged": {
-    "frontend/src/**/*.{js,jsx,ts,tsx,css}": "prettier --write --ignore-unknown",
-    "frontend/src/**/*.{js,jsx,ts,tsx}": "eslint"
+    "frontend/src/**/*.{js,jsx,ts,tsx,css}": "frontend/node_modules/.bin/prettier --write --ignore-unknown",
+    "frontend/src/**/*.{js,jsx,ts,tsx}": "frontend/node_modules/.bin/eslint"
   }
 }
