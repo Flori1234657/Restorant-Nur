@@ -1,22 +1,22 @@
 import { Stack, Typography } from '@mui/joy';
 import { Suspense, lazy, useRef } from 'react';
-import { footerHeading } from './sxObjs/textInfo';
+import { footerHeadingStyles } from './sxObjs/textInfo';
 import Fallback from '../../loading/Fallback';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 
 const Map = lazy(() => import('./map/Map'));
 
 function MapLocation() {
-  const elm = useRef<HTMLDivElement | null>(null);
+  const element = useRef<HTMLDivElement | null>(null);
 
-  const { isIntersecting } = useIntersectionObserver({ element: elm });
+  const { isIntersecting } = useIntersectionObserver({ element });
 
   return (
     <Stack gap="0.5rem">
-      <Typography level="h2" sx={(theme) => footerHeading(theme)}>
+      <Typography level="h2" sx={(theme) => footerHeadingStyles(theme)}>
         Find us on map
       </Typography>
-      <div ref={elm}>
+      <div ref={element}>
         {' '}
         <Suspense fallback={<Fallback height="8rem" />}>
           {isIntersecting && <Map />}

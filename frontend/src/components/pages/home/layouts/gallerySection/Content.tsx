@@ -9,8 +9,8 @@ const ImagesPhWrapper = lazy(() => import('./ImagesPhWrapper'));
 const ImagesPcWrapper = lazy(() => import('./ImagesPcWrapper'));
 
 function Content() {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const { isIntersecting } = useIntersectionObserver({ element: ref });
+  const element = useRef<HTMLDivElement | null>(null);
+  const { isIntersecting } = useIntersectionObserver({ element });
 
   const { vw } = useViewPortWidth();
 
@@ -20,7 +20,7 @@ function Content() {
         heading="Gallery"
         subheading="Some images of our seafood restaurant."
       />
-      <div ref={ref} aria-label="Wrapper div">
+      <div ref={element} aria-label="Wrapper div">
         {isIntersecting && (
           <Suspense
             fallback={

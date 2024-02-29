@@ -8,8 +8,8 @@ import Fallback from '@/components/same/loading/Fallback';
 const ReviewCardsMap = lazy(() => import('./ReviewCardsMap'));
 
 function Reviews() {
-  const ref = useRef<HTMLImageElement | null>(null);
-  const { isIntersecting } = useIntersectionObserver({ element: ref });
+  const element = useRef<HTMLImageElement | null>(null);
+  const { isIntersecting } = useIntersectionObserver({ element });
 
   return (
     <Stack
@@ -53,7 +53,7 @@ function Reviews() {
           zIndex: -1,
         }}
       >
-        <img src={Blob} alt="Blob shape" ref={ref} />
+        <img src={Blob} alt="Blob shape" ref={element} />
       </AspectRatio>
     </Stack>
   );

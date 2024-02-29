@@ -14,7 +14,7 @@ const useIntersectionObserver = <T extends HTMLElement>({
 
     if (!target) return;
 
-    const io = new IntersectionObserver(
+    const intersectionObserver = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -27,10 +27,10 @@ const useIntersectionObserver = <T extends HTMLElement>({
       { threshold: 0.5 }
     );
 
-    io.observe(target);
+    intersectionObserver.observe(target);
 
     // eslint-disable-next-line consistent-return
-    return () => io.disconnect();
+    return () => intersectionObserver.disconnect();
   }, [element]);
 
   return { isIntersecting };

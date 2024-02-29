@@ -13,9 +13,9 @@ function ImagesPhWrapper() {
         placeContent: 'center',
       }}
     >
-      {mapImages.map((el) => (
-        <Grid key={el.path} xs={el.gridColumns} width={el.width}>
-          <Image path={el.path} ratio={el.ratio} />
+      {mapImages.map((image) => (
+        <Grid key={image.path} xs={image.gridColumns} width={image.width}>
+          <Image path={image.path} ratio={image.ratio} />
         </Grid>
       ))}
     </Grid>

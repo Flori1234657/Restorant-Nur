@@ -6,13 +6,13 @@
 
 import { Theme } from '@mui/joy';
 
-export const footerTextInfo = (theme: Theme) => ({
+export const footerTextInfoStyles = (theme: Theme) => ({
   color: theme.palette.primary[100],
   fontSize: { xs: '0.875rem', md: '0.75rem', lg: '0.7rem', xl: '0.65rem' },
   lineHeight: { xs: '142%', xl: '150%' },
 });
 
-export const startDecStyles = {
+export const startDecoratorStyles = {
   startDecorator: {
     style: {
       color: '#FFC56D',
@@ -20,7 +20,7 @@ export const startDecStyles = {
   },
 };
 
-export const footerHeading = (theme: Theme) => ({
+export const footerHeadingStyles = (theme: Theme) => ({
   color: theme.palette.primary[500],
   fontSize: { xs: '1.125rem', md: '1rem', lg: '0.9rem', xl: '0.813rem' },
   fontWeight: 600,

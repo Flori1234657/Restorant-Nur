@@ -5,14 +5,14 @@ import {
 } from 'react-icons/md';
 import { IoHeart as IconWish } from 'react-icons/io5';
 import { GiNotebook as IconBook } from 'react-icons/gi';
-import Item, { NavItProps } from './Item';
+import Item, { NavItemProps } from './Item';
 
 import useToggleActiveNav from './hooks/useToggleActiveNav';
 
 const ItemMap = () => {
   const { activeMap, changeActive } = useToggleActiveNav();
 
-  const mapObj: NavItProps[] = [
+  const mapObj: NavItemProps[] = [
     {
       icon: <IconPromo />,
       txt: 'Promos',

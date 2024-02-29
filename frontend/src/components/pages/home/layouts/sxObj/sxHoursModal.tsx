@@ -6,11 +6,11 @@
 
 import { Theme } from '@mui/joy';
 
-const closedModalTxt = (theme: Theme) => ({
+const closedModalTxtStyles = (theme: Theme) => ({
   color: theme.palette.primary[100],
   fontSize: { xs: '0.75rem', lg: '0.7rem', xl: '0.65rem' },
   fontWeight: '600',
   lineHeight: { lg: '142%' },
 });
 
-export default closedModalTxt;
+export default closedModalTxtStyles;

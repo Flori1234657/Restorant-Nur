@@ -1,10 +1,10 @@
 import { AspectRatio, Button, Link, Stack, Typography } from '@mui/joy';
-import { FaPhone } from 'react-icons/fa6';
+import { FaPhone as PhoneIcon } from 'react-icons/fa6';
 import { Link as RouterLink } from 'react-router-dom';
 import Logo from '@/assets/logo.svg';
 
 function PcNav() {
-  const navItStyles = {
+  const navItemStyles = {
     underline: 'none',
     fontSize: { md: '0.75rem', lg: '0.7rem', xl: '0.65rem' },
     fontWeight: 600,
@@ -54,24 +54,24 @@ function PcNav() {
         </Stack>
         <nav>
           <Stack sx={{ gap: { md: '1.25rem', lg: '1.4rem' } }} direction="row">
-            <Link sx={navItStyles} component={RouterLink} to="/">
+            <Link sx={navItemStyles} component={RouterLink} to="/">
               Home
             </Link>
-            <Link sx={navItStyles} component={RouterLink} to="/wishlist">
+            <Link sx={navItemStyles} component={RouterLink} to="/wishlist">
               Wishlist
             </Link>
-            <Link sx={navItStyles} component={RouterLink} to="/promos">
+            <Link sx={navItemStyles} component={RouterLink} to="/promos">
               Promos
             </Link>
-            <Link sx={navItStyles} component={RouterLink} to="/menu">
+            <Link sx={navItemStyles} component={RouterLink} to="/menu">
               Menu
             </Link>
-            <Link sx={navItStyles} component={RouterLink} to="/reservation">
+            <Link sx={navItemStyles} component={RouterLink} to="/reservation">
               Reservation
             </Link>
           </Stack>
         </nav>
-        <Button size="xs" startDecorator={<FaPhone />}>
+        <Button size="xs" startDecorator={<PhoneIcon />}>
           Contact Us
         </Button>
       </Stack>

@@ -1,10 +1,10 @@
 import { IconButton, Stack, Typography } from '@mui/joy';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { navIt, navItActive } from '../../sxObj/phNavSx';
+import { navItemStyles, navItemActiveStyles } from '../../sxObj/phNavSx';
 import { NavActiveItems } from './hooks/useToggleActiveNav';
 
-export type NavItProps = {
+export type NavItemProps = {
   icon: React.ReactNode;
   txt: 'Promos' | 'Wishlist' | 'Home' | 'Menu' | 'Book';
   path: string;
@@ -14,8 +14,8 @@ export type NavItProps = {
   ) => void;
 };
 
-function Item({ activeMap, changeActive, icon, path, txt }: NavItProps) {
-  const nav = useNavigate();
+function Item({ activeMap, changeActive, icon, path, txt }: NavItemProps) {
+  const navigate = useNavigate();
 
   return (
     <Stack
@@ -27,10 +27,12 @@ function Item({ activeMap, changeActive, icon, path, txt }: NavItProps) {
         aria-label="Home page link"
         color="primary"
         variant="solid"
-        sx={(theme) => (activeMap[txt] ? navItActive(theme) : navIt(theme))}
+        sx={(theme) =>
+          activeMap[txt] ? navItemActiveStyles(theme) : navItemStyles(theme)
+        }
         onClick={() => {
           changeActive(txt);
-          nav(path);
+          navigate(path);
         }}
       >
         {icon}

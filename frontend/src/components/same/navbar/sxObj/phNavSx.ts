@@ -6,7 +6,7 @@
 
 import { Theme } from '@mui/joy';
 
-export const navIt = (theme: Theme) => {
+export const navItemStyles = (theme: Theme) => {
   return {
     fontSize: '1.75rem',
     borderRadius: '50%',
@@ -20,7 +20,7 @@ export const navIt = (theme: Theme) => {
     },
   };
 };
-export const navItActive = (theme: Theme) => {
+export const navItemActiveStyles = (theme: Theme) => {
   return {
     borderRadius: '50%',
     background: theme.palette.primary[900],

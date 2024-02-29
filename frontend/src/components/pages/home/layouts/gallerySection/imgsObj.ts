@@ -1,11 +1,11 @@
-type GalleryImageObj = {
+type ImageObjectType = {
   gridColumns: number;
   width: string;
   path: string;
   ratio: string;
 };
 
-const arrOfImgObjs: GalleryImageObj[] = [
+const imageObjectsMap: ImageObjectType[] = [
   {
     gridColumns: 2,
     width: '5.875rem',
@@ -38,4 +38,4 @@ const arrOfImgObjs: GalleryImageObj[] = [
   },
 ];
 
-export default arrOfImgObjs;
+export default imageObjectsMap;

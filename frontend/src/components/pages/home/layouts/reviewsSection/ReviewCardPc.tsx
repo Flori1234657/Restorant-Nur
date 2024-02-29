@@ -3,13 +3,13 @@ import { ReviewsObj } from './reviewsObj';
 import getImagePath from '@/utils/getImagePath';
 
 type Props = {
-  rvObj: ReviewsObj;
+  reviewObj: ReviewsObj;
   fontS: string;
 };
 
-function ReviewCardPc({ fontS, rvObj }: Props) {
+function ReviewCardPc({ fontS, reviewObj }: Props) {
   const imagePath = getImagePath(
-    `webp/home/reviews/review-pc-${rvObj.profileImg}.webp`
+    `webp/home/reviews/review-pc-${reviewObj.profileImg}.webp`
   );
 
   return (
@@ -47,7 +47,7 @@ function ReviewCardPc({ fontS, rvObj }: Props) {
           textAlign: 'center',
         })}
       >
-        {rvObj.review}
+        {reviewObj.review}
       </Typography>
     </Stack>
   );

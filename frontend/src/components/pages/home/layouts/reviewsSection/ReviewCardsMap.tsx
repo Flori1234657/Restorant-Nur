@@ -29,7 +29,7 @@ function ReviewCardsMap() {
             <ReviewCardPc
               key={el.profileImg}
               fontS={el.fontSize || '1rem'}
-              rvObj={el}
+              reviewObj={el}
             />
           )
         )}

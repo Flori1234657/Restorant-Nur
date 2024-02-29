@@ -1,6 +1,6 @@
 import { Card, CardContent, IconButton, Typography } from '@mui/joy';
-import { IoIosArrowDown as Icon } from 'react-icons/io';
-import closedModalTxt from '../../sxObj/sxHoursModal';
+import { IoIosArrowDown as ArrowIcon } from 'react-icons/io';
+import closedModalTxtStyles from '../../sxObj/sxHoursModal';
 
 type Props = {
   openModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -24,10 +24,10 @@ function HoursClosedModal({ isOpening, openModal }: Props) {
       }}
     >
       <CardContent>
-        <Typography level="body-lg" sx={(theme) => closedModalTxt(theme)}>
+        <Typography level="body-lg" sx={(theme) => closedModalTxtStyles(theme)}>
           Closes at
         </Typography>
-        <Typography level="body-lg" sx={(theme) => closedModalTxt(theme)}>
+        <Typography level="body-lg" sx={(theme) => closedModalTxtStyles(theme)}>
           23 : 30
         </Typography>
       </CardContent>
@@ -41,8 +41,9 @@ function HoursClosedModal({ isOpening, openModal }: Props) {
         variant="solid"
         color="primary"
         onClick={() => openModal(true)}
+        disabled={isOpening}
       >
-        <Icon />
+        <ArrowIcon />
       </IconButton>
     </Card>
   );
