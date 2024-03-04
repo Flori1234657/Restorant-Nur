@@ -1,29 +1,68 @@
-import { Option, Select } from '@mui/joy';
+import {
+  Badge,
+  Dropdown,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+} from '@mui/joy';
+import { useState } from 'react';
 import { FaFilter } from 'react-icons/fa';
-import { selectClasses } from '@mui/joy/Select';
-import { IoIosArrowDown } from 'react-icons/io';
-import useViewPortWidth from '@/hooks/useViewPortWidth';
 
 function Filter() {
-  const { vw } = useViewPortWidth();
+  const [selectedFilter, setSelectedFilter] = useState<string | undefined>(
+    undefined
+  );
 
   return (
-    <Select
-      startDecorator={<FaFilter />}
-      placeholder={vw > 899 ? 'Filter' : ''}
-      indicator={<IoIosArrowDown />}
-      sx={{
-        width: 240,
-        [`& .${selectClasses.indicator}`]: {
-          transition: '0.2s',
-          [`&.${selectClasses.expanded}`]: {
-            transform: 'rotate(-180deg)',
-          },
-        },
-      }}
-    >
-      <Option value="FilterOpt">FilterOpt</Option>
-    </Select>
+    <Dropdown>
+      <Badge invisible={!selectedFilter}>
+        <MenuButton
+          slots={{ root: IconButton }}
+          slotProps={{ root: { variant: 'solid', color: 'primary' } }}
+        >
+          <FaFilter />
+        </MenuButton>
+      </Badge>
+      <Menu
+        sx={(theme) => ({
+          bgcolor: theme.palette.secondary.black2,
+          border: `1px solid ${theme.palette.primary[500]}`,
+          ml: '2rem !important',
+          minWidth: '6.25rem',
+          borderRadius: '0.5rem',
+        })}
+      >
+        <MenuItem
+          sx={(theme) => ({
+            fontSize: '0.75rem',
+            fontWeight: 'bold',
+            color: theme.palette.secondary.gray4,
+          })}
+        >
+          FILTER BY
+        </MenuItem>
+        {['Price', 'Prc', 'Prics'].map((option) => (
+          <MenuItem
+            key={option}
+            sx={(theme) => ({
+              color: theme.palette.primary[500],
+              bgcolor:
+                selectedFilter === option
+                  ? theme.palette.secondary.black3
+                  : 'transparent',
+            })}
+            onClick={() =>
+              setSelectedFilter((prev) =>
+                prev === option ? undefined : option
+              )
+            }
+          >
+            {option}
+          </MenuItem>
+        ))}
+      </Menu>
+    </Dropdown>
   );
 }
 

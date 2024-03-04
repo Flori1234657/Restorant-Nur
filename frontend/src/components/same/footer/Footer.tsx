@@ -1,9 +1,13 @@
 import { AspectRatio, Stack } from '@mui/joy';
+import { useLocation } from 'react-router-dom';
 import { Brand, Contact, Newsletter, MapLocation, Copyright } from './sections';
 import useViewPortWidth from '@/hooks/useViewPortWidth';
 import getImagePath from '@/utils/getImagePath';
 
 function Footer() {
+  const location = useLocation();
+  if (location.pathname !== '/') return '';
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { vw } = useViewPortWidth();
 
   const imagePath = getImagePath(

@@ -8,7 +8,7 @@ function ClearButton() {
   return vw > 899 ? (
     <Button startDecorator={<MdDelete />}>Clear All</Button>
   ) : (
-    <IconButton aria-label="Clear all">
+    <IconButton aria-label="Clear all" variant="solid" color="primary">
       <MdDelete />
     </IconButton>
   );

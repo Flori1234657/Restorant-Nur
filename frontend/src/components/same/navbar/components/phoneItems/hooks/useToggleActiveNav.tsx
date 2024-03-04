@@ -22,9 +22,7 @@ const useToggleActiveNav = () => {
     Home: true,
   });
 
-  const changeActive = (
-    name: 'Promos' | 'Wishlist' | 'Home' | 'Menu' | 'Book'
-  ) => {
+  const changeActive = (name: keyof NavActiveItems) => {
     const newObj = structuredClone(defaultObj);
     setActiveMap({ ...newObj, [name]: true });
   };
