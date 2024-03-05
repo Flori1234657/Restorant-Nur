@@ -17,7 +17,7 @@ function ActionsPanel() {
         position: 'relative',
       }}
     >
-      <AspectRatio ratio="2.91">
+      <AspectRatio ratio={vw < 900 ? '2.91' : '7.62'}>
         <img src={imagePath} alt="Wave shape" />
       </AspectRatio>
       <Stack
@@ -25,9 +25,9 @@ function ActionsPanel() {
           width: '100%',
           position: 'absolute',
           zIndex: 1,
-          top: '2.5rem',
+          top: { xs: '2.5rem', md: '4rem' },
           justifyContent: 'space-between',
-          px: '2rem',
+          px: { xs: '2rem', md: '8.44rem', lg: '9.35rem', xl: '9.773rem' },
         }}
         direction="row"
       >
@@ -41,8 +41,9 @@ function ActionsPanel() {
           <Input
             startDecorator={<IoSearch />}
             placeholder="Search"
+            size="xs"
             sx={{
-              width: { xs: '6.5rem' },
+              width: { xs: '6.5rem', md: '7rem' },
             }}
           />
         </Stack>
