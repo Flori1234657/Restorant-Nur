@@ -11,8 +11,8 @@ function ContentWrapper() {
         px: { xs: '2rem', md: '8.44rem', lg: '9.35rem', xl: '9.773rem' },
         pb: '7rem',
         pt: { md: '1rem' },
-        rowGap: { md: '2rem ' },
-        columnGap: { md: '2rem' },
+        rowGap: { md: '1rem ' },
+        columnGap: { md: '1rem' },
         justifyContent: { md: 'center' },
       })}
     >
