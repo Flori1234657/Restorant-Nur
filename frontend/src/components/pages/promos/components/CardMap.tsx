@@ -1,5 +1,6 @@
 import { Stack, Typography } from '@mui/joy';
 import FoodCard from '@/components/same/cards/FoodCard';
+import ScrollShadow from '@/components/same/shadow/ScrollShadow';
 
 function CardMap({ categoryName }: { categoryName: string }) {
   return (
@@ -23,21 +24,25 @@ function CardMap({ categoryName }: { categoryName: string }) {
           fontSize: { md: '0.8rem' },
           flexDirection: { md: 'row' },
           overflowX: { md: 'scroll' },
+          scrollbarWidth: 'none',
           gap: { xs: '1rem', md: 0 },
           px: { md: '1rem' },
+          position: 'relative',
         }}
       >
-        {[1, 2, 3, 4].map((el) => (
-          <Stack
-            key={el}
-            sx={{
-              ml: { md: '1rem', lg: '2rem' },
-              py: { md: '1rem' },
-            }}
-          >
-            <FoodCard />
-          </Stack>
-        ))}
+        <ScrollShadow className="--promo" direction="Horizontal">
+          {[1, 2, 3, 4].map((el) => (
+            <Stack
+              key={el}
+              sx={{
+                ml: { md: '1rem', lg: '2rem' },
+                py: { md: '1rem' },
+              }}
+            >
+              <FoodCard />
+            </Stack>
+          ))}
+        </ScrollShadow>
       </Stack>
     </Stack>
   );

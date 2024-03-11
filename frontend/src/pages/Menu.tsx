@@ -5,7 +5,7 @@ import PagesHeaderTxt from '@/components/same/headers/PagesHeaderTxt';
 
 function Menu() {
   return (
-    <Stack>
+    <Stack sx={{ pb: '7rem' }}>
       <PagesHeaderTxt
         heading="Find what you can eat in our digital menu!"
         subheading="We have made easy for you to decide, this digital menu is easier then the real one."

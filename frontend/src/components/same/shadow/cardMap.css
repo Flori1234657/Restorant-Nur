@@ -1,0 +1,52 @@
+.scroll-shadow {
+  position: sticky;
+  z-index: 100;
+}
+
+/* Promo page*/
+.scroll-shadow.--promo {
+  width: 2rem;
+  height: 7.124rem;
+  left: -2rem;
+  background-color: #1d1d1d;
+  color: #1d1d1d;
+  box-shadow:
+    12px 0 12px 4px rgba(29, 29, 29, 1),
+    -12px 0 8px 4px rgba(29, 29, 29, 1);
+  display: none;
+}
+
+.scroll-shadow.--promo.--right {
+  left: auto;
+  right: -1rem;
+  margin-left: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .scroll-shadow.--promo {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .scroll-shadow.--promo {
+    height: 14.763rem;
+  }
+}
+
+/* Menu component */
+.scroll-shadow.--menu-component {
+  width: 14.5rem;
+  height: 7.124rem;
+  top: -0.5rem;
+  background-color: #282828;
+  color: #282828;
+  box-shadow:
+    12px 0 12px 4px rgba(40, 40, 40, 1),
+    -12px 0 8px 4px rgba(40, 40, 40, 1);
+}
+
+.scroll-shadow.--menu-component.--down {
+  top: auto;
+  bottom: -0.5rem;
+}
