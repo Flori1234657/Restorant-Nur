@@ -35,9 +35,9 @@ function CategoryMenuLinksMap() {
   return linksArray.map((link) => (
     <Link
       sx={(theme) => ({
-        fontSize: { xs: '0.875rem' },
+        fontSize: { xs: '0.875rem', md: '0.75rem' },
         fontWeight: '600',
-        lineHeight: '142%',
+        lineHeight: { xs: '142%', md: '155%' },
         color: theme.palette.primary[link.active ? 500 : 100],
       })}
       key={link.name}

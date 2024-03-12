@@ -6,12 +6,14 @@ function MenuCard() {
   return (
     <Stack
       sx={(theme) => ({
+        width: { md: '40rem' },
+        alignSelf: 'center',
         mt: { xs: '3.75rem' },
         mx: { xs: '2rem' },
         pb: { xs: '1.25rem' },
         alignItems: 'center',
         overflow: 'hidden',
-        border: `1px solid ${theme.palette.primary[500]}`,
+        border: { xs: `1px solid ${theme.palette.primary[500]}`, md: 'none' },
         borderRadius: '1rem',
       })}
     >

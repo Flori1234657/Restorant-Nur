@@ -18,13 +18,19 @@
 
 .scroll-shadow.--promo.--right {
   left: auto;
-  right: -1rem;
+  right: -2rem;
   margin-left: 2rem;
 }
 
 @media screen and (min-width: 900px) {
   .scroll-shadow.--promo {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1194px) {
+  .scroll-shadow.--promo.--right {
+    right: -2.5rem;
   }
 }
 
@@ -49,4 +55,15 @@
 .scroll-shadow.--menu-component.--down {
   top: auto;
   bottom: -0.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .scroll-shadow.--menu-component {
+    top: -1rem;
+    width: 100%;
+  }
+  .scroll-shadow.--menu-component.--down {
+    top: auto;
+    bottom: -1rem;
+  }
 }

@@ -18,7 +18,9 @@ function MenuNav() {
           flexWrap: 'wrap',
           justifyContent: 'space-between',
           px: { xs: '1.25rem' },
-          pt: { xs: '1.75rem' },
+          pt: { xs: '1.75rem', md: 0 },
+          py: { md: '1rem' },
+          zIndex: { md: '200' },
           gap: { xs: '1.5rem' },
         }}
       >
@@ -27,9 +29,10 @@ function MenuNav() {
       <AspectRatio
         ratio="8"
         sx={{
-          width: { xs: '100%' },
+          width: { xs: '100%', md: '15rem' },
           position: 'absolute',
-          bottom: '-1.8rem',
+          left: { md: 0 },
+          bottom: { xs: '-1.8rem', md: '-0.9rem' },
           zIndex: '100',
         }}
       >
