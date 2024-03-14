@@ -10,13 +10,14 @@ function ReservationItem() {
   return (
     <Card
       sx={(theme) => ({
-        py: '0.5rem',
+        py: { xs: '0.5rem', md: '0.25rem' },
         px: '0.5rem',
         bgcolor: theme.palette.secondary.black3,
         border: 'none',
         boxShadow:
           '0 2px 8px 2px rgba(0, 0, 0, 1), 0 0 8px -45px rgba(0, 0, 0, 1)',
         alignItems: 'center',
+        cursor: toggleOpen ? 'default' : 'pointer',
       })}
       onClick={() => setToggleOpen(true)}
     >

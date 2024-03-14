@@ -8,6 +8,8 @@ function ReservationsList() {
         bgcolor: theme.palette.secondary.black1,
         borderRadius: '0.75rem',
         alignItems: 'center',
+        height: 'fit-content',
+        maxWidth: { md: '16rem' },
         px: '0.75rem',
         pt: '1.25rem',
         pb: '2rem',
@@ -22,7 +24,12 @@ function ReservationsList() {
         <Typography
           color="primary"
           sx={{
-            fontSize: { xs: '1.25rem' },
+            fontSize: {
+              xs: '1.25rem',
+              md: '1.125rem',
+              lg: '1rem',
+              xl: '0.975rem',
+            },
             fontWeight: '600',
             lineHeight: '155%',
           }}
@@ -31,7 +38,13 @@ function ReservationsList() {
         </Typography>
         <Typography
           sx={(theme) => ({
-            fontSize: { xs: '1rem' },
+            fontSize: {
+              xs: '1rem',
+              md: '0.875rem',
+              lg: '0.8rem',
+              xl: '0.731rem',
+            },
+            fontWeight: { md: '300' },
             color: theme.palette.primary[100],
           })}
         >
@@ -40,7 +53,7 @@ function ReservationsList() {
       </Stack>
       <Stack
         sx={{
-          gap: '1rem',
+          gap: { xs: '1rem', md: '0.75rem' },
         }}
       >
         {[1, 2, 3].map((el) => (

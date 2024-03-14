@@ -3,7 +3,7 @@ import theme from '@/customTheme';
 
 const typographyStyles = {
   color: theme.palette.primary[500],
-  fontSize: '0.875rem',
+  fontSize: { xs: '0.875rem', lg: '0.8rem', xl: '0.731rem' },
   lineHeight: '155%',
 };
 

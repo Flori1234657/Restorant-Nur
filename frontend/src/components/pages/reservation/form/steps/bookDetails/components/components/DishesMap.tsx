@@ -10,6 +10,7 @@ function DishesMap() {
             sx={(theme) => ({
               color: theme.palette.primary[100],
               fontWeight: '300',
+              fontSize: { md: '0.875rem', lg: '0.8rem', xl: '0.731rem' },
               p: 0,
               width: 'auto',
               minBlockSize: 'auto',

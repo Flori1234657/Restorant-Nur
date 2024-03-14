@@ -8,6 +8,7 @@ function Content() {
       sx={{
         mx: { xs: '2rem', md: '8.44rem', lg: '9.35rem', xl: '9.773rem' },
         mt: { xs: '5rem' },
+        flexDirection: { md: 'row' },
       }}
     >
       <ReservationsList />

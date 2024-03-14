@@ -8,11 +8,16 @@ function ReservationItOpen({
   setCardOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   return (
-    <Stack sx={{ p: { xs: '0.5rem' }, gap: '0.5rem' }}>
+    <Stack sx={{ p: { xs: '0.5rem' }, px: { md: 0 }, gap: '0.5rem' }}>
       <Stack>
         <Typography
           sx={(theme) => ({
-            fontSize: { xs: '1rem' },
+            fontSize: {
+              xs: '1rem',
+              md: '0.875rem',
+              lg: '0.8rem',
+              xl: '0.731rem',
+            },
             color: theme.palette.primary[300],
           })}
         >
@@ -27,6 +32,7 @@ function ReservationItOpen({
         }}
         color="primary"
         variant="solid"
+        size="sm"
       >
         <ArrIcon />
       </IconButton>

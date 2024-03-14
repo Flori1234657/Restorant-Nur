@@ -5,9 +5,14 @@ function ReservationItClosed() {
     <>
       <Typography
         sx={(theme) => ({
-          fontSize: { xs: '1rem' },
+          fontSize: {
+            xs: '1rem',
+            md: '0.875rem',
+            lg: '0.8rem',
+            xl: '0.731rem',
+          },
           fontWeight: '600',
-          px: '0.5rem',
+          px: { xs: '0.5rem', md: '0.4rem', xl: '0.35rem' },
           color: theme.palette.primary[900],
           bgcolor: theme.palette.primary[500],
           borderRadius: '50%',
@@ -19,7 +24,12 @@ function ReservationItClosed() {
         aria-label="Card Info Table"
         sx={(theme) => ({
           '& thead th': {
-            fontSize: '0.75rem',
+            fontSize: {
+              xs: '0.75rem',
+              md: '0.625rem',
+              lg: '0.6rem',
+              xl: '0.569rem',
+            },
             lineHeight: '166%',
             color: theme.palette.primary[300],
             height: 'auto',
@@ -29,7 +39,12 @@ function ReservationItClosed() {
             bgcolor: 'transparent',
           },
           '& tbody td': {
-            fontSize: '0.875rem',
+            fontSize: {
+              xs: '0.875rem',
+              md: '0.75rem',
+              lg: '0.7rem',
+              xl: '0.65rem',
+            },
             lineHeight: '155%',
             fontWeight: '500',
             color: theme.palette.primary[50],
