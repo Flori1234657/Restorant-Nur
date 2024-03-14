@@ -1,39 +1,38 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  IconButton,
-  Stack,
-  Typography,
-} from '@mui/joy';
-import { useState } from 'react';
-import { IoIosArrowDown as ArrIcon } from 'react-icons/io';
+import { Card, CardContent } from '@mui/joy';
+import { Suspense, lazy, useState } from 'react';
 import ReservationItClosed from './ReservationItClosed';
-import ReservationItOpen from './ReservationItOpen';
+
+const ReservationItOpen = lazy(() => import('./ReservationItOpen'));
 
 function ReservationItem() {
   const [toggleOpen, setToggleOpen] = useState<boolean>(false);
 
   return (
-    <Card>
-      <CardContent>
-        <Typography>1</Typography>
+    <Card
+      sx={(theme) => ({
+        py: '0.5rem',
+        px: '0.5rem',
+        bgcolor: theme.palette.secondary.black3,
+        border: 'none',
+        boxShadow:
+          '0 2px 8px 2px rgba(0, 0, 0, 1), 0 0 8px -45px rgba(0, 0, 0, 1)',
+        alignItems: 'center',
+      })}
+      onClick={() => setToggleOpen(true)}
+    >
+      <CardContent
+        sx={{
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+      >
         {toggleOpen ? (
-          <Stack>
-            <ReservationItOpen />
-            <IconButton>
-              <ArrIcon />
-            </IconButton>
-          </Stack>
+          <Suspense fallback="loading">
+            <ReservationItOpen setCardOpen={setToggleOpen} />
+          </Suspense>
         ) : (
           <ReservationItClosed />
         )}
-        <Button
-          onClick={() => {
-            // the button component is a PLaceholder only for build
-            setToggleOpen(true);
-          }}
-        />
       </CardContent>
     </Card>
   );

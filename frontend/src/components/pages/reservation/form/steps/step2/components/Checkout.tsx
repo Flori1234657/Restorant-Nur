@@ -1,5 +1,5 @@
 import { Stack, Typography } from '@mui/joy';
-import BookDetails from '../../BookDetails';
+import BookDetails from '../../bookDetails/BookDetails';
 
 function Checkout() {
   return (
