@@ -1,51 +1,43 @@
-import { lazy, Suspense, useState } from 'react';
-import { Button, Stack, Typography } from '@mui/joy';
-import { GoArrowRight as ArrIcon } from 'react-icons/go';
-import { MdDiscount as IconPromo } from 'react-icons/md';
-import { GiNotebook as BookIcon } from 'react-icons/gi';
-import StepOne from './steps/step1/StepOne';
-import BookingModalsWrapper from './modals/BookingModalsWrapper';
+// import { lazy, Suspense, useState } from 'react';
+import { Stack, Typography } from '@mui/joy';
+import Form from './components/Form';
 
-const StepTwo = lazy(() => import('./steps/step2/StepTwo'));
+// const BookingModalsWrapper = lazy(
+//   () => import('./modals/BookingModalsWrapper')
+// );
 
 function ReservationForm() {
-  const [toggleStep, setToggleStep] = useState<'step1' | 'step2'>('step1');
-  const [bookTable, setBookTable] = useState<boolean>(false); // Only for first time download <BookingModalsWrapper />
-
   return (
-    <Stack>
-      <Typography>Book a table</Typography>
-      <form>
-        <Suspense fallback="">
-          {toggleStep === 'step1' ? <StepOne /> : <StepTwo />}
-        </Suspense>
-        <Stack>
-          {toggleStep === 'step1' ? (
-            <Button startDecorator={<ArrIcon />}>Next</Button>
-          ) : (
-            <Button
-              startDecorator={<BookIcon />}
-              onClick={() => {
-                if (!bookTable) setBookTable(true);
-              }}
-            >
-              Book My Table
-            </Button>
-          )}
-          <Button
-            startDecorator={<IconPromo />}
-            onClick={() => {
-              // PLaceholder only for build
-              setToggleStep('step1');
-            }}
-          >
-            Use A Promo
-          </Button>
-        </Stack>
-      </form>
-      <Suspense fallback="Loading Component">
+    <Stack
+      sx={(theme) => ({
+        bgcolor: theme.palette.secondary.black1,
+        borderRadius: '0.75rem',
+        pt: '1.25rem',
+        px: { md: '0.75rem' },
+        pb: '2rem',
+        alignItems: 'center',
+        gap: '1.25rem',
+      })}
+    >
+      <Typography
+        color="primary"
+        sx={{
+          fontSize: {
+            xs: '1.25rem',
+            md: '1.125rem',
+            lg: '1rem',
+            xl: '0.975rem',
+          },
+          fontWeight: '600',
+          lineHeight: '155%',
+        }}
+      >
+        Book a table
+      </Typography>
+      <Form />
+      {/* <Suspense fallback="Loading Component">
         {bookTable && <BookingModalsWrapper />}
-      </Suspense>
+      </Suspense> */}
     </Stack>
   );
 }

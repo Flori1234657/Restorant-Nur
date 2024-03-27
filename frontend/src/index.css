@@ -49,3 +49,8 @@ body {
 .MuiAspectRatio-content {
   background-color: transparent !important;
 }
+
+.css-1cq9kb0-JoyOption-root.Mui-disabled {
+  background-color: #ff9f0d !important;
+  color: #995f07 !important;
+}

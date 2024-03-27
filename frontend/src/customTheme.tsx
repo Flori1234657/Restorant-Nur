@@ -140,6 +140,22 @@ const theme = extendTheme({
         },
       },
     },
+    JoySelect: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...(ownerState.size === 'xs' && {
+            '--Icon-fontSize': '1rem',
+            minHeight: '1.625rem',
+            fontSize: '0.75rem',
+            paddingBlock: '2px',
+            paddingInline: '0.5rem',
+          }),
+          fontWeight: '500',
+          borderRadius: '0.5rem',
+          boxShadow: 'none',
+        }),
+      },
+    },
     JoyTypography: {
       styleOverrides: {
         root: {

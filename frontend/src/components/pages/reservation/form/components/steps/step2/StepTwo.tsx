@@ -1,5 +1,5 @@
 import { Stack, Typography } from '@mui/joy';
-import InputField from '../InputField';
+import InputField from '../components/InputField';
 import SelectDishes from './components/SelectDishes';
 import Checkout from './components/Checkout';
 
