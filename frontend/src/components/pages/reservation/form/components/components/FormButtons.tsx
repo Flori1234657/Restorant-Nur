@@ -1,15 +1,11 @@
 import { Stack } from '@mui/joy';
-import {
-  GoArrowRight as RightArrow,
-  GoArrowLeft as LeftArrow,
-} from 'react-icons/go';
-import { MdDiscount as IconPromo } from 'react-icons/md';
-import { GiNotebook as BookIcon } from 'react-icons/gi';
+import { Suspense, lazy } from 'react';
 import { useFormUiStore } from '../../state/uiState';
-import Button from './components/Button';
+
+const StepOneButtons = lazy(() => import('./components/StepOneButtons'));
+const StepTwoButtons = lazy(() => import('./components/StepTwoButtons'));
 
 function FormButtons() {
-  const toggleFormStep = useFormUiStore((state) => state.toggleStep);
   const formStep = useFormUiStore((state) => state.step);
 
   return (
@@ -18,37 +14,9 @@ function FormButtons() {
       justifyContent="space-between"
       sx={{ gap: '1.5rem' }}
     >
-      {formStep === 'step1' ? (
-        <>
-          <Button
-            action={() => {
-              toggleFormStep('step2');
-            }}
-            decorator={<RightArrow />}
-            innerText="Next"
-          />
-          <Button
-            action={() => {}}
-            decorator={<IconPromo />}
-            innerText="Use A Promo"
-          />
-        </>
-      ) : (
-        <>
-          <Button
-            action={() => {}}
-            decorator={<BookIcon />}
-            innerText="Book Now"
-          />
-          <Button
-            action={() => {
-              toggleFormStep('step1');
-            }}
-            decorator={<LeftArrow />}
-            innerText="Back"
-          />
-        </>
-      )}
+      <Suspense fallback="">
+        {formStep === 'step1' ? <StepOneButtons /> : <StepTwoButtons />}
+      </Suspense>
     </Stack>
   );
 }

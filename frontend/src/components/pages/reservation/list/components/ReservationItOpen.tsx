@@ -1,6 +1,6 @@
 import { IconButton, Stack, Typography } from '@mui/joy';
 import { IoIosArrowUp as ArrIcon } from 'react-icons/io';
-import BookDetails from '../../form/steps/bookDetails/BookDetails';
+import BookDetails from '../../form/components/steps/bookDetails/BookDetails';
 
 function ReservationItOpen({
   setCardOpen,

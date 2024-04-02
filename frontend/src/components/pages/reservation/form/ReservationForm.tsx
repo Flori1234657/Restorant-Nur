@@ -2,10 +2,6 @@
 import { Stack, Typography } from '@mui/joy';
 import Form from './components/Form';
 
-// const BookingModalsWrapper = lazy(
-//   () => import('./modals/BookingModalsWrapper')
-// );
-
 function ReservationForm() {
   return (
     <Stack
@@ -35,9 +31,6 @@ function ReservationForm() {
         Book a table
       </Typography>
       <Form />
-      {/* <Suspense fallback="Loading Component">
-        {bookTable && <BookingModalsWrapper />}
-      </Suspense> */}
     </Stack>
   );
 }
