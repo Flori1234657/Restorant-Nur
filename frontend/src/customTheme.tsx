@@ -85,6 +85,8 @@ const theme = extendTheme({
     navItMobile: '0px 0px 24px -45px #331F02, 0px 2px 20px 0px #331F02',
     pcFoodCard:
       '0px 2px 20px 2px rgba(255,159,13,1),0px 0px 24px -45px rgba(255,159,13,1)',
+    selectedDish:
+      '0px 0px 8px 2px rgba(255,159,13,1),0px 0px 8px -45px rgba(255,159,13,1)',
   },
   components: {
     JoyButton: {
@@ -104,7 +106,15 @@ const theme = extendTheme({
     },
     JoyIconButton: {
       styleOverrides: {
-        root: { borderRadius: '0.5rem' },
+        root: ({ ownerState }) => ({
+          ...(ownerState.size === 'xxs' && {
+            fontSize: '0.75rem',
+            minHeight: '0.875rem',
+            minWidth: '0.875rem',
+            color: 'white',
+          }),
+          borderRadius: '50%',
+        }),
       },
     },
     JoyInput: {

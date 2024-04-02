@@ -13,6 +13,7 @@ function Fallback({ height, heightMd, heightLg }: Props) {
       sx={{
         height: { xs: height, md: heightMd, lg: heightLg },
         justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Loading w="3.125rem" />

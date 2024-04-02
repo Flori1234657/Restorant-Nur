@@ -1,6 +1,6 @@
 import { ListItem, ListItemDecorator, Stack, Typography } from '@mui/joy';
 import { GiMeal as DishIcon } from 'react-icons/gi';
-import detialIconStyles from '../../../sxObj/detailStyles';
+import detialIconStyles from '../../../../sxObj/detailStyles';
 import DishesMap from './components/DishesMap';
 
 function BookDetailsDishesMap() {

@@ -1,34 +1,54 @@
-import { Button, Stack } from '@mui/joy';
-import { GoArrowRight as ArrIcon } from 'react-icons/go';
+import { Stack } from '@mui/joy';
+import {
+  GoArrowRight as RightArrow,
+  GoArrowLeft as LeftArrow,
+} from 'react-icons/go';
 import { MdDiscount as IconPromo } from 'react-icons/md';
 import { GiNotebook as BookIcon } from 'react-icons/gi';
-import useViewPortWidth from '@/hooks/useViewPortWidth';
 import { useFormUiStore } from '../../state/uiState';
+import Button from './components/Button';
 
 function FormButtons() {
-  const { vw } = useViewPortWidth();
-
   const toggleFormStep = useFormUiStore((state) => state.toggleStep);
   const formStep = useFormUiStore((state) => state.step);
 
   return (
-    <Stack direction="row" sx={{ gap: '1.5rem' }}>
+    <Stack
+      direction="row"
+      justifyContent="space-between"
+      sx={{ gap: '1.5rem' }}
+    >
       {formStep === 'step1' ? (
-        <Button
-          size={vw < 900 ? 'sm' : 'xs'}
-          endDecorator={<ArrIcon />}
-          onClick={() => toggleFormStep('step2')}
-        >
-          Next
-        </Button>
+        <>
+          <Button
+            action={() => {
+              toggleFormStep('step2');
+            }}
+            decorator={<RightArrow />}
+            innerText="Next"
+          />
+          <Button
+            action={() => {}}
+            decorator={<IconPromo />}
+            innerText="Use A Promo"
+          />
+        </>
       ) : (
-        <Button size={vw < 900 ? 'sm' : 'xs'} startDecorator={<BookIcon />}>
-          Book My Table
-        </Button>
+        <>
+          <Button
+            action={() => {}}
+            decorator={<BookIcon />}
+            innerText="Book Now"
+          />
+          <Button
+            action={() => {
+              toggleFormStep('step1');
+            }}
+            decorator={<LeftArrow />}
+            innerText="Back"
+          />
+        </>
       )}
-      <Button startDecorator={<IconPromo />} size={vw < 900 ? 'sm' : 'xs'}>
-        Use A Promo
-      </Button>
     </Stack>
   );
 }

@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 import { MdTableBar as TableIcon } from 'react-icons/md';
 import theme from '@/customTheme';
-import detialIconStyles from '../../../sxObj/detailStyles';
+import detialIconStyles from '../../../../sxObj/detailStyles';
 
 const bookDetails = [
   {
