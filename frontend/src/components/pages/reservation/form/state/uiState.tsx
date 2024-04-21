@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 import { create } from 'zustand';
 // eslint-disable-next-line import/extensions
 import { immer } from 'zustand/middleware/immer';
@@ -9,22 +11,36 @@ interface FormUi {
     isOpen: boolean;
     toggleOpen: () => void;
   };
+  reservationModals: {
+    selectDishes: {
+      isOpen: boolean;
+      toggleOpen: () => void;
+    };
+  };
 }
 
 export const useFormUiStore = create<FormUi>()(
   immer((set) => ({
     step: 'step1',
     toggleStep: (step) => set(() => ({ step })),
-
     tableModal: {
       isOpen: false,
       toggleOpen: () =>
         set((state) => {
-          // eslint-disable-next-line no-param-reassign
           state.tableModal.isOpen = !state.tableModal.isOpen;
         }),
+    },
+    reservationModals: {
+      selectDishes: {
+        isOpen: false,
+        toggleOpen: () =>
+          set((state) => {
+            state.reservationModals.selectDishes.isOpen =
+              !state.reservationModals.selectDishes.isOpen;
+          }),
+      },
     },
   }))
 );
 
-export const placeholder = 'sss';
+export const ssasa = 'ss';

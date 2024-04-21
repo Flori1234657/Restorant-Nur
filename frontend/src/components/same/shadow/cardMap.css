@@ -22,6 +22,10 @@
   margin-left: 2rem;
 }
 
+.scroll-shadow.--promo.--right.--select-modal {
+  margin-left: 0;
+}
+
 @media screen and (min-width: 900px) {
   .scroll-shadow.--promo {
     display: block;
@@ -38,6 +42,9 @@
   .scroll-shadow.--promo {
     height: 14.763rem;
   }
+  .scroll-shadow.--promo.--select-modal {
+    height: 7.314rem;
+  }
 }
 
 /* Menu component */
@@ -50,6 +57,10 @@
   box-shadow:
     12px 0 12px 4px rgba(40, 40, 40, 1),
     -12px 0 8px 4px rgba(40, 40, 40, 1);
+}
+
+.scroll-shadow.--menu-component.--select-modal {
+  height: 1rem;
 }
 
 .scroll-shadow.--menu-component.--down {

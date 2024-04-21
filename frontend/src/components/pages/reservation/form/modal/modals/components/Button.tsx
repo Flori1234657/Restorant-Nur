@@ -1,4 +1,5 @@
 import { Button } from '@mui/joy';
+import useViewPortWidth from '@/hooks/useViewPortWidth';
 
 type Props = {
   innerTxt: string;
@@ -7,8 +8,14 @@ type Props = {
 };
 
 function Btn({ action, decorator, innerTxt }: Props) {
+  const { vw } = useViewPortWidth();
+
   return (
-    <Button startDecorator={decorator} onClick={action}>
+    <Button
+      startDecorator={decorator}
+      onClick={action}
+      size={vw < 900 ? 'sm' : 'xs'}
+    >
       {innerTxt}
     </Button>
   );

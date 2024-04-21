@@ -10,11 +10,7 @@ function FoodCard() {
 
   return (
     <Suspense fallback={<span className="food-card-fallback" />}>
-      {vw < 1536 ? (
-        <FoodCardPh isMenuComponent={false} />
-      ) : (
-        <FoodCardPc promo={false} />
-      )}
+      {vw < 1536 ? <FoodCardPh haveShadow /> : <FoodCardPc promo={false} />}
     </Suspense>
   );
 }

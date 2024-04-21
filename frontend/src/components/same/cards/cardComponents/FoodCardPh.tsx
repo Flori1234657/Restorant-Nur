@@ -3,10 +3,10 @@ import { IoHeart as IconWish } from 'react-icons/io5';
 import useBluredImage from '@/hooks/useBluredImage';
 
 interface Props {
-  isMenuComponent: boolean;
+  haveShadow: boolean;
 }
 
-function FoodCardPh({ isMenuComponent }: Props) {
+function FoodCardPh({ haveShadow }: Props) {
   const PlaceholderImg = useBluredImage({
     src: '/src/assets/webp/cards/food-placeholder.jpg',
     hash: 'LUF5EBIp4;tR~UIpIV%LS6WBn$xZ',
@@ -25,7 +25,7 @@ function FoodCardPh({ isMenuComponent }: Props) {
         borderRadius: '0.5rem',
         overflow: 'hidden',
       })}
-      boxShadow={isMenuComponent ? 'none' : 'xs'}
+      boxShadow={haveShadow ? 'xs' : 'none'}
     >
       <Stack sx={{ position: 'relative' }}>
         <AspectRatio

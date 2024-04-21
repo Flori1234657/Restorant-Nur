@@ -25,7 +25,7 @@ function CardsWrapper() {
         >
           {[1, 2, 3, 4, 5, 6].map((el) => (
             <Grid xs={6} md={3} key={el}>
-              <FoodCardPh isMenuComponent />
+              <FoodCardPh haveShadow={false} />
             </Grid>
           ))}
         </Grid>

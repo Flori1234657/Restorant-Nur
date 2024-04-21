@@ -5,7 +5,13 @@ import Button from '../../../components/Button';
 
 function Buttons() {
   return (
-    <Stack>
+    <Stack
+      sx={{
+        gap: { xs: '0.5rem', md: '1rem' },
+        px: { xs: '2rem', md: 'auto' },
+        flexDirection: { md: 'row' },
+      }}
+    >
       <Button
         action={() => {}}
         decorator={<GoArrowRight />}
