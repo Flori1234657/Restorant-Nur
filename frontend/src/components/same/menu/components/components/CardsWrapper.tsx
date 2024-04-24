@@ -1,6 +1,6 @@
 import { Grid, Stack } from '@mui/joy';
-import FoodCardPh from '@/components/same/cards/cardComponents/FoodCardPh';
 import ScrollShadow from '@/components/same/shadow/ScrollShadow';
+import CardsMap from './components/CardsMap';
 
 function CardsWrapper() {
   return (
@@ -23,11 +23,7 @@ function CardsWrapper() {
             py: '0.5rem',
           }}
         >
-          {[1, 2, 3, 4, 5, 6].map((el) => (
-            <Grid xs={6} md={3} key={el}>
-              <FoodCardPh haveShadow={false} />
-            </Grid>
-          ))}
+          <CardsMap />
         </Grid>
       </ScrollShadow>
     </Stack>

@@ -45,6 +45,7 @@ function SelectDishes() {
         <Suspense fallback="Loading...">
           {toggleSelectDishesFrom !== null && (
             <SelectModal
+              isFromMenu={toggleSelectDishesFrom === 'From Menu'}
               selectDishFrom={
                 toggleSelectDishesFrom === 'From Menu' ? (
                   <FromMenu />

@@ -21,7 +21,12 @@ interface SelectModal {
 const useSelectModalStore = create<SelectModal>()(
   devtools(
     immer((set) => ({
-      foodCardsReference: [],
+      foodCardsReference: [
+        { isSelected: false, index: 0 },
+        { isSelected: false, index: 1 },
+        { isSelected: false, index: 2 },
+        { isSelected: false, index: 3 },
+      ],
       promoCardsReference: [
         { isSelected: false, index: 0 },
         { isSelected: false, index: 1 },
