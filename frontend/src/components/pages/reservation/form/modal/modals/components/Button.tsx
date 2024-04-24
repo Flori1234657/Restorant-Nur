@@ -1,13 +1,13 @@
 import { Button } from '@mui/joy';
 import useViewPortWidth from '@/hooks/useViewPortWidth';
 
-type Props = {
+export type ButtonProps = {
   innerTxt: string;
   decorator: React.ReactNode;
   action: () => void;
 };
 
-function Btn({ action, decorator, innerTxt }: Props) {
+function Btn({ action, decorator, innerTxt }: ButtonProps) {
   const { vw } = useViewPortWidth();
 
   return (

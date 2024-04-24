@@ -4,18 +4,18 @@ import { create } from 'zustand';
 // eslint-disable-next-line import/extensions
 import { immer } from 'zustand/middleware/immer';
 
+interface ModalProp {
+  isOpen: boolean;
+  toggleOpen: () => void;
+}
+
 interface FormUi {
   step: 'step1' | 'step2';
   toggleStep: (step: 'step1' | 'step2') => void;
-  tableModal: {
-    isOpen: boolean;
-    toggleOpen: () => void;
-  };
+  tableModal: ModalProp;
   reservationModals: {
-    selectDishes: {
-      isOpen: boolean;
-      toggleOpen: () => void;
-    };
+    selectDishes: ModalProp;
+    modalsWrapper: ModalProp;
   };
 }
 
@@ -37,6 +37,14 @@ export const useFormUiStore = create<FormUi>()(
           set((state) => {
             state.reservationModals.selectDishes.isOpen =
               !state.reservationModals.selectDishes.isOpen;
+          }),
+      },
+      modalsWrapper: {
+        isOpen: false,
+        toggleOpen: () =>
+          set((state) => {
+            state.reservationModals.modalsWrapper.isOpen =
+              !state.reservationModals.modalsWrapper.isOpen;
           }),
       },
     },

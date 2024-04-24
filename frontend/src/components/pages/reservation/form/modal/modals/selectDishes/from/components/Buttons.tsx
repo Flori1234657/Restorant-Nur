@@ -2,8 +2,13 @@ import { Stack } from '@mui/joy';
 import { GoArrowRight } from 'react-icons/go';
 import { IoClose } from 'react-icons/io5';
 import Button from '../../../components/Button';
+import { useFormUiStore } from '@/components/pages/reservation/form/state/uiState';
 
 function Buttons() {
+  const closeSelectDishesModal = useFormUiStore(
+    (state) => state.reservationModals.selectDishes.toggleOpen
+  );
+
   return (
     <Stack
       sx={{
@@ -17,7 +22,11 @@ function Buttons() {
         decorator={<GoArrowRight />}
         innerTxt="Continue"
       />
-      <Button action={() => {}} decorator={<IoClose />} innerTxt="Cancel" />
+      <Button
+        action={() => closeSelectDishesModal()}
+        decorator={<IoClose />}
+        innerTxt="Cancel"
+      />
     </Stack>
   );
 }

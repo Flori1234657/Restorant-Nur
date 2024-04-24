@@ -1,14 +1,11 @@
 import { Stack } from '@mui/joy';
-// import { Suspense, lazy, useState } from 'react';
-// import { MdRestaurantMenu as IconMenu } from 'react-icons/md';
-// import { IoHeart as IconWish } from 'react-icons/io5';
-// import SelectedCard from './components/components/components/SelectedCard';
+import { Suspense, lazy } from 'react';
 import Dishes from './components/Dishes';
 import Label from './components/Label';
 
-// const TwoOptionsModal = lazy(
-//   () => import('../../../../modals/TwoOptionsModal')
-// );
+const SelectDishesModal = lazy(
+  () => import('../../../../modal/modals/selectDishes/SelectDishes')
+);
 
 function SelectDishes() {
   // const [toggleModal, setToggleModal] = useState<boolean>(false);
@@ -17,17 +14,9 @@ function SelectDishes() {
     <Stack sx={{ gap: { xs: '0.75rem' } }}>
       <Label />
       <Dishes />
-      {/* {toggleModal && (
-        <Suspense fallback="Loading Component">
-          <TwoOptionsModal
-            text="Select dishes"
-            btn1={{ txt: 'From Wishlist', icn: <IconWish /> }}
-            btn2={{ txt: 'From Menu', icn: <IconMenu /> }}
-            toggleState={toggleModal}
-            setOpenModal={setToggleModal}
-          />
-        </Suspense>
-      )} */}
+      <Suspense fallback="">
+        <SelectDishesModal />
+      </Suspense>
     </Stack>
   );
 }
