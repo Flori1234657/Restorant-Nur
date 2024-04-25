@@ -10,24 +10,27 @@ function Inputs() {
       <InputField
         label="Full name"
         type="text"
+        name="fullName"
         placeholder="Name Surname"
-        errorText="This field is required!"
+        errorText="Required!"
       />
       <Stack direction="row" width="100%" justifyContent="space-between">
         <Stack sx={{ width: { xs: '7rem', md: '6rem' } }}>
           <InputField
             label="Check in date"
             type="date"
+            name="checkinDate"
             placeholder="dd/mm/yyyy"
-            errorText="This field is required!"
+            errorText="Required!"
           />
         </Stack>
         <Stack sx={{ width: { xs: '6.5rem', md: '5rem' } }}>
           <InputField
             label="Check in time"
             type="time"
+            name="checkinTime"
             placeholder="hh:mm"
-            errorText="This field is required!"
+            errorText="Required!"
           />
         </Stack>
       </Stack>
@@ -40,16 +43,18 @@ function Inputs() {
           <InputField
             label="Persons"
             type="number"
+            name="persons"
             placeholder="1"
-            errorText="This field is required!"
+            errorText="Required!"
           />
         </Stack>
         <Stack sx={{ width: { xs: '6rem', md: '5rem' } }}>
           <InputField
             label="Table"
             type="button"
+            name="table"
             placeholder="Click to select"
-            errorText="This field is required!"
+            errorText="Required!"
             actions={() => openTableModal()}
           />
         </Stack>

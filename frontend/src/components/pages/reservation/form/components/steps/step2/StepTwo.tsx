@@ -12,12 +12,14 @@ function StepTwo() {
         <InputField
           label="Email"
           type="email"
+          name="email"
           placeholder="example@ex.domain"
           errorText="This field is required!"
         />
         <InputField
           label="Phone number"
           type="tel"
+          name="phoneNumber"
           placeholder="+355 68 839 3968"
           errorText="This field is required!"
         />

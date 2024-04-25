@@ -1,8 +1,13 @@
 import { Option, Select } from '@mui/joy';
 import useViewPortWidth from '@/hooks/useViewPortWidth';
+import { useFormUiStore } from '@/components/pages/reservation/form/state/uiState';
 
 function SelectTable() {
   const { vw } = useViewPortWidth();
+
+  const setSelectedTable = useFormUiStore(
+    (state) => state.tableModal.setSelectedTable
+  );
 
   const placeholderTablesArr = [
     {
@@ -30,6 +35,9 @@ function SelectTable() {
           placement: 'bottom-start',
         },
       }}
+      onChange={(e, newValue: string | null) =>
+        setSelectedTable(newValue || '')
+      }
     >
       {placeholderTablesArr.map((table) => (
         <Option

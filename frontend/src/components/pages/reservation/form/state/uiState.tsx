@@ -12,7 +12,12 @@ interface ModalProp {
 interface FormUi {
   step: 'step1' | 'step2';
   toggleStep: (step: 'step1' | 'step2') => void;
-  tableModal: ModalProp;
+  tableModal: {
+    isOpen: boolean;
+    toggleOpen: () => void;
+    selectedTable: string;
+    setSelectedTable: (table: string) => void;
+  };
   reservationModals: {
     selectDishes: ModalProp;
     modalsWrapper: ModalProp;
@@ -25,9 +30,14 @@ export const useFormUiStore = create<FormUi>()(
     toggleStep: (step) => set(() => ({ step })),
     tableModal: {
       isOpen: false,
+      selectedTable: '',
       toggleOpen: () =>
         set((state) => {
           state.tableModal.isOpen = !state.tableModal.isOpen;
+        }),
+      setSelectedTable: (table) =>
+        set((state) => {
+          state.tableModal.selectedTable = table;
         }),
     },
     reservationModals: {
