@@ -9,18 +9,22 @@ interface ModalProp {
   toggleOpen: () => void;
 }
 
+interface TableModal extends ModalProp {
+  selectedTable: string;
+  setSelectedTable: (table: string) => void;
+}
+
 interface FormUi {
   step: 'step1' | 'step2';
   toggleStep: (step: 'step1' | 'step2') => void;
-  tableModal: {
-    isOpen: boolean;
-    toggleOpen: () => void;
-    selectedTable: string;
-    setSelectedTable: (table: string) => void;
-  };
+  tableModal: TableModal;
   reservationModals: {
     selectDishes: ModalProp;
     modalsWrapper: ModalProp;
+    confirmBooking: 'AskToConfirm' | 'Successfull' | 'Failed' | 'Disabled';
+    setConfirmBooking: (
+      at: 'AskToConfirm' | 'Successfull' | 'Failed' | 'Disabled'
+    ) => void;
   };
 }
 
@@ -57,6 +61,11 @@ export const useFormUiStore = create<FormUi>()(
               !state.reservationModals.modalsWrapper.isOpen;
           }),
       },
+      confirmBooking: 'Disabled',
+      setConfirmBooking: (at) =>
+        set((state) => {
+          state.reservationModals.confirmBooking = at;
+        }),
     },
   }))
 );

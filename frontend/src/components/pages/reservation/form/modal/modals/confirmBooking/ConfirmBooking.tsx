@@ -1,12 +1,22 @@
-import { Stack } from '@mui/joy';
+/* eslint-disable no-nested-ternary */
+import { Suspense, lazy } from 'react';
+import { useFormUiStore } from '../../../state/uiState';
 import AskToConfirm from './bookingState/AskToConfirm';
 
+const Failed = lazy(() => import('./bookingState/Failed'));
+const Successfull = lazy(() => import('./bookingState/Successfull'));
+
 function ConfirmBooking() {
-  return (
-    <Stack>
-      {/** Toggle the booking state using zustand */}
-      <AskToConfirm />
-    </Stack>
+  const toggleBookingState = useFormUiStore(
+    (state) => state.reservationModals.confirmBooking
+  );
+
+  return toggleBookingState === 'AskToConfirm' ? (
+    <AskToConfirm />
+  ) : (
+    <Suspense fallback="">
+      {toggleBookingState === 'Successfull' ? <Successfull /> : <Failed />}
+    </Suspense>
   );
 }
 

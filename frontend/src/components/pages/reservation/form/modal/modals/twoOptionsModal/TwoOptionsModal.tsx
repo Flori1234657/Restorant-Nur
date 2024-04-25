@@ -14,6 +14,9 @@ function TwoOptionsModal({ heading, buttons }: Props) {
           fontSize: { xs: '1.125rem', md: '1rem' },
           fontWeight: '600',
           color: theme.palette.primary[500],
+          px: '1rem',
+          maxWidth: { xs: '16.563rem' },
+          textAlign: 'center',
         })}
       >
         {heading}
