@@ -6,4 +6,5 @@ export interface ReservationForm {
   table: string;
   email: string;
   phoneNumber: number;
+  food?: string; // cardData
 }
