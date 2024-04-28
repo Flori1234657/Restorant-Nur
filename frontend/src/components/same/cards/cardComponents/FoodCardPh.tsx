@@ -2,11 +2,21 @@ import { AspectRatio, IconButton, Stack, Typography } from '@mui/joy';
 import { IoHeart as IconWish } from 'react-icons/io5';
 import useBluredImage from '@/hooks/useBluredImage';
 
-interface Props {
+export interface PhCardProps {
+  cardData: {
+    name: string;
+    // image
+    description: string;
+    price: number;
+    discount: number | null;
+  };
+}
+
+interface Props extends PhCardProps {
   haveShadow: boolean;
 }
 
-function FoodCardPh({ haveShadow }: Props) {
+function FoodCardPh({ haveShadow, cardData }: Props) {
   const PlaceholderImg = useBluredImage({
     src: '/src/assets/webp/cards/food-placeholder.jpg',
     hash: 'LUF5EBIp4;tR~UIpIV%LS6WBn$xZ',
@@ -60,7 +70,7 @@ function FoodCardPh({ haveShadow }: Props) {
           sx={{ fontSize: { xs: '1em', lg: '0.9em' } }}
           fontWeight={600}
         >
-          Grilled fish
+          {cardData.name || 'Failed to fetch'}
         </Typography>
         <Typography
           level="body-lg"
@@ -71,7 +81,9 @@ function FoodCardPh({ haveShadow }: Props) {
             fontSize: { xs: '0.75em', lg: '0.7em' },
           })}
         >
-          Grilled koce fish with spice
+          {(cardData.description.length > 32
+            ? `${cardData.description.slice(0, 32)}...`
+            : cardData.description) || 'Network error'}
         </Typography>
         <Stack mt="0.25em" direction="row" gap="0.5em" justifyContent="center">
           <Typography
@@ -81,19 +93,23 @@ function FoodCardPh({ haveShadow }: Props) {
             })}
             level="title-lg"
           >
-            $15.99
+            ${cardData.price}0
           </Typography>
-          <Typography
-            fontWeight={600}
-            level="body-lg"
-            sx={(theme) => ({
-              color: theme.palette.success[300],
-              textDecoration: 'line-through',
-              fontSize: { xs: '0.75em', lg: '0.7em' },
-            })}
-          >
-            -20%
-          </Typography>
+          {cardData.discount ? (
+            <Typography
+              fontWeight={600}
+              level="body-lg"
+              sx={(theme) => ({
+                color: theme.palette.success[300],
+                textDecoration: 'line-through',
+                fontSize: { xs: '0.75em', lg: '0.7em' },
+              })}
+            >
+              -{cardData.discount}%
+            </Typography>
+          ) : (
+            ''
+          )}
         </Stack>
       </Stack>
     </Stack>

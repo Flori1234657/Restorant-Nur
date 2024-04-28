@@ -1,10 +1,17 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+var cors = require("cors");
 const foodCardRoutes = require("./routes/foodCardRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 7000;
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 app.use(express.json());
 

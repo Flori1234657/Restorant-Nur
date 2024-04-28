@@ -16,18 +16,24 @@ const useFoodCardsStore = create<CardsStore>()(
   immer((set) => ({
     foodCards: [],
     promoCards: [],
-    setFoodCards: async () =>
-      set(async (state) => {
-        const response = await fetchFoodData();
+    setFoodCards: async () => {
+      const response = await fetchFoodData();
 
-        if (typeof response !== 'string') state.foodCards = response;
-      }),
-    setPromoCards: async () =>
-      set(async (state) => {
-        const response = await fetchPromoData();
+      if (typeof response !== 'string') {
+        set((state) => {
+          state.foodCards = response;
+        });
+      }
+    },
+    setPromoCards: async () => {
+      const response = await fetchPromoData();
 
-        if (typeof response !== 'string') state.promoCards = response;
-      }),
+      if (typeof response !== 'string') {
+        set((state) => {
+          state.promoCards = response;
+        });
+      }
+    },
   }))
 );
 

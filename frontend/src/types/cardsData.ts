@@ -1,5 +1,5 @@
 type CardData = {
-  id: string;
+  _id: string;
   name: string;
   description: string;
   imageUrl: string;

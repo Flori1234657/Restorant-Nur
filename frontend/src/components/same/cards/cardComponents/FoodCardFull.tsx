@@ -14,7 +14,27 @@ import { FaUserFriends as UsersIcon } from 'react-icons/fa';
 import theme from '@/customTheme';
 import useBluredImage from '@/hooks/useBluredImage';
 
-function FoodCardPc({ promo }: { promo: boolean }) {
+interface Props {
+  cardData: {
+    name: string;
+    // image
+    description: string;
+    price: number;
+    discount: number | null;
+  };
+  cookingTime: string;
+  isAvailabe: boolean;
+  promo: boolean;
+  persons?: number;
+}
+
+function FoodCardPc({
+  promo,
+  cookingTime,
+  isAvailabe,
+  cardData,
+  persons,
+}: Props) {
   const PlaceholderImg = useBluredImage({
     src: '/src/assets/webp/cards/food-placeholder.jpg',
     hash: 'LUF5EBIp4;tR~UIpIV%LS6WBn$xZ',
@@ -60,7 +80,7 @@ function FoodCardPc({ promo }: { promo: boolean }) {
             fontWeight={600}
             sx={{ fontSize: { xl: '0.673rem' } }}
           >
-            Shrimp linguine
+            {cardData.name || 'Failed to fetch'}
           </Typography>
           <Typography
             sx={() => ({
@@ -69,11 +89,11 @@ function FoodCardPc({ promo }: { promo: boolean }) {
               lineHeight: '122%',
             })}
           >
-            Linguine with shrimp and spice
+            {cardData.description || 'Network error'}
           </Typography>
           <Stack direction="row" sx={{ gap: '0.269rem' }}>
             {promo ? (
-              <Chip startDecorator={<UsersIcon />}>4 persons</Chip>
+              <Chip startDecorator={<UsersIcon />}>{persons} persons</Chip>
             ) : (
               <Chip
                 color="primary"
@@ -82,17 +102,17 @@ function FoodCardPc({ promo }: { promo: boolean }) {
                 sx={{ fontSize: { xl: '0.5rem' }, fontWeight: 'bold' }}
                 startDecorator={<FaClock />}
               >
-                10 Min
+                {cookingTime || '-- : --'}
               </Chip>
             )}
             <Chip
-              color="primary"
+              color={isAvailabe ? 'primary' : 'danger'}
               variant="solid"
               size="sm"
               sx={{ fontSize: { xl: '0.5rem' }, fontWeight: 'bold' }}
               startDecorator={<FaCheck />}
             >
-              Available
+              {isAvailabe ? 'Availabe' : 'Not available'}
             </Chip>
           </Stack>
         </Stack>
@@ -105,23 +125,31 @@ function FoodCardPc({ promo }: { promo: boolean }) {
               color: theme.palette.primary[100],
             })}
           >
-            $15.99
+            ${cardData.price || ''}.00
           </Typography>
-          <Typography
-            level="body-lg"
-            sx={() => ({
-              fontSize: { xl: '0.538rem' },
-              fontWeight: 700,
-              color: theme.palette.success[500],
-              textDecoration: 'line-through',
-            })}
-          >
-            -20%
-          </Typography>
+          {cardData.discount ? (
+            <Typography
+              level="body-lg"
+              sx={() => ({
+                fontSize: { xl: '0.538rem' },
+                fontWeight: 700,
+                color: theme.palette.success[500],
+                textDecoration: 'line-through',
+              })}
+            >
+              -{cardData.discount}%
+            </Typography>
+          ) : (
+            ''
+          )}
         </Stack>
       </CardContent>
     </Card>
   );
 }
+
+FoodCardPc.defaultProps = {
+  persons: 0,
+};
 
 export default FoodCardPc;
