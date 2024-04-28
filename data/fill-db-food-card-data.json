@@ -1,0 +1,706 @@
+[
+  {
+    "name": "Grilled Salmon",
+    "description": "Juicy salmon fillet. Served with a side of steamed vegetables.",
+    "imageUrl": "grilled_salmon_image_url",
+    "isAvailable": true,
+    "price": 12,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Tuna Sashimi",
+    "description": "Fresh tuna slices, served with wasabi and soy sauce.",
+    "imageUrl": "tuna_sashimi_image_url",
+    "isAvailable": true,
+    "price": 15,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Fish",
+    "discount": 20
+  },
+  {
+    "name": "Fish Tacos",
+    "description": "Crispy fish fillets wrapped in warm tortillas.",
+    "imageUrl": "fish_tacos_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Lemon Garlic Shrimp",
+    "description": "Sautéed in a flavorful lemon garlic butter sauce.",
+    "imageUrl": "lemon_garlic_shrimp_image_url",
+    "isAvailable": true,
+    "price": 14,
+    "isLiked": false,
+    "cookingTime": "12 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Grilled Kocë",
+    "description": "Grilled Kocë fish, with vegetables.",
+    "imageUrl": "fish_and_chips_image_url",
+    "isAvailable": true,
+    "price": 20,
+    "isLiked": false,
+    "cookingTime": "25 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Salmon Poke Bowl",
+    "description": "Fresh salmon cubes marinated in a savory sauce.",
+    "imageUrl": "salmon_poke_bowl_image_url",
+    "isAvailable": true,
+    "price": 13,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Grilled Mahi Mahi",
+    "description": "Mahi Mahi fillet grilled, seasoned with herbs and spices.",
+    "imageUrl": "grilled_mahi_mahi_image_url",
+    "isAvailable": true,
+    "price": 16,
+    "isLiked": false,
+    "cookingTime": "18 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Lobster 1kg",
+    "description": "Boiled lobster with spices and vegetables..",
+    "imageUrl": "fish_curry_image_url",
+    "isAvailable": true,
+    "price": 120,
+    "isLiked": false,
+    "cookingTime": "30 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Cajun Blackened Catfish",
+    "description": "Tender catfish fillet coated in spicy Cajun seasoning.",
+    "imageUrl": "cajun_blackened_catfish_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Teriyaki Glazed Salmon",
+    "description": "Salmon fillet glazed with sweet and savory teriyaki sauce.",
+    "imageUrl": "teriyaki_glazed_salmon_image_url",
+    "isAvailable": true,
+    "price": 14,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Fish"
+  },
+  {
+    "name": "Spaghetti Albanese",
+    "description": "Classic Albanian pasta dish with creamy sauce.",
+    "imageUrl": "spaghetti_carbonara_image_url",
+    "isAvailable": true,
+    "price": 12,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Penne Arrabiata",
+    "description": "Spicy tomato sauce with garlic and chili flakes.",
+    "imageUrl": "penne_arrabiata_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Pasta",
+    "discount": 15
+  },
+  {
+    "name": "Fettuccine Alfredo",
+    "description": "Creamy Alfredo sauce tossed with fettuccine pasta.",
+    "imageUrl": "fettuccine_alfredo_image_url",
+    "isAvailable": true,
+    "price": 14,
+    "isLiked": false,
+    "cookingTime": "25 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Linguine Aglio e Olio",
+    "description": "With garlic, olive oil, and chili flakes tossed with linguine.",
+    "imageUrl": "linguine_aglio_e_olio_image_url",
+    "isAvailable": true,
+    "price": 11,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Ravioli with Pesto",
+    "description": "Delicate ravioli stuffed with ricotta cheese.",
+    "imageUrl": "ravioli_with_pesto_image_url",
+    "isAvailable": true,
+    "price": 13,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Gnocchi in Marinara",
+    "description": "Soft potato dumplings tossed in a tangy marinara sauce.",
+    "imageUrl": "gnocchi_in_marinara_image_url",
+    "isAvailable": true,
+    "price": 11,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Pasta Primavera",
+    "description": "Colorful pasta dish with seasonal vegetables.",
+    "imageUrl": "pasta_primavera_image_url",
+    "isAvailable": true,
+    "price": 12,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Lasagna",
+    "description": "Layered pasta with rich meat sauce and melted cheese.",
+    "imageUrl": "lasagna_image_url",
+    "isAvailable": true,
+    "price": 15,
+    "isLiked": false,
+    "cookingTime": "30 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Tortellini with Cream Sauce",
+    "description": "Tender tortellini pasta stuffed with cheese.",
+    "imageUrl": "tortellini_with_cream_sauce_image_url",
+    "isAvailable": true,
+    "price": 13,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Pasta with Truffle Oil",
+    "description": "Buttery pasta drizzled with aromatic truffle oil.",
+    "imageUrl": "pasta_with_truffle_oil_image_url",
+    "isAvailable": true,
+    "price": 16,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Pasta"
+  },
+  {
+    "name": "Chicken Biryani",
+    "description": "Fragrant rice cooked with spiced chicken.",
+    "imageUrl": "chicken_biryani_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "30 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Vegetable Fried Rice",
+    "description": "Stir-fried rice with mixed vegetables, eggs, and soy sauce.",
+    "imageUrl": "vegetable_fried_rice_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Shrimp Pilaf",
+    "description": "Fluffy rice cooked with succulent shrimp and aromatic spices.",
+    "imageUrl": "shrimp_pilaf_image_url",
+    "isAvailable": true,
+    "price": 12,
+    "isLiked": false,
+    "cookingTime": "25 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Coconut Rice",
+    "description": "Jasmine rice cooked with coconut milk for a creamy texture.",
+    "imageUrl": "coconut_rice_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Seafood Risotto",
+    "description": "Risotto with seafood, and herbs.",
+    "imageUrl": "beef_teriyaki_with_rice_image_url",
+    "isAvailable": true,
+    "price": 14,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Mushroom Risotto",
+    "description": "Creamy Arborio rice cooked with mushrooms.",
+    "imageUrl": "mushroom_risotto_image_url",
+    "isAvailable": true,
+    "price": 11,
+    "isLiked": false,
+    "cookingTime": "30 min",
+    "category": "Risotto",
+    "discount": 10
+  },
+  {
+    "name": "Spicy Szechuan Rice",
+    "description": "Fiery rice dish with Szechuan sauce.",
+    "imageUrl": "spicy_szechuan_rice_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Lemon Herb Rice",
+    "description": "Fluffy rice infused with tangy lemon juice and aromatic herbs.",
+    "imageUrl": "lemon_herb_rice_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Risotto",
+    "description": "Simple risotto with spices and herbs.",
+    "imageUrl": "jambalaya_image_url",
+    "isAvailable": true,
+    "price": 6,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Turmeric Rice",
+    "description": "Basmati rice cooked with turmeric.",
+    "imageUrl": "turmeric_rice_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Risotto"
+  },
+  {
+    "name": "Tomato Basil Soup",
+    "description": "Classic soup with tomatoes, basil, and a hint of cream.",
+    "imageUrl": "tomato_basil_soup_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "25 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Chicken Noodle Soup",
+    "description": "Homemade soup with chicken, noodles, and vegetables in broth.",
+    "imageUrl": "chicken_noodle_soup_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "30 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Minestrone Soup",
+    "description": "Italian soup with beans, vegetables, and pasta.",
+    "imageUrl": "minestrone_soup_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "35 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Lentil Soup",
+    "description": "Nutritious soup made with lentils, carrots, and aromatic spices.",
+    "imageUrl": "lentil_soup_image_url",
+    "isAvailable": true,
+    "price": 7,
+    "isLiked": false,
+    "cookingTime": "40 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Butternut Squash Soup",
+    "description": "Velvety soup with roasted butternut squash and a hint of nutmeg.",
+    "imageUrl": "butternut_squash_soup_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "30 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Miso Soup",
+    "description": "Traditional Japanese soup with miso paste, tofu, and seaweed.",
+    "imageUrl": "miso_soup_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Soups"
+  },
+  {
+    "name": "French Onion Soup",
+    "description": "Rich soup with caramelized onions and melted cheese on top.",
+    "imageUrl": "french_onion_soup_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "45 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Thai Coconut Soup",
+    "description": "Creamy coconut soup with lemongrass, galangal, and Thai spices.",
+    "imageUrl": "thai_coconut_soup_image_url",
+    "isAvailable": true,
+    "price": 11,
+    "isLiked": false,
+    "cookingTime": "35 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Potato Leek Soup",
+    "description": "Soup with potatoes, leeks, and a touch of cream.",
+    "imageUrl": "potato_leek_soup_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "30 min",
+    "category": "Soups"
+  },
+  {
+    "name": "Mulukhiyah",
+    "description": "A dish made from the leaves of jute",
+    "imageUrl": "clam_chowder_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Soups",
+    "discount": 10
+  },
+  {
+    "name": "Caesar Salad",
+    "description": "Romaine lettuce, croutons, and Caesar dressing.",
+    "imageUrl": "caesar_salad_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Greek Salad",
+    "description": "With tomatoes, cucumbers, olives, feta cheese, and dressing.",
+    "imageUrl": "greek_salad_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Caprese Salad",
+    "description": "With tomatoes, mozzarella cheese, basil, olive oil, and balsamic glaze.",
+    "imageUrl": "caprese_salad_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Cobb Salad",
+    "description": "With mixed greens, avocado, bacon, eggs, chicken, and dressing.",
+    "imageUrl": "cobb_salad_image_url",
+    "isAvailable": true,
+    "price": 11,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Spinach Salad",
+    "description": "With spinach leaves, strawberries, almonds, and vinaigrette.",
+    "imageUrl": "spinach_salad_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Nicoise Salad",
+    "description": "With tuna, boiled potatoes, green beans, eggs, and dressing.",
+    "imageUrl": "nicoise_salad_image_url",
+    "isAvailable": true,
+    "price": 12,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Waldorf Salad",
+    "description": "With apples, grapes, celery, walnuts, and mayonnaise dressing.",
+    "imageUrl": "waldorf_salad_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Asian Chicken Salad",
+    "description": "With mixed greens, grilled chicken, mandarin oranges, and sesame dressing.",
+    "imageUrl": "asian_chicken_salad_image_url",
+    "isAvailable": true,
+    "price": 11,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Quinoa Salad",
+    "description": "With quinoa, cherry tomatoes, cucumbers, and lemon vinaigrette.",
+    "imageUrl": "quinoa_salad_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Tuna Salad",
+    "description": "With tuna, mixed greens, cherry tomatoes, and Italian dressing.",
+    "imageUrl": "tuna_salad_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Salads"
+  },
+  {
+    "name": "Palestine Cola",
+    "description": "Palestine cola, better than coca-cola.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 1,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Arranxhata",
+    "description": "Drink with vegetables.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 1.5,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Bavaria 0",
+    "description": "Non-alchoolic beer.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 2,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Water",
+    "description": "Albanian fresh water.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 0.8,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Sparkling water",
+    "description": "Glina sparkling water.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 0.8,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Vitamine water",
+    "description": "Glina vitamine water.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 1,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Grape Cider",
+    "description": "Non-alchoolic grape cider .",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 2,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Date milk",
+    "description": "Milk mixed with Arab date's.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 1.5,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Orange juice",
+    "description": "100% Orange juice.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 1,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Lemon juice",
+    "description": "100% Lemon juice.",
+    "imageUrl": "drink_image_url",
+    "isAvailable": true,
+    "price": 1,
+    "isLiked": false,
+    "cookingTime": "",
+    "category": "Drink"
+  },
+  {
+    "name": "Belgian Waffles",
+    "description": "Fluffy waffles served with maple syrup and fresh berries.",
+    "imageUrl": "belgian_waffles_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Others"
+  },
+  {
+    "name": "Village eggs",
+    "description": "2 fried village eggs with butter and sausage.",
+    "imageUrl": "eggs_benedict_image_url",
+    "isAvailable": true,
+    "price": 5,
+    "isLiked": false,
+    "cookingTime": "5 min",
+    "category": "Others"
+  },
+  {
+    "name": "French Toast",
+    "description": "Thick slices of bread dipped in egg batter and fried golden brown.",
+    "imageUrl": "french_toast_image_url",
+    "isAvailable": true,
+    "price": 7,
+    "isLiked": false,
+    "cookingTime": "15 min",
+    "category": "Others"
+  },
+  {
+    "name": "Potatoes",
+    "description": "Baked potatoes with spices and herbs.",
+    "imageUrl": "cheesy_potatoes_image_url",
+    "isAvailable": true,
+    "price": 7,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Others"
+  },
+  {
+    "name": "Avocado Toast",
+    "description": "Toast topped with mashed avocado, cherry tomatoes, and a sprinkle of salt.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 8,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Others"
+  },
+  {
+    "name": "Meat Byrek",
+    "description": "With cow meat, cheese, and custard filling baked in a flaky crust.",
+    "imageUrl": "quiche_lorraine_image_url",
+    "isAvailable": true,
+    "price": 11,
+    "isLiked": false,
+    "cookingTime": "40 min",
+    "category": "Others"
+  },
+  {
+    "name": "Fruit Salad",
+    "description": "Refreshing mix of assorted fruits, for a healthy breakfast.",
+    "imageUrl": "fruit_salad_image_url",
+    "isAvailable": true,
+    "price": 6,
+    "isLiked": false,
+    "cookingTime": "5 min",
+    "category": "Others"
+  },
+  {
+    "name": "Pancakes",
+    "description": "Fluffy pancakes served with butter and maple syrup.",
+    "imageUrl": "pancakes_image_url",
+    "isAvailable": true,
+    "price": 7,
+    "isLiked": false,
+    "cookingTime": "20 min",
+    "category": "Others"
+  },
+  {
+    "name": "Baked cheese",
+    "description": "Baked cheese with spices and vegetables.",
+    "imageUrl": "breakfast_burrito_image_url",
+    "isAvailable": true,
+    "price": 9,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Others"
+  },
+  {
+    "name": "Grilled vegetables",
+    "description": "Grilled vegetables with spices and balsamic glaze.",
+    "imageUrl": "mashed_potatoes_image_url",
+    "isAvailable": true,
+    "price": 7,
+    "isLiked": false,
+    "cookingTime": "10 min",
+    "category": "Others"
+  }
+]

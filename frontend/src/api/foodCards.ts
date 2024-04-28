@@ -2,7 +2,7 @@ import { FoodCardData, PromosCardData } from '@/types/cardsData';
 
 export const fetchFoodData = async (): Promise<FoodCardData[] | string> => {
   try {
-    const response = await fetch('api/endpoint');
+    const response = await fetch(import.meta.env.FOOD_CARDS_API_ENDPOINT);
 
     if (!response.ok) throw new Error('Problem when fetching data');
 
@@ -14,7 +14,7 @@ export const fetchFoodData = async (): Promise<FoodCardData[] | string> => {
 
 export const fetchPromoData = async (): Promise<PromosCardData[] | string> => {
   try {
-    const response = await fetch('api/endpoint');
+    const response = await fetch(import.meta.env.PROMO_CARDS_API_ENDPOINT);
 
     if (!response.ok) throw new Error('Problem when fetching data');
 

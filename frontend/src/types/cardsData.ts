@@ -8,8 +8,18 @@ type CardData = {
   isLiked: boolean;
 };
 
+export type FoodCategories =
+  | 'Fish'
+  | 'Pasta'
+  | 'Risotto'
+  | 'Soups'
+  | 'Salads'
+  | 'Drink'
+  | 'Others';
+
 export type FoodCardData = CardData & {
   cookingTime: string;
+  category: FoodCategories;
   discount: null | number;
 };
 

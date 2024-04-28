@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Small family",
+    "description": "Small family dinner with pasta and others.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 30,
+    "isLiked": false,
+    "persons": 4,
+    "type": "Economic"
+  },
+  {
+    "name": "Medium family",
+    "description": "Medium family dinner with pasta and others.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 35,
+    "isLiked": false,
+    "persons": 6,
+    "type": "Economic"
+  },
+  {
+    "name": "Big family",
+    "description": "Big family dinner with pasta and others.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 45,
+    "isLiked": false,
+    "persons": 8,
+    "type": "Economic"
+  },
+  {
+    "name": "Friend group",
+    "description": "Drinks, byreks, and potatoes.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 15,
+    "isLiked": false,
+    "persons": 5,
+    "type": "Economic"
+  },
+  {
+    "name": "Work meeting",
+    "description": "Pasta and risotto for tem meeting.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 40,
+    "isLiked": false,
+    "persons": 10,
+    "type": "Economic"
+  },
+  {
+    "name": "Couple",
+    "description": "Simple table with shrimps and Pasta.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 12,
+    "isLiked": false,
+    "persons": 2,
+    "type": "Dinner"
+  },
+  {
+    "name": "Fish night",
+    "description": "Grilled koce and Palestine cola.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 30,
+    "isLiked": false,
+    "persons": 3,
+    "type": "Dinner"
+  },
+  {
+    "name": "Drink night",
+    "description": "Palestine cola, and coffe..",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 15,
+    "isLiked": false,
+    "persons": 4,
+    "type": "Dinner"
+  },
+  {
+    "name": "Sweet night",
+    "description": "Sweets and Palestine cola.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 20,
+    "isLiked": false,
+    "persons": 4,
+    "type": "Dinner"
+  },
+  {
+    "name": "Workers vacation",
+    "description": "Seafood linguine and Bavaria 0.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 30,
+    "isLiked": false,
+    "persons": 3,
+    "type": "Dinner"
+  },
+  {
+    "name": "Couple",
+    "description": "Simple table with brusketa and Data milk.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 10,
+    "isLiked": false,
+    "persons": 2,
+    "type": "Breakfast"
+  },
+  {
+    "name": "Village",
+    "description": "Village eggs, baked cheese and sausages.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 15,
+    "isLiked": false,
+    "persons": 2,
+    "type": "Breakfast"
+  },
+  {
+    "name": "Green",
+    "description": "Salad and baked cheese with basil.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 15,
+    "isLiked": false,
+    "persons": 2,
+    "type": "Breakfast"
+  },
+  {
+    "name": "Family breakfast",
+    "description": "Eggs with sausages and baked cheese plus Date milk.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 25,
+    "isLiked": false,
+    "persons": 4,
+    "type": "Breakfast"
+  },
+  {
+    "name": "Workers breakfast",
+    "description": "Byrek with cow meat and Date milk.",
+    "imageUrl": "avocado_toast_image_url",
+    "isAvailable": true,
+    "price": 20,
+    "isLiked": false,
+    "persons": 3,
+    "type": "Breakfast"
+  }
+]
